@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/installation-page" element={<InstallationDetails />} />
-      <Route path='/about-team' element={ /* PLACEHOLDER FOR ABOUT TEAM */>}
+      {/* <Route path='/about-team' element={ /* PLACEHOLDER FOR ABOUT TEAM */}
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
