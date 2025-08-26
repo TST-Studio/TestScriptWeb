@@ -16,7 +16,7 @@ function App() {
             Install
           </button>
 
-          <button className='pill-btn' onClick={() => navigate('/about-page')}>
+          <button className='pill-btn' onClick={() => navigate('/about-team')}>
             Meet the team
           </button>
         </header>

@@ -1,4 +1,6 @@
-function About() {
+import React from 'react';
+
+const About: React.FC = () => {
   return (
     <div>
       <h1>About Team</h1>
@@ -13,7 +15,7 @@ function About() {
         </div>
 
         <div className='team-member'>
-          <img src='/public/images/member1' alt='Team Member 1' />
+          <img src='/public/images/member1' alt='Team Member 2' />
           <h3> Member Name 2</h3>
           <p>
             <strong>Role</strong>
@@ -21,7 +23,7 @@ function About() {
         </div>
 
         <div className='team-member'>
-          <img src='/public/images/member1' alt='Team Member 1' />
+          <img src='/public/images/member1' alt='Team Member 3' />
           <h3> Member Name 3</h3>
           <p>
             <strong>Role</strong>
@@ -29,7 +31,7 @@ function About() {
         </div>
 
         <div className='team-member'>
-          <img src='/public/images/member1' alt='Team Member 1' />
+          <img src='/public/images/member1' alt='Team Member 4' />
           <h3> Member Name 4</h3>
           <p>
             <strong>Role</strong>
@@ -37,7 +39,7 @@ function About() {
         </div>
 
         <div className='team-member'>
-          <img src='/public/images/member1' alt='Team Member 1' />
+          <img src='/public/images/member1' alt='Team Member 5' />
           <h3> Member Name 5</h3>
           <p>
             <strong>Role</strong>
@@ -46,6 +48,6 @@ function About() {
       </div>
     </div>
   );
-}
+};
 
 export default About;
