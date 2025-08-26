@@ -1,10 +1,3 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 .title {
   font-size: 8rem;
   line-height: 1.1;
@@ -24,38 +17,9 @@
   width: 100%;
   color: #ffb703;
 }
-/* button {
-  background-color: #219ebc;
-  color: white;
-  border-radius: 11px;
-  position: relative;
-  display: inline-block;
-  margin: 20px;
 
-  font-size: 17px;
-  line-height: 17px;
-  padding: 9px;
-  border-radius: 39px;
-  background-image: linear-gradient(
-    to right,
-    rgb(20, 78, 117) 0%,
-    rgb(33, 158, 188) 50%,
-    rgb(15, 61, 91) 100%
-  );
-  /* box-shadow: rgba(0, 0, 0, 0.23) 2px 2px 0px 1px; */
-border: 3px solid rgb(20, 78, 117);
-display: inline-block;
-/* } */
-/* .myButton:hover {
-  background: #1c6ea4;
-}
-.myButton:active {
-  background: #144e75;
+/* :root {
 } */
-:root {
-  --btn-color: #00ccff;
-  --btn-color-dark: #008fb2; /* darken(#00ccff, 15%) */
-}
 /* layout: puts buttons at top-left & top-right */
 .header-buttons {
   position: fixed;
@@ -75,7 +39,7 @@ button.pill-btn {
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
-  color: #fff;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.15rem;
@@ -91,17 +55,20 @@ button.pill-btn:after {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: #00ccff;
+  background-color: #219ebc;
   border-radius: 10rem;
   z-index: -2;
 }
 
 /* hover sweep layer */
 button.pill-btn:before {
+  width: 0;
+  left: 0;
+  top: 0;
   content: '';
   position: absolute;
-  /* height: 100%; */
-  background-color: #008fb2;
+  height: 100%;
+  background-color: #0e7a95;
   transition: all 0.3s;
   border-radius: 10rem;
   z-index: -1;
@@ -126,23 +93,10 @@ button.pill-btn:hover::before {
   font-weight: 100;
   font-size: 25px;
 }
-
-/* @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
-
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #f5f5f5;
-}
-
-.learn-more {
-}
-
-.installation-detail-container {
 }
