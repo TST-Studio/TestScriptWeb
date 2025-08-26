@@ -7,19 +7,20 @@ function App() {
 
   return (
     <>
-      <header className='header-buttons'>
-        <button
-          className='pill-btn'
-          onClick={() => navigate('/installation-page')}
-        >
-          Install
-        </button>
+      <body className='body'>
+        <header className='header-buttons'>
+          <button
+            className='pill-btn'
+            onClick={() => navigate('/installation-page')}
+          >
+            Install
+          </button>
 
-        <button className='pill-btn' onClick={() => navigate('/about-page')}>
-          Meet the team
-        </button>
-      </header>
-      {/* <header>
+          <button className='pill-btn' onClick={() => navigate('/about-page')}>
+            Meet the team
+          </button>
+        </header>
+        {/* <header>
         <button
           className='install'
           onClick={() => navigate('/installation-page')}
@@ -31,8 +32,11 @@ function App() {
           Meet the team
         </button>
       </header> */}
-      <h1 className='title'>TestScript</h1>
-      <h1 className='description'>An easy unit tester for a smoother flow.</h1>
+        <h1 className='title'>Tst Studios</h1>
+        <h1 className='description'>
+          Creating solutions for a better tomorrow.
+        </h1>
+      </body>
     </>
   );
 }
