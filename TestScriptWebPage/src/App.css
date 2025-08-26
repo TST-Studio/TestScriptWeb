@@ -3,9 +3,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  /* background-image: url(./background.png); */
 }
 
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -16,38 +17,146 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+.title {
+  font-size: 8rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  margin: 0.5rem 0 1rem;
+  width: 100%;
+  color: #fb8500;
+  margin-top: -30rem;
+}
+.description {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  margin: 0.5rem 0 1rem;
+  width: 100%;
+  color: #ffb703;
+}
+/* button {
+  background-color: #219ebc;
+  color: white;
+  border-radius: 11px;
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+
+  font-size: 17px;
+  line-height: 17px;
+  padding: 9px;
+  border-radius: 39px;
+  background-image: linear-gradient(
+    to right,
+    rgb(20, 78, 117) 0%,
+    rgb(33, 158, 188) 50%,
+    rgb(15, 61, 91) 100%
+  );
+  /* box-shadow: rgba(0, 0, 0, 0.23) 2px 2px 0px 1px; */
+border: 3px solid rgb(20, 78, 117);
+display: inline-block;
+/* } */
+/* .myButton:hover {
+  background: #1c6ea4;
+}
+.myButton:active {
+  background: #144e75;
+} */
+:root {
+  --btn-color: #00ccff;
+  --btn-color-dark: #008fb2; /* darken(#00ccff, 15%) */
+}
+/* layout: puts buttons at top-left & top-right */
+.header-buttons {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  z-index: 1000;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* reset + pill styles (stronger selector so it overrides your global button rules) */
+button.pill-btn {
+  border: none;
+  background: transparent;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* base layer */
+button.pill-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #00ccff;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+/* hover sweep layer */
+button.pill-btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #008fb2;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+button.pill-btn:hover::before {
+  width: 100%;
+}
+
+.about-team {
+  position: fixed;
+  top: 1rem;
+  right: 15rem;
+  padding: 10px 20px;
+  font-weight: 100;
+  font-size: 25px;
+}
+.install {
+  position: fixed;
+  top: 1rem;
+  left: 15rem;
+  padding: 10px 20px;
+  font-weight: 100;
+  font-size: 25px;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #f5f5f5;
 }
 
 .learn-more {
-  
-
 }
 
 .installation-detail-container {
-
 }
-
-
