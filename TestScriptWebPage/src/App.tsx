@@ -8,7 +8,24 @@ function App() {
 
   return (
     <>
+
       <h1 className='header-buttons'>
+
+      <body className='body'>
+        <header className='header-buttons'>
+          <button
+            className='pill-btn'
+            onClick={() => navigate('/installation-page')}
+          >
+            Install
+          </button>
+
+          <button className='pill-btn' onClick={() => navigate('/about-team')}>
+            Meet the team
+          </button>
+        </header>
+        {/* <header>
+
         <button
           className='pill-btn'
           onClick={() => navigate('/installation-page')}
