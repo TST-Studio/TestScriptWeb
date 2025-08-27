@@ -6,8 +6,9 @@
   margin: 0.5rem 0 1rem;
   width: 100%;
   color: #fb8500;
-  margin-top: -30rem;
+  margin-top: -25rem;
 }
+
 .description {
   font-size: 2.5rem;
   line-height: 1.1;
@@ -18,14 +19,11 @@
   color: #ffb703;
 }
 
-/* :root {
-} */
-/* layout: puts buttons at top-left & top-right */
 .header-buttons {
   position: fixed;
   top: 1rem;
-  left: 0;
-  right: 0;
+  left: 15rem;
+  right: 15rem;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
@@ -80,7 +78,7 @@ button.pill-btn:hover::before {
 .about-team {
   position: fixed;
   top: 1rem;
-  right: 15rem;
+  right: 18rem;
   padding: 10px 20px;
   font-weight: 100;
   font-size: 25px;
@@ -88,7 +86,7 @@ button.pill-btn:hover::before {
 .install {
   position: fixed;
   top: 1rem;
-  left: 15rem;
+  left: 18rem;
   padding: 10px 20px;
   font-weight: 100;
   font-size: 25px;
@@ -99,4 +97,145 @@ button.pill-btn:hover::before {
 
 .read-the-docs {
   color: #f5f5f5;
+}
+
+.community {
+  position: relative;
+  bottom: -25rem;
+  --bg1: #ffdbb4;
+  --bg2: #ffd1a6;
+  --bg3: #fff8ee;
+  --ring: rgba(227, 212, 3, 0.902);
+  --card-bg: rgba(255, 255, 255, 0.85);
+
+  --card-border: rgba(0, 0, 0, 0.08);
+  --title-grad: linear-gradient(#0602ff, #219ebc);
+}
+@media (prefers-color-scheme: dark) {
+  .community {
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --card-border: rgba(255, 255, 255, 0.14);
+    --ring: rgba(255, 255, 255, 0.08);
+    background: radial-gradient(
+        1200px 400px at -10% -10%,
+        rgba(219, 112, 255, 0.15),
+        transparent 60%
+      ),
+      radial-gradient(
+        1200px 400px at 110% 10%,
+        rgba(99, 179, 237, 0.15),
+        transparent 60%
+      ),
+      linear-gradient(180deg, #0b0b10, #121218);
+  }
+}
+
+.community__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* .community__title {
+  font-weight: 800;
+  font-size: clamp(1.6rem, 1.2rem + 2vw, 2.6rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 28px;
+  background: var(--title-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  text-shadow: 0px 0px 1px #ffffff;
+} */
+
+/* Responsive grid: 3 columns on desktop -> 2 -> 1 */
+.community__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 22px;
+  border-radius: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 20px var(--ring);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px var(--ring);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+/* Icon bubble */
+.card__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #7c7c7c;
+}
+.card__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #ff8800;
+}
+@media (prefers-color-scheme: dark) {
+  .card__icon {
+    background: rgba(99, 102, 241, 0.15);
+  }
+  .card__icon svg {
+    fill: #e5e7eb;
+  }
+}
+
+/* Text */
+.card__title {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: rgb(255, 174, 0);
+}
+.card__desc {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.35;
+  font-size: 0.95rem;
+}
+@media (prefers-color-scheme: dark) {
+  .card__desc {
+    color: #c7cbd6;
+  }
+}
+
+/* External arrow */
+.card__external {
+  position: absolute;
+  top: px;
+  right: 12px;
+  opacity: 0.65;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.card__external svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  color: #0e7a95;
+}
+.card:hover .card__external {
+  opacity: 1;
+  transform: translate(2px, -2px);
 }
