@@ -113,21 +113,33 @@ button.pill-btn:hover::before {
 }
 @media (prefers-color-scheme: dark) {
   .community {
-    --card-bg: rgba(255, 255, 255, 0.06);
+ position: relative;
+  bottom: -25rem;
+  --bg1: #ffdbb4;
+  --bg2: #ffd1a6;
+  --bg3: #fff8ee;
+  --ring: rgba(227, 212, 3, 0.902);
+  --card-bg: rgba(0, 0, 0, 0.85);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --title-grad: linear-gradient(#0602ff, #219ebc);
+
+
+
+    /* --card-bg: rgba(255, 255, 255, 0.06);
     --card-border: rgba(255, 255, 255, 0.14);
     --ring: rgba(255, 255, 255, 0.08);
-    background: radial-gradient(
+    /* background: radial-gradient(
         1200px 400px at -10% -10%,
         rgba(219, 112, 255, 0.15),
         transparent 60%
-      ),
-      radial-gradient(
+      ), */
+      /* radial-gradient(
         1200px 400px at 110% 10%,
         rgba(99, 179, 237, 0.15),
         transparent 60%
       ),
       linear-gradient(180deg, #0b0b10, #121218);
-  }
+  } */
 }
 
 .community__inner {
