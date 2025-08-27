@@ -51,8 +51,7 @@ const InstallationDetails: React.FC = () => {
         <div className="nav-brand" onClick={() => navigate('/')}>TST</div>
         <ul className="nav-links">
           <li onClick={() => navigate('/')}>Home</li>
-          <li onClick={() => navigate('/about')}>About</li>
-          <li onClick={() => navigate('/install')}>Installation</li>
+          <li onClick={() => navigate('/about-team')}>About</li>
           <li onClick={() => navigate('/docs')}>Docs</li>
           <li onClick={() => navigate('/cli')}>CLI</li>
           <li onClick={() => navigate('/contact')}>Contact</li>
@@ -65,33 +64,33 @@ const InstallationDetails: React.FC = () => {
         {/* INPUTS */}
         <div className="inputs-grid">
           <label className="input-block">
-            <span className="input-label">Function / Code Sample</span>
+            <span className="input-label">Installation</span>
             <textarea
               name="codeSample"
               className="long-input"
-              placeholder="Paste a TypeScript function here..."
+              placeholder="npm install -g @tst-studio/tst"
               value={inputs.codeSample}
               onChange={handleChange}
             />
           </label>
 
           <label className="input-block">
-            <span className="input-label">Config (tsconfig / test config)</span>
+            <span className="input-label">Configuration: Add configuration file (tst.config.json)</span>
             <textarea
               name="configJson"
               className="long-input"
-              placeholder='Paste JSON or config here...'
+              placeholder="tst configure --outFormat=sameLocation"
               value={inputs.configJson}
               onChange={handleChange}
             />
           </label>
 
           <label className="input-block">
-            <span className="input-label">Notes / Edge Cases</span>
+            <span className="input-label">Usage: Generate tests for a file</span>
             <textarea
               name="notes"
               className="long-input"
-              placeholder="Any special cases or constraints..."
+              placeholder="tst generate < filename >"
               value={inputs.notes}
               onChange={handleChange}
             />
