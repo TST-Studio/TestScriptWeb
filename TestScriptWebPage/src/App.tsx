@@ -70,12 +70,11 @@ function App() {
             </button>
           </div>
         </header>
-        <h1 className='title'>Tst Studios.</h1>
-        <h1 className='description'>
-          Creating solutions for a better tomorrow.
-        </h1>
-        <h2>Background Video Example</h2>
+        <h1 className='title'>Tst Studio.</h1>
+        <p className='description'>Creating solutions for a better tomorrow.</p>
+        <h2 className='sample-video'>Background Video Example</h2>
         <video
+          className='sample-video'
           src='/videos/my-video.mp4' // put the file in /public/videos/
           autoPlay
           loop

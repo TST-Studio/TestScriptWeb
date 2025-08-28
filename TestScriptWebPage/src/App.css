@@ -28,7 +28,7 @@
 .title {
   display: grid;
   place-items: center;
-  margin: 2rem 0 1rem;
+  margin: 2rem 0 0.2rem;
   width: 100%;
   color: #fb8500;
   font-weight: 800;
@@ -66,6 +66,11 @@
   align-items: center;
   justify-content: space-between;
   gap: clamp(1rem, 8vw, 4rem);
+}
+.sample-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Box sizing rules */
