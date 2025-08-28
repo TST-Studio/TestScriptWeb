@@ -5,19 +5,3 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-html {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  justify-content: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg');
-  background-size: cover; /* fill the whole screen */
-  background-repeat: no-repeat; /* prevent tiling */
-  background-position: center;
-  image-rendering: -webkit-optimize-contrast; /* Chrome/Safari */
-  image-rendering: crisp-edges; /* Modern browsers */
-  image-rendering: pixelated;
-}
