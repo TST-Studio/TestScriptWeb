@@ -6,7 +6,6 @@
   /* place-items: center; */
   padding: clamp(6rem, 2vh, 8rem) 1.5rem 4rem; /* room for header and content */
   /* text-align: center; */
-
   background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg');
   background-size: cover;
   background-repeat: no-repeat;
