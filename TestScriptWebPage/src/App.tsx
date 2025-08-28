@@ -52,62 +52,69 @@ function App() {
   ];
 
   return (
-    <div className='hero'>
-      <header className='site-header'>
-        <div className='header-inner'>
-          <button
-            className='pill-btn'
-            onClick={() => navigate('/installation-page')}
-          >
-            Extension
-          </button>
-          <button className='pill-btn' onClick={() => navigate('/about-team')}>
-            Meet the team
-          </button>
-        </div>
-      </header>
-      <h1 className='title'>Tst Studios.</h1>
-      <h1 className='description'>Creating solutions for a better tomorrow.</h1>
-      <h2>Background Video Example</h2>
-      <video
-        src='/videos/my-video.mp4' // put the file in /public/videos/
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          width: '100%', // full width
-          height: 'auto', // maintain aspect ratio
-        }}
-      />
-      <section className='community'>
-        <div className='community__inner'>
-          {/* <h2 className='community__title'>Come check us out</h2> */}
-
-          <div className='community__grid'>
-            {COMMUNITY.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='card'
-              >
-                <span className='card__icon' aria-hidden='true'>
-                  {item.icon}
-                </span>
-                <div className='card__text'>
-                  <h3 className='card__title'>{item.name}</h3>
-                  <p className='card__desc'>{item.desc}</p>
-                </div>
-
-                <span className='card__external' aria-hidden='true'></span>
-              </a>
-            ))}
+    <>
+      <div className='hero'>
+        <header className='site-header'>
+          <div className='header-inner'>
+            <button
+              className='pill-btn'
+              onClick={() => navigate('/installation-page')}
+            >
+              Extension
+            </button>
+            <button
+              className='pill-btn'
+              onClick={() => navigate('/about-team')}
+            >
+              Meet the team
+            </button>
           </div>
-        </div>
-      </section>
-    </div>
+        </header>
+        <h1 className='title'>Tst Studios.</h1>
+        <h1 className='description'>
+          Creating solutions for a better tomorrow.
+        </h1>
+        <h2>Background Video Example</h2>
+        <video
+          src='/videos/my-video.mp4' // put the file in /public/videos/
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: '100%', // full width
+            height: 'auto', // maintain aspect ratio
+          }}
+        />
+        <section className='community'>
+          <div className='community__inner'>
+            {/* <h2 className='community__title'>Come check us out</h2> */}
+
+            <div className='community__grid'>
+              {COMMUNITY.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='card'
+                >
+                  <span className='card__icon' aria-hidden='true'>
+                    {item.icon}
+                  </span>
+                  <div className='card__text'>
+                    <h3 className='card__title'>{item.name}</h3>
+                    <p className='card__desc'>{item.desc}</p>
+                  </div>
+
+                  <span className='card__external' aria-hidden='true'></span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
 
