@@ -52,19 +52,20 @@ function App() {
   ];
 
   return (
-    <>
-      <h1 className='header-buttons'>
-        <button
-          className='pill-btn'
-          onClick={() => navigate('/installation-page')}
-        >
-          Install
-        </button>
-
-        <button className='pill-btn' onClick={() => navigate('/about-team')}>
-          Meet the team
-        </button>
-      </h1>
+    <div className='hero'>
+      <header className='site-header'>
+        <div className='header-inner'>
+          <button
+            className='pill-btn'
+            onClick={() => navigate('/installation-page')}
+          >
+            Extension
+          </button>
+          <button className='pill-btn' onClick={() => navigate('/about-team')}>
+            Meet the team
+          </button>
+        </div>
+      </header>
       <h1 className='title'>Tst Studios.</h1>
       <h1 className='description'>Creating solutions for a better tomorrow.</h1>
       <h2>Background Video Example</h2>
@@ -100,17 +101,13 @@ function App() {
                   <p className='card__desc'>{item.desc}</p>
                 </div>
 
-                <span className='card__external' aria-hidden='true'>
-                  <svg viewBox='0 0 24 24'>
-                    <path d='M14 5h5v5h-2V8.4l-7.3 7.3-1.4-1.4L15.6 7H14V5z' />
-                  </svg>
-                </span>
+                <span className='card__external' aria-hidden='true'></span>
               </a>
             ))}
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
