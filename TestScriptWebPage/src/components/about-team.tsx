@@ -1,77 +1,70 @@
-import React from 'react';
-import '../index.css';
+// about-team.tsx full file with articulation
 
-const About: React.FC = () => {
+import React, { useEffect, useState } from 'react'; // Import React, hooks
+import '/src/components/about-team.css'; // Import custom stylesheet
+
+const About: React.FC = () => { // Define About component
+  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Track expanded card index
+
+  // Fade-in on scroll animation
+  useEffect(() => {
+    const observer = new IntersectionObserver( // Create observer
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { // Element visible
+            entry.target.classList.add('show'); // Add show class
+          } else {
+            entry.target.classList.remove('show'); // Remove when leaving
+          }
+        });
+      },
+      { threshold: 0.15 } // Trigger threshold
+    );
+
+    const hiddenElements = document.querySelectorAll('.team-member'); // Select hidden elements
+    hiddenElements.forEach((el) => observer.observe(el)); // Observe each element
+    return () => observer.disconnect(); // Cleanup observer
+  }, []);
+
+  const toggleCard = (index: number) => { // Toggle folder expansion
+    setActiveIndex(activeIndex === index ? null : index); // Toggle state O(1)
+  };
+
   return (
-    <>
-      <div className='hero'>
-        <h1>About Team</h1>
-        <h2> Meet the Team</h2>
-        <div className='team-grid'>
-          <div className='team-member'>
-            <img
-              src='../images/member1.png'
-              alt='Team Member 1'
-              style={{ width: '500px', height: '600px' }}
-            />
-            <h3> Member Name 1</h3>
-            <p>
-              <strong>Role</strong>
-            </p>
-          </div>
+    <div className="about-team"> {/* Root container */}
+      <h1>About the Team</h1> {/* Main heading */}
+      <h2>Meet the Team</h2> {/* Subheading */}
 
-          <div className='team-member'>
-            <img
-              src='/images/member2.jpeg'
-              alt='Team Member 2'
-              style={{ width: '500px', height: '600px' }}
-            />
-            <h3> Member Name 2</h3>
-            <p>
-              <strong>Role</strong>
-            </p>
+      <div className="team-grid"> {/* Team cards row */}
+        {[
+          { img: "/images/member1.png", name: "G", role: "Staff Engineer", email: "member1@email.com" },
+          { img: "/images/member2.jpeg", name: "Member Name 2", role: "Role", email: "member2@email.com" },
+          { img: "/images/member3.jpeg", name: "Member Name 3", role: "Role", email: "member3@email.com" },
+          { img: "/images/member4.jpg", name: "Member Name 4", role: "Role", email: "member4@email.com" },
+          { img: "/images/member5.png", name: "Member Name 5", role: "Role", email: "member5@email.com" }
+        ].map((member, index) => (
+          <div
+            key={index}
+            className={`team-member hidden ${activeIndex === index ? 'active' : ''}`}
+            onClick={() => toggleCard(index)}
+          >
+            <img src={member.img} alt={member.name} /> {/* Member image */}
+            <h3>{member.name}</h3> {/* Member name */}
+            {activeIndex === index && ( // Expanded folder
+              <div className="expanded-card">
+                <p><strong>{member.role}</strong></p> {/* Role */}
+                <div className="social-links">
+                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href={`mailto:${member.email}`}>Email</a>
+                </div>
+              </div>
+            )}
           </div>
-
-          <div className='team-member'>
-            <img
-              src='/images/member3.jpeg'
-              alt='Team Member 3'
-              style={{ width: '500px', height: '600px' }}
-            />
-            <h3> Member Name 3</h3>
-            <p>
-              <strong>Role</strong>
-            </p>
-          </div>
-
-          <div className='team-member'>
-            <img
-              src='/images/member4.jpg'
-              alt='Team Member 4'
-              style={{ width: '500px', height: '600px' }}
-            />
-            <h3> Member Name 4</h3>
-            <p>
-              <strong>Role</strong>
-            </p>
-          </div>
-
-          <div className='team-member'>
-            <img
-              src='/images/member5.png'
-              alt='Team Member 5'
-              style={{ width: '500px', height: '600px' }}
-            />
-
-            <h3> Member Name 5</h3>
-            <p>
-              <strong>Role</strong>
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default About;
+export default About; // Export component

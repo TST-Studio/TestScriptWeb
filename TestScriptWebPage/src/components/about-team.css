@@ -1,0 +1,145 @@
+/* about-team.css full file with articulation */
+
+.about-team { /* Root container styles */
+  text-align: center; /* Center all text */
+  padding: 60px 20px; /* Space around content */
+  color: #e8eaf2; /* Default text color */
+  background: transparent; /* Transparent to show root bg */
+  min-height: 100vh; /* Take full viewport height */
+  display: flex; /* Flex for vertical centering */
+  flex-direction: column; /* Stack header and grid */
+  justify-content: flex-start; /* Align top to bottom */
+  align-items: center; /* Center horizontally */
+}
+
+.about-team h1 { /* Main heading */
+  font-size: 40px; /* Large font */
+  margin-bottom: 12px; /* Space below */
+  color: #ffb703; /* Bright gold accent */
+  text-shadow: 0 0 12px rgba(255, 183, 3, 0.5); /* Glow effect */
+}
+
+.about-team h2 { /* Subheading */
+  font-size: 22px; /* Smaller font */
+  margin-bottom: 40px; /* Space before grid */
+  color: #a7afc0; /* Muted accent */
+}
+
+.team-grid { /* Grid of cards */
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Horizontal row */
+  justify-content: center; /* Centered alignment */
+  gap: 24px; /* Space between cards */
+  width: 100%; /* Full width row */
+  max-width: 1400px; /* Contained max width */
+  flex-wrap: wrap; /* ✅ Allow wrapping to prevent cutoff */
+}
+
+.team-member { /* Team card container */
+  background: #151922; /* Dark card background */
+  border: 1px solid #252a36; /* Border subtle */
+  border-radius: 12px; /* Rounded corners */
+  padding: 16px; /* Inner spacing */
+  width: 240px; /* Fixed card width */
+  cursor: pointer; /* Clickable */
+  transition: transform 0.3s ease, background 0.3s ease; /* Smooth hover */
+  opacity: 0; /* Hidden initially */
+  transform: translateY(40px); /* Slide-in offset */
+}
+
+.team-member.show { /* When fade-in triggered */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Reset offset */
+}
+
+.team-member:hover { /* On hover */
+  transform: scale(1.05); /* Slight enlarge */
+  background: #1e2432; /* Brighter dark tone */
+}
+
+.team-member img { /* Profile images */
+  width: 100%; /* Fill card width */
+  height: 220px; /* Fixed height */
+  object-fit: cover; /* Keep proportions */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 12px; /* Space below */
+  transition: transform 0.3s ease; /* Smooth zoom */
+}
+
+.team-member:hover img { /* Image hover */
+  transform: scale(1.03); /* Slight zoom effect */
+}
+
+.team-member h3 { /* Member name */
+  font-size: 18px; /* Medium font */
+  margin: 8px 0; /* Vertical spacing */
+  color: #8ecae6; /* Sky blue accent */
+  transition: color 0.3s ease; /* Smooth color */
+}
+
+.team-member:hover h3 { /* Hover name */
+  color: #ffb703; /* Gold hover accent */
+}
+
+.team-member p { /* Role text */
+  font-size: 14px; /* Small text */
+  color: #fb8500; /* Orange accent */
+  margin-bottom: 10px; /* Space below */
+}
+
+/* Expanded Folder Effect */
+.team-member.active { /* When clicked */
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  width: 280px; /* Slightly larger width */
+  transform: scale(1.08); /* Expanded scale */
+  z-index: 10; /* Bring to front */
+}
+
+.team-member.active h3 { /* Expanded name */
+  color: #fff; /* White text */
+}
+
+.expanded-card { /* Extra info area */
+  margin-top: 10px; /* Space above */
+  padding: 10px; /* Inner spacing */
+  background: #111; /* Slightly lighter black */
+  border-radius: 8px; /* Rounded */
+}
+
+.social-links { /* Container for socials */
+  display: flex; /* Flex layout */
+  gap: 12px; /* Space between links */
+  justify-content: center; /* Center horizontally */
+  margin-top: 8px; /* Space above */
+}
+
+.social-links a { /* Social link style */
+  color: #a7afc0; /* Muted text */
+  text-decoration: none; /* Remove underline */
+  background: #1e2432; /* Dark background */
+  padding: 6px 10px; /* Clickable area */
+  border-radius: 6px; /* Rounded corners */
+  font-size: 13px; /* Small text */
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth hover */
+}
+
+.social-links a:hover { /* Hover links */
+  background: #ffb703; /* Gold background */
+  color: #0f1115; /* Dark text */
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1200px) {
+  .team-grid { gap: 16px; } /* Smaller spacing */
+  .team-member { width: 220px; } /* Slightly smaller */
+}
+
+@media (max-width: 900px) {
+  .team-member { width: 45%; } /* Two per row */
+}
+
+@media (max-width: 600px) {
+  .team-grid { flex-direction: column; align-items: center; } /* Stack */
+  .team-member { width: 90%; } /* Full width on mobile */
+}
