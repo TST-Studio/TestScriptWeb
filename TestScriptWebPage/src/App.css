@@ -28,7 +28,7 @@
 .title {
   display: grid;
   place-items: center;
-  margin: 1rem 0 0.01rem;
+  margin: 2rem 0 0.2rem;
   width: 100%;
   color: #fb8500;
   font-weight: 800;
@@ -68,7 +68,6 @@
 }
 @media (prefers-color-scheme: dark) {
   .demo-video video {
-    /* filter: brightness(0.75) contrast(1.05); */
     filter: invert(1) grayscale(1);
   }
 }
@@ -90,6 +89,11 @@
   align-items: center;
   justify-content: space-between;
   gap: clamp(1rem, 8vw, 4rem);
+}
+.sample-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Box sizing rules */
@@ -141,16 +145,6 @@ button.pill-btn {
   z-index: 1;
   cursor: pointer;
 }
-
-/* base layer
-button.pill-btn:after {
-  content: '';
-  position: relative;
-  inset: 0;
-  background-color: #219ebc;
-  border-radius: 1rem;
-  z-index: -2;
-} */
 
 /* hover sweep layer */
 button.pill-btn:before {
