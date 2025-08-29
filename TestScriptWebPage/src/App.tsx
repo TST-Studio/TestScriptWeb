@@ -76,7 +76,7 @@ function App() {
         </h1>
         <div className='demo-video'>
           <video
-            src='public/images/Short-Demo.mp4' // put the file in /public/videos/
+            src='./images/Short-Demo.mp4' // put the file in /public/videos/
             autoPlay
             loop
             muted
