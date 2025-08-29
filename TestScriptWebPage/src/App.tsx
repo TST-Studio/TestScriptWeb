@@ -70,22 +70,23 @@ function App() {
             </button>
           </div>
         </header>
-        <h1 className='title'>Tst Studios.</h1>
+        <h1 className='title'>Tst Studio.</h1>
         <h1 className='description'>
           Creating solutions for a better tomorrow.
         </h1>
-        <h2>Background Video Example</h2>
-        <video
-          src='/videos/my-video.mp4' // put the file in /public/videos/
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            width: '100%', // full width
-            height: 'auto', // maintain aspect ratio
-          }}
-        />
+        <div className='demo-video'>
+          <video
+            src='public/images/Short-Demo.mp4' // put the file in /public/videos/
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: '95%', // full width
+              height: 'auto', // maintain aspect ratio
+            }}
+          />
+        </div>
         <section className='community'>
           <div className='community__inner'>
             {/* <h2 className='community__title'>Come check us out</h2> */}
