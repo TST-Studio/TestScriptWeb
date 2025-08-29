@@ -28,8 +28,7 @@
 .title {
   display: grid;
   place-items: center;
-  margin: 2rem 0 0.2rem;
-  width: 100%;
+  margin: 1rem 0 0.01rem;
   color: #fb8500;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -40,13 +39,37 @@
 .description {
   display: grid;
   place-items: center;
-  margin: 0.5rem 0 2rem;
+  margin: 0.01rem 0 2rem;
   width: 100%;
   color: #ffb703;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 0.2;
   font-size: clamp(1.125rem, 2.5vw, 2.5rem);
+}
+
+.demo-video {
+  display: grid;
+  place-items: center; /* centers content */
+  margin: 0.5rem 0 2rem;
+  width: 100%;
+  max-width: 960px; /* optional: keep it from getting too wide */
+  margin-inline: auto; /* center the block itself */
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+/* Native <video> should scale nicely */
+.demo-video > video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  .demo-video video {
+    /* filter: brightness(0.75) contrast(1.05); */
+    filter: invert(1) grayscale(1);
+  }
 }
 
 /* Top bar */
@@ -122,16 +145,6 @@ button.pill-btn {
   z-index: 1;
   cursor: pointer;
 }
-
-/* base layer
-button.pill-btn:after {
-  content: '';
-  position: relative;
-  inset: 0;
-  background-color: #219ebc;
-  border-radius: 1rem;
-  z-index: -2;
-} */
 
 /* hover sweep layer */
 button.pill-btn:before {
