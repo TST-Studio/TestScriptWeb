@@ -17,20 +17,18 @@ function App() {
       ),
     },
     {
-      name: 'Slack',
-      // need slack link
-      href: 'https://slack.com/yourworkspace',
-      desc: 'Connect and chat with other users',
+      name: 'Instagram',
+      href: 'https://www.instagram.com/tststudio56/',
+      desc: 'Follow us for updates and stories',
       icon: (
         <svg viewBox='0 0 24 24' aria-hidden='true'>
-          <path d='M5 14a2 2 0 1 1 0-4h2v4H5zm3-7a2 2 0 1 1 4 0v2H8V7zm8 3h-2V8a2 2 0 1 1 4 0v2h-2zm-3 8a2 2 0 1 1-4 0v-2h4v2zm-6-3v-4h10v4H7z' />
+          <path d='M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm9.25 2.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z' />
         </svg>
       ),
     },
     {
       name: 'Youtube',
-      // need youtube link
-      href: 'https://youtube.com/@yourchannel',
+      href: 'https://youtube.com/@tst-studio-56',
       desc: 'Learn with team videos & tutorials',
       icon: (
         <svg viewBox='0 0 24 24' aria-hidden='true'>
@@ -41,7 +39,7 @@ function App() {
     {
       name: 'Linkedin',
       // need linkedin link
-      href: 'https://linkedin.com/company/yourcompany',
+      href: 'https://linkedin.com/in/tst-studio',
       desc: 'Follow us and connect with engineers!',
       icon: (
         <svg viewBox='0 0 24 24' aria-hidden='true'>
@@ -71,9 +69,22 @@ function App() {
           </div>
         </header>
         <h1 className='title'>Tst Studio.</h1>
-        <h1 className='description'>
-          Creating solutions for a better tomorrow.
-        </h1>
+        <section className='description'>
+          {/* <p>Creating solutions for a better tomorrow.</p> */}
+          <p>
+            {' '}
+            Making developers' lives easier with innovative tools and
+            extensions.
+          </p>
+          <h3 className='mission'>
+            Focused on empowering developers to build smarter, faster, and with
+            less friction. Our tools are designed to simplify workflows, remove
+            repetitive barriers, and unlock creativity. We believe in building
+            solutions that are intuitive, reliable, and made for developers by
+            developers.
+          </h3>
+        </section>
+        <div className='video-title'> UNIT TEST CREATOR TOOL: TestScript</div>
         <div className='demo-video'>
           <video
             src='./images/Short-Demo.mp4' // put the file in /public/videos/
@@ -89,8 +100,6 @@ function App() {
         </div>
         <section className='community'>
           <div className='community__inner'>
-            {/* <h2 className='community__title'>Come check us out</h2> */}
-
             <div className='community__grid'>
               {COMMUNITY.map((item) => (
                 <a
