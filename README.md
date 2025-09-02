@@ -32,18 +32,32 @@
 
 ## About the Project
 
+**Tst Studio Website** is the official web interface for TestScript, **an LLM-powered unit test generator CLI**.
+It provides a clean and modern frontend to showcase the CLI, its features, and documentation in a developer-friendly way.
+
  <img src="TestScriptWebPage/public/images/website1.png" alt="website" width="%" height="auto" />
 
+<br />
+
+**The site is designed as both a landing page and interactive hub:**
+
+- Introduces the TestScript tool and its purpose
+
+- Highlights supported providers, frameworks, and configuration options
+
+- Guides developers through installation, setup, and usage examples
+
+- Offers a polished, React-based UI for easy navigation
 <!-- Getting Started -->
 
 ## Getting Started
 
 ### Prerequisites
 
-Make sure you have the following installed :
+Ensure sure you have the following installed :
 
 - [Node.js v18+](https://nodejs.org/)
-- npm
+- [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 
 ### Tech Stack
