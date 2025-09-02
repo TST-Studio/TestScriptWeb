@@ -82,7 +82,7 @@ function App() {
             developers.
           </h3>
         </section>
-        <div className='video-title'> UNIT TEST CREATOR TOOL: TestScript</div>
+        <div className='video-title'> UNIT TEST Generator: TestScript</div>
         <div className='demo-video'>
           <video
             src='./images/Short-Demo.mp4' // put the file in /public/videos/
