@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-/* Optional overlay for readability */
+/*Overlay for readability */
 .hero::before {
   content: '';
   position: absolute;
@@ -61,10 +61,7 @@
   text-align: center; /* or 'center' if you prefer */
   text-indent: 2rem;
   color: #ffb803dc;
-  /* background: linear-gradient(90deg, #ffa60291, #0073ff63); */
-  /* background: #03afff00; */
   border-radius: 3rem;
-  /* border: #fb860077 2px; */
   box-shadow: #0095ff77 0px 10px 20px;
 }
 
@@ -116,7 +113,6 @@ select {
   max-width: 960px; /* optional: keep it from getting too wide */
   margin-inline: auto; /* center the block itself */
   position: relative;
-  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
 }
 /* Native <video> should scale nicely */
 .demo-video > video {
@@ -128,7 +124,6 @@ select {
 }
 @media (prefers-color-scheme: dark) {
   .demo-video video {
-    /* filter: brightness(0.75) contrast(1.05); */
     filter: invert(1) grayscale(1);
   }
 }
@@ -156,7 +151,6 @@ select {
 button.pill-btn {
   border: none;
   background: transparent;
-  /* background-color: #0602ff; */
   display: flex;
   align-items: center;
   padding: 0.75rem 1.25rem;

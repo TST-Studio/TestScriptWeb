@@ -38,7 +38,6 @@ function App() {
     },
     {
       name: 'Linkedin',
-      // need linkedin link
       href: 'https://linkedin.com/in/tst-studio',
       desc: 'Follow us and connect with engineers!',
       icon: (
@@ -70,7 +69,6 @@ function App() {
         </header>
         <h1 className='title'>Tst Studio.</h1>
         <section className='description'>
-          {/* <p>Creating solutions for a better tomorrow.</p> */}
           <p>
             {' '}
             Making developers' lives easier with innovative tools and
