@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-/* Optional overlay for readability */
+/*Overlay for readability */
 .hero::before {
   content: '';
   position: absolute;
@@ -39,61 +39,40 @@
 .description {
   display: grid;
   place-items: center;
-  margin: 0.01rem 0 2rem;
+  margin: 1rem 0 3rem;
   width: 100%;
   color: #ffb703;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 0.2;
+  line-height: 0;
   font-size: clamp(1.125rem, 2.5vw, 2.5rem);
 }
 
-.demo-video {
-  display: grid;
-  place-items: center; /* centers content */
-  margin: 0.5rem 0 2rem;
-  width: 100%;
-  max-width: 960px; /* optional: keep it from getting too wide */
-  margin-inline: auto; /* center the block itself */
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-/* Native <video> should scale nicely */
-.demo-video > video {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-@media (prefers-color-scheme: dark) {
-  .demo-video video {
-    /* filter: brightness(0.75) contrast(1.05); */
-    filter: invert(1) grayscale(1);
-  }
-}
-
-/* Top bar */
-.site-header {
-  position: fixed; /* or fixed if you want it always visible */
-  top: 0;
-  inset-inline: 0; /* logical left/right */
-  z-index: 1000;
-  background: transparent; /* or a blur/glass if you like */
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin-inline: auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(1rem, 8vw, 4rem);
-}
-.sample-video {
+.mission {
   display: flex;
   justify-content: center;
-  align-items: center;
+  font-size: 1.25rem;
+  color: #edc600bd;
+  font-weight: 600;
+  margin: 1rem 0 0rem;
+  width: 70%;
+  font-size: 1.45rem;
+  line-height: 1.6; /* <-- prevents line overlap */
+  text-align: center; /* or 'center' if you prefer */
+  text-indent: 2rem;
+  color: #ffb803dc;
+  border-radius: 3rem;
+  box-shadow: #0095ff77 0px 10px 20px;
+}
+
+.video-title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-left: 10rem;
+  margin: 5rem 0 0.01rem;
 }
 
 /* Box sizing rules */
@@ -126,11 +105,52 @@ select {
   font: inherit;
 }
 
+.demo-video {
+  display: grid;
+  place-items: center; /* centers content */
+  margin: 1rem 0 0.1rem;
+  width: 100%;
+  max-width: 960px; /* optional: keep it from getting too wide */
+  margin-inline: auto; /* center the block itself */
+  position: relative;
+}
+/* Native <video> should scale nicely */
+.demo-video > video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: #0095ff77 0px 10px 20px;
+}
+@media (prefers-color-scheme: dark) {
+  .demo-video video {
+    filter: invert(1) grayscale(1);
+  }
+}
+
+/* Top bar with buttons */
+.site-header {
+  position: fixed; /* or fixed if you want it always visible */
+  top: 0;
+  inset-inline: 0; /* logical left/right */
+  z-index: 1000;
+  background: transparent; /* or a blur/glass if you like */
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(1rem, 8vw, 4rem);
+}
+
 /* reset + pill styles (stronger selector so it overrides your global button rules) */
 button.pill-btn {
   border: none;
   background: transparent;
-  /* background-color: #0602ff; */
   display: flex;
   align-items: center;
   padding: 0.75rem 1.25rem;
@@ -170,7 +190,7 @@ button.pill-btn:hover::before {
 .community {
   position: relative;
   display: block;
-  margin-top: 3rem;
+  margin-top: 1rem;
   padding: 10rem 1rem 1rem;
   --bg1: #ffdbb4;
   --bg2: #ffd1a6;
@@ -184,7 +204,7 @@ button.pill-btn:hover::before {
 @media (prefers-color-scheme: dark) {
   .community {
     position: sticky;
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding: 3rem 1.5rem;
     --bg1: #ffdbb4;
     --bg2: #ffd1a6;
