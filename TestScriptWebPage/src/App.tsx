@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom'; // dont erase this
 import './App.css';
 import './index.css';
