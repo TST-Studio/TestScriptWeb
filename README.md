@@ -43,16 +43,7 @@ It provides a clean and modern frontend to showcase the CLI, its features, and d
 
 <br />
 
-**The site is designed as both a landing page and interactive hub:**
 
-- Introduces the TestScript tool and its purpose
-
-- Documents supported AI providers (currently `openai`)  
-- Documents supported testing frameworks (currently `vitest`)  
-
-- Guides developers through installation, setup, and usage examples
-
-- Offers a polished, React-based UI for easy navigation
 <!-- Getting Started -->
 
 ## Getting Started
