@@ -7,7 +7,7 @@
   <a href="https://github.com/TST-Studio/TestScriptWeb/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/TST-Studio/TestScriptWeb" alt="contributors" />
   </a>
-  <a href="">
+  <a href="https://github.com/TST-Studio/TestScriptWeb/commits/main">
     <img src="https://img.shields.io/github/last-commit/TST-Studio/TestScriptWeb" alt="last update" />
   </a>
   <a href="https://github.com/TST-Studio/TestScriptWeb/network/members">
@@ -28,11 +28,21 @@
 
 <br />
 
+<p align="center">
+  This README provides an overview of the Tst Studio Website project — including setup, tech stack, and guidelines for contributing.
+</p>
+
 <!-- About the Project -->
 
 ## About the Project
 
+**Tst Studio Website** is the official web interface for **TestScript**, an LLM-powered unit test generator CLI.
+It provides a clean and modern frontend to showcase the CLI, its features, and documentation in a developer-friendly way.
+
  <img src="TestScriptWebPage/public/images/website1.png" alt="website" width="%" height="auto" />
+
+<br />
+
 
 <!-- Getting Started -->
 
@@ -40,10 +50,10 @@
 
 ### Prerequisites
 
-Make sure you have the following installed :
+Ensure you have the following installed :
 
 - [Node.js v18+](https://nodejs.org/)
-- npm
+- [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 
 ### Tech Stack
@@ -80,6 +90,18 @@ cd TestScriptWeb/TestScriptWebPage
 ```bash
   npm run dev
 ```
+
+## Contributing
+
+Contributions are welcome and appreciated!
+
+To contribute:
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Run and test as needed.
+5. Open a pull request.
+ 
 
 <!-- License -->
 
