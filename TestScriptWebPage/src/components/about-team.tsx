@@ -41,13 +41,13 @@ const team: Member[] = [
     description: "Build & deliver reliable end-to-end features, while maintaining a positive & productive work enivornment for my team."
   },
   {
-    img: "/images/member4.jpg",
-    name: "Tucker Olsen",
-    role: "Full Stack Engineer | Product Manager",
-    github: "https://github.com/username4",
-    linkedin: "https://linkedin.com/in/username4",
-    email: "member4@email.com",
-    description: "Visionary PM aligning engineering with business goals."
+    img: '/images/member4.jpg',
+    name: 'Tucker Olsen',
+    role: 'Full Stack Engineer | Product Manager',
+    github: 'https://github.com/tuckerolsen',
+    linkedin: 'https://linkedin.com/in/tuckerolsen23',
+    email: 'Tucker.Olsen@tst-studio.com',
+    description: 'Visionary PM aligning engineering with business goals.',
   },
   {
     img: "/images/member5.png",
