@@ -34,7 +34,7 @@ const team: Member[] = [
   {
     img: "/images/member3.jpeg",
     name: "Laura Schlueter",
-    role: "Full Stack Engineer | Scrum Leader",
+    role: "Full Stack Software Engineer | Scrum Leader",
     github: "https://github.com/LauraSchlueter22",
     linkedin: "https://linkedin.com/in/lauraschlueter22",
     email: "Laura.Schlueter@ts-studio.com",
