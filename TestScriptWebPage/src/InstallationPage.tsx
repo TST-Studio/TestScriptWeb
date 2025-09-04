@@ -1,65 +1,10 @@
 import './InstallationPage.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
 
-type TestCase = {
-  id: number;
-  name: string;
-  status: 'pass' | 'fail' | 'pending' | 'changed';
-  body: string;
-  highlightLines?: number[];
-};
-
-const mockTests: TestCase[] = [
-  {
-    id: 1,
-    name: 'reverse() length preserved',
-    status: 'pass',
-    body: `expect(reverse([1,2,3]).length).toBe(3);`,
-  },
-  {
-    id: 2,
-    name: 'reverse() twice equals original',
-    status: 'fail',
-    body: `expect(reverse(reverse(arr))).toEqual(arr);`,
-    highlightLines: [1],
-  },
-  {
-    id: 3,
-    name: 'handles empty input',
-    status: 'pending',
-    body: `expect(reverse([])).toEqual([]);`,
-  },
-];
-
 const InstallationDetails: React.FC = () => {
   const navigate = useNavigate();
-  const [inputs, setInputs] = useState({
-    codeSample: '',
-    configJson: '',
-    notes: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setInputs((prev) => ({ ...prev, [name]: value }));
-  };
-  function DemoVideo() {
-    return (
-      <div className='demo-video'>
-        <iframe
-          width='560'
-          height='315'
-          src='https://www.youtube.com/embed/dQw4w9WgXcQ' // replace with your video
-          title='YouTube video player'
-          frameBorder='0'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          allowFullScreen
-        />
-      </div>
-    );
-  }
   return (
     <>
       <div className='hero'>
@@ -183,10 +128,10 @@ const InstallationDetails: React.FC = () => {
             height='315'
             src='https://www.youtube.com/embed/cSW7uQHNTJE?si=2OBw8i-JGx-5CJKT'
             title='YouTube video player'
-            frameborder='0'
+            frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            referrerpolicy='strict-origin-when-cross-origin'
-            allowfullscreen
+            referrerPolicy='strict-origin-when-cross-origin'
+            allowFullScreen
           ></iframe>
         </div>
       </div>
