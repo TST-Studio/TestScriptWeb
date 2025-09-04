@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import '/src/components/about-team.css';
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowLeft } from 'react-icons/fa';
+// about-team.tsx — clean business card grid with mission statement
 
+import React, { useEffect } from "react";
+import "/src/components/about-team.css";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+
+// Strict type for team members
 type Member = {
   img: string;
   name: string;
@@ -9,9 +12,9 @@ type Member = {
   github: string;
   linkedin: string;
   email: string;
-  description: string;
 };
 
+// Team data array — centralized for easy updates
 const team: Member[] = [
   {
     img: "/images/member1.png",
@@ -20,16 +23,14 @@ const team: Member[] = [
     github: "https://github.com/glenjarvis/",
     linkedin: "https://linkedin.com/in/glenjarvis",
     email: "Glen.Jarvis@tst-studio.com",
-    description: "Staff engineer with 10+ years experience building scalable systems."
   },
   {
     img: "/images/member2.jpeg",
     name: "Jonathan Jovel",
-    role: " Full Stack Software Engineer",
+    role: "Full Stack Software Engineer",
     github: "https://github.com/jalexjovel",
     linkedin: "https://linkedin.com/in/jonathan-jovel",
     email: "Jonathan.Jovel@tst-studio.com",
-    description: "Frontend wizard and React specialist with a love for UI/UX."
   },
   {
     img: "/images/member3.jpeg",
@@ -37,85 +38,86 @@ const team: Member[] = [
     role: "Full Stack Software Engineer | Scrum Leader",
     github: "https://github.com/LauraSchlueter22",
     linkedin: "https://linkedin.com/in/lauraschlueter22",
-    email: "Laura.Schlueter@ts-studio.com",
-    description: "Build & deliver reliable end-to-end features, while maintaining a positive & productive work enivornment for my team."
+    email: "Laura.Schlueter@tst-studio.com",
   },
   {
-    img: '/images/member4.jpg',
-    name: 'Tucker Olsen',
-    role: 'Full Stack Engineer | Product Manager',
-    github: 'https://github.com/tuckerolsen',
-    linkedin: 'https://linkedin.com/in/tuckerolsen23',
-    email: 'Tucker.Olsen@tst-studio.com',
-    description: 'Visionary PM aligning engineering with business goals.',
+    img: "/images/member4.jpg",
+    name: "Tucker Olsen",
+    role: "Full Stack Engineer | Product Manager",
+    github: "https://github.com/tuckerolsen",
+    linkedin: "https://linkedin.com/in/tuckerolsen23",
+    email: "Tucker.Olsen@tst-studio.com",
   },
   {
-    img: "/images/member5.png",
+    img: "/images/amanimg.png",
     name: "Aman Lally",
     role: "Full Stack Engineer | QA Tester",
-    github: "https://github.com/username5",
-    linkedin: "https://linkedin.com/in/username5",
-    email: "member5@email.com",
-    description: ""
-  }
+    github: "https://github.com/CodeRepeater",
+    linkedin: "https://linkedin.com/in/amanlally",
+    email: "Aman.Lally@tst-studio.com",
+  },
 ];
 
 const About: React.FC = () => {
-  const [detailIndex, setDetailIndex] = useState<number | null>(null);
-
-  // Fade-in observer
+  // IntersectionObserver → fade-in cards on scroll
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) =>
           entry.isIntersecting
-            ? entry.target.classList.add('show')
-            : entry.target.classList.remove('show')
+            ? entry.target.classList.add("show")
+            : entry.target.classList.remove("show")
         );
       },
       { threshold: 0.15 }
     );
-    const elements = document.querySelectorAll('.team-member');
+    const elements = document.querySelectorAll(".team-member");
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
 
   return (
     <div className="about-team">
+      {/* Heading Section */}
       <h1>About the Team</h1>
       <h2>Meet the Team</h2>
+      <p className="mission">
+        We are a dedicated team of full stack engineers, designers, and leaders
+        united by one mission: to deliver high-quality software solutions that
+        empower businesses and create positive impact. Collaboration,
+        creativity, and craftsmanship define our culture — and we bring that
+        energy into every project.
+      </p>
 
+      {/* Team Grid */}
       <div className="team-grid">
-        {team.map((member, index) => {
-          const isDetail = detailIndex === index;
-
-          return (
-            <div key={index} className="team-wrapper">
-              {!isDetail ? (
-                <div
-                  className="team-member hidden"
-                  onClick={() => setDetailIndex(index)}
-                >
-                  <img src={member.img} alt={member.name} className="avatar" />
-                  <h3>{member.name}</h3>
-                  <p>{member.role}</p>
-                  <p><FaGithub /> {member.github.replace('https://github.com/', '')}</p>
-                  <p><FaLinkedin /> {member.linkedin.replace('https://linkedin.com/in/', '')}</p>
-                  <p><FaEnvelope /> {member.email}</p>
-                </div>
-              ) : (
-                <div className="detail-view">
-                  <button className="back-button" onClick={() => setDetailIndex(null)}>
-                    <FaArrowLeft />
-                  </button>
-                  <h3>{member.name}</h3>
-                  <p className="detail-role">{member.role}</p>
-                  <p className="detail-description">{member.description}</p>
-                </div>
-              )}
-            </div>
-          );
-        })}
+        {team.map((member, index) => (
+          <div key={index} className="team-member hidden">
+            <img src={member.img} alt={member.name} className="avatar" />
+            <h3>{member.name}</h3>
+            <p>{member.role}</p>
+            <p>
+              <a href={member.github} target="_blank" rel="noopener noreferrer">
+                <FaGithub /> {member.github.replace("https://github.com/", "")}
+              </a>
+            </p>
+            <p>
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />{" "}
+                {member.linkedin.replace("https://linkedin.com/in/", "")}
+              </a>
+            </p>
+            <p>
+              <a href={`mailto:${member.email}`}>
+                <FaEnvelope /> {member.email}
+              </a>
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
