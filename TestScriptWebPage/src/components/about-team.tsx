@@ -16,10 +16,10 @@ const team: Member[] = [
   {
     img: "/images/member1.png",
     name: "Glen Jarvis",
-    role: "Full Stack Engineer | Mentor",
-    github: "https://github.com/username1",
-    linkedin: "https://linkedin.com/in/username1",
-    email: "member1@email.com",
+    role: "Full Stack Engineer",
+    github: "https://github.com/glenjarvis/",
+    linkedin: "https://linkedin.com/in/glenjarvis",
+    email: "Glen.Jarvis@tst-studio.com",
     description: "Staff engineer with 10+ years experience building scalable systems."
   },
   {
