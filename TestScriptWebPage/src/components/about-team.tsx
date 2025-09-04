@@ -45,7 +45,7 @@ const team: Member[] = [
     name: 'Tucker Olsen',
     role: 'Full Stack Engineer | Product Manager',
     github: 'https://github.com/tuckerolsen',
-    linkedin: 'www.linkedin.com/in/tuckerolsen23',
+    linkedin: 'https://linkedin.com/in/tuckerolsen23',
     email: 'Tucker.Olsen@tst-studio.com',
     description: 'Visionary PM aligning engineering with business goals.',
   },
