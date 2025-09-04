@@ -35,10 +35,10 @@ const team: Member[] = [
     img: "/images/member3.jpeg",
     name: "Laura Schlueter",
     role: "Full Stack Engineer | Scrum Leader",
-    github: "https://github.com/username3",
-    linkedin: "https://linkedin.com/in/username3",
-    email: "member3@email.com",
-    description: "Creative designer blending art and tech into unique user experiences."
+    github: "https://github.com/LauraSchlueter22",
+    linkedin: "https://linkedin.com/in/lauraschlueter22",
+    email: "Laura.Schlueter@ts-studio.com",
+    description: "Build & deliver reliable end-to-end features, while maintaining a positive & productive work enivornment for my team."
   },
   {
     img: "/images/member4.jpg",
