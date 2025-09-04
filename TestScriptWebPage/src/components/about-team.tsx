@@ -1,70 +1,124 @@
-// about-team.tsx full file with articulation
+import React, { useEffect, useState } from 'react';
+import '/src/components/about-team.css';
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowLeft } from 'react-icons/fa';
 
-import React, { useEffect, useState } from 'react'; // Import React, hooks
-import '/src/components/about-team.css'; // Import custom stylesheet
+type Member = {
+  img: string;
+  name: string;
+  role: string;
+  github: string;
+  linkedin: string;
+  email: string;
+  description: string;
+};
 
-const About: React.FC = () => { // Define About component
-  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Track expanded card index
+const team: Member[] = [
+  {
+    img: "/images/member1.png",
+    name: "Glen Jarvis",
+    role: "Full Stack Engineer | Mentor",
+    github: "https://github.com/username1",
+    linkedin: "https://linkedin.com/in/username1",
+    email: "member1@email.com",
+    description: "Staff engineer with 10+ years experience building scalable systems."
+  },
+  {
+    img: "/images/member2.jpeg",
+    name: "Jonathan Jovel",
+    role: " Full Stack Software Engineer",
+    github: "https://github.com/username2",
+    linkedin: "https://linkedin.com/in/username2",
+    email: "Jonathan.Jovel@ts-studio.com",
+    description: "Frontend wizard and React specialist with a love for UI/UX."
+  },
+  {
+    img: "/images/member3.jpeg",
+    name: "Laura Schlueter",
+    role: "Full Stack Engineer | Scrum Leader",
+    github: "https://github.com/username3",
+    linkedin: "https://linkedin.com/in/username3",
+    email: "member3@email.com",
+    description: "Creative designer blending art and tech into unique user experiences."
+  },
+  {
+    img: "/images/member4.jpg",
+    name: "Tucker Olsen",
+    role: "Full Stack Engineer | Product Manager",
+    github: "https://github.com/username4",
+    linkedin: "https://linkedin.com/in/username4",
+    email: "member4@email.com",
+    description: "Visionary PM aligning engineering with business goals."
+  },
+  {
+    img: "/images/member5.png",
+    name: "Aman Lally",
+    role: "Full Stack Engineer | QA Tester",
+    github: "https://github.com/username5",
+    linkedin: "https://linkedin.com/in/username5",
+    email: "member5@email.com",
+    description: ""
+  }
+];
 
-  // Fade-in on scroll animation
+const About: React.FC = () => {
+  const [detailIndex, setDetailIndex] = useState<number | null>(null);
+
+  // Fade-in observer
   useEffect(() => {
-    const observer = new IntersectionObserver( // Create observer
+    const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) { // Element visible
-            entry.target.classList.add('show'); // Add show class
-          } else {
-            entry.target.classList.remove('show'); // Remove when leaving
-          }
-        });
+        entries.forEach((entry) =>
+          entry.isIntersecting
+            ? entry.target.classList.add('show')
+            : entry.target.classList.remove('show')
+        );
       },
-      { threshold: 0.15 } // Trigger threshold
+      { threshold: 0.15 }
     );
-
-    const hiddenElements = document.querySelectorAll('.team-member'); // Select hidden elements
-    hiddenElements.forEach((el) => observer.observe(el)); // Observe each element
-    return () => observer.disconnect(); // Cleanup observer
+    const elements = document.querySelectorAll('.team-member');
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
-  const toggleCard = (index: number) => { // Toggle folder expansion
-    setActiveIndex(activeIndex === index ? null : index); // Toggle state O(1)
-  };
-
   return (
-    <div className="about-team"> {/* Root container */}
-      <h1>About the Team</h1> {/* Main heading */}
-      <h2>Meet the Team</h2> {/* Subheading */}
+    <div className="about-team">
+      <h1>About the Team</h1>
+      <h2>Meet the Team</h2>
 
-      <div className="team-grid"> {/* Team cards row */}
-        {[
-          { img: "/images/member1.png", name: "G", role: "Staff Engineer", email: "member1@email.com" },
-          { img: "/images/member2.jpeg", name: "Member Name 2", role: "Role", email: "member2@email.com" },
-          { img: "/images/member3.jpeg", name: "Member Name 3", role: "Role", email: "member3@email.com" },
-          { img: "/images/member4.jpg", name: "Member Name 4", role: "Role", email: "member4@email.com" },
-          { img: "/images/member5.png", name: "Member Name 5", role: "Role", email: "member5@email.com" }
-        ].map((member, index) => (
-          <div
-            key={index}
-            className={`team-member hidden ${activeIndex === index ? 'active' : ''}`}
-            onClick={() => toggleCard(index)}
-          >
-            <img src={member.img} alt={member.name} /> {/* Member image */}
-            <h3>{member.name}</h3> {/* Member name */}
-            {activeIndex === index && ( // Expanded folder
-              <div className="expanded-card">
-                <p><strong>{member.role}</strong></p> {/* Role */}
-                <div className="social-links">
-                  <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  <a href={`mailto:${member.email}`}>Email</a>
+      <div className="team-grid">
+        {team.map((member, index) => {
+          const isDetail = detailIndex === index;
+
+          return (
+            <div key={index} className="team-wrapper">
+              {!isDetail ? (
+                <div
+                  className="team-member hidden"
+                  onClick={() => setDetailIndex(index)}
+                >
+                  <img src={member.img} alt={member.name} className="avatar" />
+                  <h3>{member.name}</h3>
+                  <p>{member.role}</p>
+                  <p><FaGithub /> {member.github.replace('https://github.com/', '')}</p>
+                  <p><FaLinkedin /> {member.linkedin.replace('https://linkedin.com/in/', '')}</p>
+                  <p><FaEnvelope /> {member.email}</p>
                 </div>
-              </div>
-            )}
-          </div>
-        ))}
+              ) : (
+                <div className="detail-view">
+                  <button className="back-button" onClick={() => setDetailIndex(null)}>
+                    <FaArrowLeft />
+                  </button>
+                  <h3>{member.name}</h3>
+                  <p className="detail-role">{member.role}</p>
+                  <p className="detail-description">{member.description}</p>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export default About; // Export component
+export default About;
