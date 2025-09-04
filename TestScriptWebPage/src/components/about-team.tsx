@@ -16,7 +16,7 @@ const team: Member[] = [
   {
     img: "/images/member1.png",
     name: "Glen Jarvis",
-    role: "Full Stack Engineer",
+    role: "Full Stack Software Engineer",
     github: "https://github.com/glenjarvis/",
     linkedin: "https://linkedin.com/in/glenjarvis",
     email: "Glen.Jarvis@tst-studio.com",
