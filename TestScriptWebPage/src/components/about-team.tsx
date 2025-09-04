@@ -18,7 +18,7 @@ const team: Member[] = [
     name: "Glen Jarvis",
     role: "Full Stack Engineer",
     github: "https://github.com/glenjarvis/",
-    linkedin: "linkedin.com/in/glenjarvis",
+    linkedin: "https://linkedin.com/in/glenjarvis",
     email: "Glen.Jarvis@tst-studio.com",
     description: "Staff engineer with 10+ years experience building scalable systems."
   },
