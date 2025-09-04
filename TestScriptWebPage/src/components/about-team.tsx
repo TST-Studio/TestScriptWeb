@@ -25,9 +25,9 @@ const team: Member[] = [
   {
     img: "/images/member2.jpeg",
     name: "Jonathan Jovel",
-    role: " Full Stack Software Engineer",
-    github: "https://github.com/username2",
-    linkedin: "https://linkedin.com/in/username2",
+    role: " Full Stack Engineer",
+    github: "https://github.com/jalexjovel",
+    linkedin: "https://linkedin.com/in/jonathan-jovel",
     email: "Jonathan.Jovel@ts-studio.com",
     description: "Frontend wizard and React specialist with a love for UI/UX."
   },
