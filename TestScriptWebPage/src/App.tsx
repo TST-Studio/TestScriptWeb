@@ -74,14 +74,12 @@ function App() {
             extensions.
           </p>
           <h3 className='mission'>
-            Focused on empowering developers to build smarter, faster, and with
-            less friction. Our tools are designed to simplify workflows, remove
-            repetitive barriers, and unlock creativity. We believe in building
-            solutions that are intuitive, reliable, and made for developers by
-            developers.
+            Empowering developers to build with less friction. We simplify
+            workflows, remove barriers, and unlock creativity. Our solutions are
+            intuitive, reliable, and made for developers by developers.
           </h3>
         </section>
-        <div className='video-title'> UNIT TEST Generator: TestScript</div>
+        <div className='video-title'> UNIT TEST GENERATOR: TestScript</div>
         <div className='demo-video'>
           <video
             src='./images/Short-Demo.mp4' // put the file in /public/videos/

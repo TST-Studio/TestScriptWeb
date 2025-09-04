@@ -45,7 +45,21 @@ const InstallationDetails: React.FC = () => {
     const { name, value } = e.target;
     setInputs((prev) => ({ ...prev, [name]: value }));
   };
-
+  function DemoVideo() {
+    return (
+      <div className='demo-video'>
+        <iframe
+          width='560'
+          height='315'
+          src='https://www.youtube.com/embed/dQw4w9WgXcQ' // replace with your video
+          title='YouTube video player'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          allowFullScreen
+        />
+      </div>
+    );
+  }
   return (
     <>
       <div className='hero'>
@@ -62,142 +76,118 @@ const InstallationDetails: React.FC = () => {
           </ul>
         </nav>
 
-        <div className='installation-detail-container'>
-          <h2>TestScript Installation</h2>
+        <div className='testscript-info'>
+          <h2 className='testscript-title'>TestScript</h2>
+          <h3 className='testscript-description'>
+            Evaluates project code and quickly generates runnable, high-quality
+            Vitest tests with minimal effort, for a safer development
+            experience.
+          </h3>
+          <div className='tables-row'>
+            <div className='features-wrapper'>
+              <h2 className='product-name'>Key Features:</h2>
+              <table className='features-table'>
+                <tbody>
+                  <tr>
+                    <td>Repo-aware imports</td>
+                  </tr>
+                  <tr>
+                    <td>Works with NodeNext/ESM</td>
+                  </tr>
+                  <tr>
+                    <td>Supports React &amp; Express</td>
+                  </tr>
+                  <tr>
+                    <td>Multiple Persona leverage</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Post-process &amp; Self-heal to return runnable tests
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>CLI + Config (Current provider: OpenAI)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className='prereq-wrapper'>
+              <h2 className='product-name'>Prerequisites:</h2>
+              <table className='prereq-table'>
+                <tbody>
+                  <tr>
+                    <th>Runtime</th>
+                    <td>Node.js 18+ &amp; npm 9+</td>
+                  </tr>
+                  <tr>
+                    <th>Package type</th>
+                    <td>ESM</td>
+                  </tr>
+                  <tr>
+                    <th>TypeScript</th>
+                    <td>Installed</td>
+                  </tr>
+                  <tr>
+                    <th>Vitest</th>
+                    <td>Installed</td>
+                  </tr>
+                  <tr>
+                    <th>LLM provider</th>
+                    <td>API Key available</td>
+                  </tr>
+                  <tr>
+                    <th>Network</th>
+                    <td>Outbound HTTPS to LLM provider</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-          {/* INPUTS */}
-          <div className='inputs-grid'>
-            <label className='input-block'>
-              <span className='input-label'>Installation</span>
-              <textarea
-                name='codeSample'
-                className='long-input'
-                placeholder='npm install -g @tst-studio/tst'
-                value={inputs.codeSample}
-                onChange={handleChange}
-              />
-            </label>
+            <div className='steps-wrapper'>
+              <h2 className='product-name'>Steps:</h2>
+              {/* INPUTS */}
+              <div className='inputs-grid'>
+                <label className='input-block'>
+                  <span className='input-label'>{'1.) Installation'}</span>
+                  <p className='long-input'>npm install -g @tst-studio/tst</p>
+                </label>
 
-            <label className='input-block'>
-              <span className='input-label'>
-                Configuration: Add configuration file (tst.config.json)
-              </span>
-              <textarea
-                name='configJson'
-                className='long-input'
-                placeholder='tst configure --outFormat=sameLocation'
-                value={inputs.configJson}
-                onChange={handleChange}
-              />
-            </label>
+                <label className='input-block'>
+                  <span className='input-label'>
+                    {`2.) Configuration: Add configuration file (tst.config.json)`}
+                  </span>
+                  <p className='long-input'>
+                    {'tst configuration --outFormat=sameLocation'}
+                  </p>
+                </label>
 
-            <label className='input-block'>
-              <span className='input-label'>
-                Usage: Generate tests for a file
-              </span>
-              <textarea
-                name='notes'
-                className='long-input'
-                placeholder='tst generate < filename >'
-                value={inputs.notes}
-                onChange={handleChange}
-              />
-            </label>
+                <label className='input-block'>
+                  <span className='input-label'>
+                    {`3.) Usage: Generate tests for a file`}
+                  </span>
+                  <p className='long-input'>{'tst generate < filename >'}</p>
+                </label>
+                <label className='input-block'>
+                  <span className='input-label'>{'4.) API key'}</span>
+                  <p className='long-input'>
+                    {'API key is required for .env file'}
+                  </p>
+                </label>
+              </div>
+            </div>
           </div>
-
-          {/* TABLE */}
-          <div className='table-wrap'>
-            <table className='data-table'>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Step</th>
-                  <th>Command</th>
-                  <th>Description</th>
-                  <th>Status</th>
-                  <th>Notes</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Init</td>
-                  <td>npx tst init</td>
-                  <td>Scaffold config and folders</td>
-                  <td>Pending</td>
-                  <td>Creates meta + tests dir</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Generate</td>
-                  <td>npx tst gen</td>
-                  <td>Generate tests from TS function</td>
-                  <td>Pending</td>
-                  <td>Reads from stdin/file</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Watch</td>
-                  <td>npx tst watch</td>
-                  <td>Regen tests on refactors</td>
-                  <td>Pending</td>
-                  <td>AST-aware updates</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Check</td>
-                  <td>npx tst check</td>
-                  <td>Pre-commit sync & gaps</td>
-                  <td>Pending</td>
-                  <td>Blocks stale metas</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Docs</td>
-                  <td>open docs</td>
-                  <td>Open quick start guide</td>
-                  <td>Pending</td>
-                  <td>Local or web</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>CI</td>
-                  <td>tst ci</td>
-                  <td>CI mode summary outputs</td>
-                  <td>Pending</td>
-                  <td>PR-friendly report</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          {/* TEST CASES SECTION */}
-          <div className='tests-list'>
-            {mockTests.map((t) => (
-              <article key={t.id} className={`test-card ${t.status}`}>
-                <header className='test-card__head'>
-                  <span className='test-badge'>{t.status}</span>
-                  <h4 className='test-title'>{t.name}</h4>
-                </header>
-
-                <pre className='code'>
-                  {t.body.split('\n').map((line, i) => {
-                    const ln = i + 1;
-                    const hl = t.highlightLines?.includes(ln);
-                    return (
-                      <div
-                        key={i}
-                        className={`code-line ${hl ? 'line-attn' : ''}`}
-                      >
-                        <span className='ln'>{ln}</span>
-                        <span className='code-content'>{line}</span>
-                      </div>
-                    );
-                  })}
-                </pre>
-              </article>
-            ))}
-          </div>
+          <h2 className='testscript-installation'>Tutorial:</h2>
+          <iframe
+            className='demo-video'
+            width='560'
+            height='315'
+            src='https://www.youtube.com/embed/cSW7uQHNTJE?si=2OBw8i-JGx-5CJKT'
+            title='YouTube video player'
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+            referrerpolicy='strict-origin-when-cross-origin'
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </>
