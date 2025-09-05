@@ -18,8 +18,15 @@
 /* Base */
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    'Helvetica Neue', sans-serif;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    'Helvetica Neue',
+    sans-serif;
   background: linear-gradient(180deg, var(--bg) 0%, var(--prussian-blue) 100%);
   color: var(--text);
 }
@@ -56,7 +63,9 @@ body {
   border-radius: 6px;
   color: var(--muted);
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 .nav-links li:hover {
   background: rgba(251, 133, 0, 0.2);
@@ -90,10 +99,15 @@ body {
   font-size: 3rem;
   font-weight: 700;
   color: var(--orange);
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.778), -2px -2px 0 rgba(0, 0, 0, 0.778),
-    2px -2px 0 rgba(0, 0, 0, 0.778), -2px 2px 0 rgba(0, 0, 0, 0.778),
-    0px 2px 0 rgba(0, 0, 0, 0.778), 2px 0px 0 rgba(0, 0, 0, 0.778),
-    0px -2px 0 rgba(0, 0, 0, 0.778), -2px 0px 0 rgba(0, 0, 0, 0.778);
+  text-shadow:
+    2px 2px 0 rgba(0, 0, 0, 0.778),
+    -2px -2px 0 rgba(0, 0, 0, 0.778),
+    2px -2px 0 rgba(0, 0, 0, 0.778),
+    -2px 2px 0 rgba(0, 0, 0, 0.778),
+    0px 2px 0 rgba(0, 0, 0, 0.778),
+    2px 0px 0 rgba(0, 0, 0, 0.778),
+    0px -2px 0 rgba(0, 0, 0, 0.778),
+    -2px 0px 0 rgba(0, 0, 0, 0.778);
 }
 .tables-row {
   display: flex;
@@ -153,10 +167,15 @@ body {
 .steps-header {
   font-size: 2.3rem;
   color: var(--orange);
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.778), -2px -2px 0 rgba(0, 0, 0, 0.778),
-    2px -2px 0 rgba(0, 0, 0, 0.778), -2px 2px 0 rgba(0, 0, 0, 0.778),
-    0px 2px 0 rgba(0, 0, 0, 0.778), 2px 0px 0 rgba(0, 0, 0, 0.778),
-    0px -2px 0 rgba(0, 0, 0, 0.778), -2px 0px 0 rgba(0, 0, 0, 0.778);
+  text-shadow:
+    2px 2px 0 rgba(0, 0, 0, 0.778),
+    -2px -2px 0 rgba(0, 0, 0, 0.778),
+    2px -2px 0 rgba(0, 0, 0, 0.778),
+    -2px 2px 0 rgba(0, 0, 0, 0.778),
+    0px 2px 0 rgba(0, 0, 0, 0.778),
+    2px 0px 0 rgba(0, 0, 0, 0.778),
+    0px -2px 0 rgba(0, 0, 0, 0.778),
+    -2px 0px 0 rgba(0, 0, 0, 0.778);
 }
 
 /* INPUTS — Panel Base + Sky Blue Focus */
@@ -189,10 +208,15 @@ body {
   margin: 1rem 0 1rem;
   font-size: 3rem;
   color: var(--orange);
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.778), -2px -2px 0 rgba(0, 0, 0, 0.778),
-    2px -2px 0 rgba(0, 0, 0, 0.778), -2px 2px 0 rgba(0, 0, 0, 0.778),
-    0px 2px 0 rgba(0, 0, 0, 0.778), 2px 0px 0 rgba(0, 0, 0, 0.778),
-    0px -2px 0 rgba(0, 0, 0, 0.778), -2px 0px 0 rgba(0, 0, 0, 0.778);
+  text-shadow:
+    2px 2px 0 rgba(0, 0, 0, 0.778),
+    -2px -2px 0 rgba(0, 0, 0, 0.778),
+    2px -2px 0 rgba(0, 0, 0, 0.778),
+    -2px 2px 0 rgba(0, 0, 0, 0.778),
+    0px 2px 0 rgba(0, 0, 0, 0.778),
+    2px 0px 0 rgba(0, 0, 0, 0.778),
+    0px -2px 0 rgba(0, 0, 0, 0.778),
+    -2px 0px 0 rgba(0, 0, 0, 0.778);
 }
 .demo-video {
   position: relative;

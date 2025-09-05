@@ -45,7 +45,9 @@
   padding: 16px;
   width: 240px; /* Fixed width */
   min-height: 380px; /* Ensure consistent card height */
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
   opacity: 0; /* Start hidden */
   transform: translateY(40px); /* Slide-in offset */
   display: flex;
