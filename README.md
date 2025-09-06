@@ -65,7 +65,7 @@ This project is built with :
 ```bash
 git clone git@github.com:TST-Studio/TestScriptWeb.git
 
-cd TestScriptWeb/TestScriptWebPage
+cd TestScriptWebPage
 
 ```
 
