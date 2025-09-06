@@ -33,7 +33,7 @@
 **Tst Studio Website** is a website for the tool **TestScript**, an LLM-powered unit test generator CLI.
 It provides a clean and modern frontend to showcase the CLI, its features, and documentation in a developer-friendly way.
 
- <img src="TestScriptWebPage/public/images/website1.png" alt="website" width="%" height="auto" />
+ <img src="./public/images/website1.png" alt="website" width="%" height="auto" />
 
 <br />
 
