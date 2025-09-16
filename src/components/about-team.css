@@ -1,143 +1,168 @@
 .about-team {
-  /* Root container styles */
-  text-align: center; /* Center all text */
-  padding: 60px 20px; /* Space around content */
-  color: #e8eaf2; /* Default text color */
-  background: transparent; /* Transparent to show root bg */
-  min-height: 100vh; /* Full viewport height */
-  display: flex; /* Flex layout */
-  flex-direction: column; /* Stack vertically */
-  justify-content: flex-start; /* Start from top */
-  align-items: center; /* Center horizontally */
+  /* ROOT CONTAINER: controls the entire About section layout */
+  text-align: center; /* Horizontally center text content */
+  padding: 80px 20px; /* 80px vertical padding, 20px horizontal breathing room */
+  color: #e8eaf2; /* Default text color: soft bluish-gray for readability */
+  background: transparent; /* Transparent so parent background can show through */
+  min-height: 100vh; /* Forces section to fill at least full viewport height */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: flex-start; /* Aligns content to the top */
+  align-items: center; /* Horizontally centers content */
 }
 
 .about-team h1 {
-  /* Main heading */
-  font-size: 40px;
-  margin-bottom: 12px;
-  color: #ffb703; /* Bright gold accent */
-  text-shadow: 0 0 12px rgba(255, 183, 3, 0.5);
+  /* MAIN HEADING */
+  font-size: 42px; /* Large font for dominance */
+  margin-bottom: 16px; /* Space beneath heading before next element */
+  color: #ffb703; /* Gold accent color for importance */
+  text-shadow: 0 0 12px rgba(255, 183, 3, 0.5); /* Subtle glowing shadow aura */
 }
 
 .about-team h2 {
-  /* Subheading */
-  font-size: 22px;
-  margin-bottom: 40px;
-  color: #a7afc0; /* Muted accent */
+  /* SUBHEADING */
+  font-size: 24px; /* Slightly smaller than h1 for hierarchy */
+  margin-bottom: 32px; /* Space beneath subheading before mission text */
+  color: #a7afc0; /* Muted bluish-gray accent for balance */
+}
+
+.about-team .mission {
+  /* MISSION STATEMENT PARAGRAPH */
+  max-width: 900px; /* Constrains line length for readability */
+  margin: 0 auto 60px auto; /* Center horizontally + 60px bottom spacing before grid */
+  font-size: 16px; /* Standard readable size */
+  line-height: 1.6; /* Taller lines improve readability */
+  color: #cbd5e1; /* Softer gray tone for less eye strain */
 }
 
 .team-grid {
-  /* Grid of cards */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 24px;
-  width: 100%;
-  max-width: 1400px;
-  flex-wrap: wrap; /* Allow wrapping to prevent cutoff */
+  /* CONTAINER FOR TEAM CARDS */
+  display: flex; /* Enables flexbox */
+  flex-direction: row; /* Arrange cards in a row */
+  justify-content: center; /* Center all cards horizontally */
+  gap: 28px; /* Horizontal and vertical space between cards */
+  width: 100%; /* Full container width */
+  max-width: 1400px; /* Restrict maximum width for consistent layout */
+  flex-wrap: wrap; /* Allow cards to wrap onto new rows */
 }
 
 .team-member {
-  /* Team card container */
-  background: #151922;
-  border: 1px solid #252a36;
-  border-radius: 12px;
-  padding: 16px;
-  width: 240px; /* Fixed width */
-  min-height: 380px; /* Ensure consistent card height */
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
-  opacity: 0; /* Start hidden */
-  transform: translateY(40px); /* Slide-in offset */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  /* INDIVIDUAL TEAM CARD */
+  background: #151922; /* Dark card background */
+  border: 1px solid #252a36; /* Thin border for definition */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Internal padding for breathing space */
+  width: 250px; /* Fixed card width */
+  min-height: 400px; /* Ensures consistent card height */
+  transition: transform 0.3s ease, background 0.3s ease; /* Smooth hover animations */
+  opacity: 0; /* Start invisible (fade-in controlled via JS + .show) */
+  transform: translateY(40px); /* Start slightly shifted down */
+  display: flex; /* Flexbox for internal alignment */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: flex-start; /* Align items at the top */
 }
 
 .team-member.show {
-  /* Fade-in when triggered */
-  opacity: 1;
-  transform: translateY(0);
+  /* APPLIED WHEN ELEMENT ENTERS VIEWPORT (via IntersectionObserver) */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide back into natural position */
 }
 
 .team-member:hover {
-  transform: scale(1.05);
-  background: #1e2432;
+  /* CARD HOVER EFFECT */
+  transform: scale(1.05); /* Enlarge slightly for emphasis */
+  background: #1e2432; /* Darken background on hover */
 }
 
 .team-member img.avatar {
-  /* Profile images */
-  width: 100%;
-  height: 240px; /* Uniform image height */
-  object-fit: cover; /* Crop and fill */
-  object-position: top; /* Keep faces visible */
-  border-radius: 8px;
-  margin-bottom: 12px;
-  display: block;
-  transition: transform 0.3s ease;
+  /* AVATAR IMAGE STYLING */
+  width: 100%; /* Image fills card width */
+  height: 240px; /* Fixed uniform height */
+  object-fit: cover; /* Crop to fill container */
+  object-position: top; /* Keep face/top of image visible */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 16px; /* Space beneath image */
+  display: block; /* Ensure image respects block flow */
+  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
 
 .team-member:hover img.avatar {
-  transform: scale(1.03);
+  /* AVATAR HOVER ZOOM */
+  transform: scale(1.03); /* Slight zoom on hover */
 }
 
 .team-member h3 {
-  /* Member name */
-  font-size: 18px;
-  margin: 8px 0;
-  color: #8ecae6; /* Sky blue accent */
-  transition: color 0.3s ease;
-  text-align: center;
+  /* MEMBER NAME */
+  font-size: 20px; /* Larger than body text */
+  margin: 12px 0; /* Space above and below name */
+  color: #8ecae6; /* Sky blue color accent */
+  transition: color 0.3s ease; /* Smooth hover color change */
+  text-align: center; /* Center text alignment */
 }
 
 .team-member:hover h3 {
-  color: #ffb703;
+  /* NAME HOVER EFFECT */
+  color: #ffb703; /* Gold accent on hover */
 }
 
 .team-member p {
-  /* Role + links */
-  font-size: 14px;
-  color: #fb8500; /* Orange accent */
-  margin-bottom: 10px;
-  text-align: center;
+  /* ROLE + LINKS */
+  font-size: 15px; /* Slightly larger than small text */
+  color: #fb8500; /* Orange accent color */
+  margin-bottom: 12px; /* Space beneath each paragraph */
+  text-align: center; /* Center text alignment */
 }
 
 .team-member p a {
-  /* Links inside cards */
-  color: inherit; /* Inherit accent color */
-  text-decoration: none;
-  transition: color 0.3s ease;
+  /* LINKS INSIDE CARD */
+  color: inherit; /* Inherit parent text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth hover color animation */
 }
 
 .team-member p a:hover {
-  color: #ffb703; /* Gold on hover */
-  text-decoration: underline;
+  /* LINK HOVER EFFECT */
+  color: #ffb703; /* Gold accent on hover */
+  text-decoration: underline; /* Add underline for clarity */
 }
 
-/* RESPONSIVENESS */
+/* ---------------------- RESPONSIVE BREAKPOINTS ---------------------- */
+
 @media (max-width: 1200px) {
   .team-grid {
-    gap: 16px;
+    gap: 20px; /* Reduce spacing between cards */
   }
   .team-member {
-    width: 220px;
+    width: 220px; /* Narrower cards to fit more on row */
   }
 }
 
 @media (max-width: 900px) {
   .team-member {
-    width: 45%;
+    width: 45%; /* Cards occupy 45% of row width → 2 per row */
   }
 }
 
 @media (max-width: 600px) {
   .team-grid {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
   }
   .team-member {
-    width: 90%;
+    width: 90%; /* Card nearly full width */
+  }
+}
+
+/* ---------------------- FADE-IN ANIMATION ---------------------- */
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(-10px); /* Start slightly above final position */
+  }
+  to {
+    opacity: 1; /* Fade to visible */
+    transform: translateY(0); /* Slide to resting position */
   }
 }
