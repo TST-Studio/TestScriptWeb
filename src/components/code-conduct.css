@@ -1,0 +1,89 @@
+/* Code-conduct.css — TestScript Code of Conduct Styling */
+
+/* Root Container */
+.conduct-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg), var(--prussian-blue));
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar (inherits global style but scoped here for safety) */
+.conduct-navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--panel);
+  border-bottom: 0.05em solid var(--sky-blue);
+  padding: 0.875em 1.375em;
+  z-index: 20;
+}
+.nav-brand {
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  cursor: pointer;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+.nav-links li:hover {
+  color: var(--orange);
+}
+
+/* Main Container */
+.conduct-container {
+  max-width: 60rem;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Title + Intro */
+.conduct-title {
+  font-size: 2.5rem;
+  color: var(--yellow);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
+}
+.conduct-intro {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--sky-blue);
+}
+
+/* Sections */
+.conduct-section {
+  margin-bottom: 2.5rem;
+}
+.conduct-heading {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--orange);
+  text-shadow: 0 0 0.5rem rgba(251, 133, 0, 0.6);
+}
+.conduct-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+/* Links */
+a {
+  color: var(--sky-blue);
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--orange);
+}

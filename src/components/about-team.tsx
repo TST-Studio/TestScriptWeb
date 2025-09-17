@@ -95,7 +95,7 @@ const navLinks = [
   { name: 'Home', path: '/' }, // Root route
   { name: 'Installation', path: '/installation-page' }, // Installation guide page
   { name: 'Docs', path: '/docs' }, // Documentation page
-  { name: 'CLI', path: '/cli' }, // CLI tool page
+  { name: 'Conduct', path: '/conduct' }, // CLI tool page
   { name: 'Contact', path: '/contact' }, // Contact page
 ];
 

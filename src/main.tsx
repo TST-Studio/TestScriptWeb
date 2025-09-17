@@ -6,6 +6,7 @@ import App from './App.tsx';
 import InstallationDetails from './InstallationPage.tsx';
 import About from './components/about-team.tsx';
 import Contact from './components/Contact';
+import Conduct from './components/Code-conduct.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -15,6 +16,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/installation-page" element={<InstallationDetails />} />
         <Route path="/about-team" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/conduct" element={<Conduct />} />
+        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
