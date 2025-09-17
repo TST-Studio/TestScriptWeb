@@ -1,0 +1,111 @@
+/* Office-hours.css — TestScript Office Hours Styling */
+
+/* ---------------------- ROOT PAGE ---------------------- */
+.office-page {
+  min-height: 100vh; /* Page fills full viewport height */
+  background: linear-gradient(180deg, var(--bg), var(--prussian-blue));
+  /* Gradient background from brand dark → prussian blue */
+  color: var(--text); /* Default text color matches global theme */
+  display: flex; /* Flex container for vertical layout */
+  flex-direction: column; /* Stacks children vertically */
+}
+
+/* ---------------------- NAVBAR ---------------------- */
+.office-navbar {
+  position: sticky; /* Locks navbar to top while scrolling */
+  top: 0; /* Stick at very top */
+  display: flex; /* Horizontal flex for brand + links */
+  justify-content: space-between; /* Brand left, links right */
+  align-items: center; /* Vertically center elements */
+  background: var(--panel); /* Dark panel background */
+  border-bottom: 0.05em solid var(--sky-blue); /* Subtle accent line */
+  padding: 0.875em 1.375em; /* Internal spacing (top/bottom + sides) */
+  z-index: 20; /* Ensures navbar overlays content */
+}
+.nav-brand {
+  cursor: pointer; /* Pointer cursor → clickable logo */
+}
+.nav-links {
+  display: flex; /* Horizontal list of links */
+  gap: 1em; /* Space between links */
+  list-style: none; /* Remove bullets */
+  margin: 0; /* Reset margins */
+  padding: 0; /* Reset padding */
+}
+.nav-links li {
+  cursor: pointer; /* Links act clickable */
+  color: var(--muted); /* Neutral muted color by default */
+  transition: color 0.2s ease; /* Smooth hover color transition */
+}
+.nav-links li:hover {
+  color: var(--orange); /* Highlight link when hovered */
+}
+
+/* ---------------------- CONTENT CONTAINER ---------------------- */
+.office-container {
+  max-width: 60rem; /* Constrains content width */
+  margin: 3rem auto; /* Centers block with vertical spacing */
+  padding: 0 1.5rem; /* Horizontal padding for smaller screens */
+  text-align: center; /* Centers text inside */
+}
+
+/* ---------------------- TITLE + INTRO ---------------------- */
+.office-title {
+  font-size: 2.5rem; /* Large page title */
+  margin-bottom: 1rem; /* Space below title */
+  color: var(--yellow); /* Bright accent color */
+  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
+  /* Glow effect for emphasis */
+}
+.office-intro {
+  font-size: 1.125rem; /* Slightly larger than body */
+  color: var(--sky-blue); /* Accent blue for friendly tone */
+  margin-bottom: 2.5rem; /* Space before table */
+}
+
+/* ---------------------- HOURS TABLE ---------------------- */
+.office-table-wrapper {
+  overflow-x: auto; /* Horizontal scroll safeguard on small screens */
+}
+.office-table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Collapse cell borders */
+  margin: 0 auto 2.5rem; /* Center table with bottom margin */
+  background: var(--panel); /* Dark background panel */
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 234, 255, 0.3);
+  /* Soft cyan glow shadow */
+}
+.office-table th,
+.office-table td {
+  padding: 1rem; /* Equal padding for readability */
+  text-align: center; /* Center text in cells */
+  border-bottom: 0.05em solid var(--border); /* Subtle horizontal dividers */
+}
+.office-table th {
+  font-size: 1.25rem; /* Larger, bold header */
+  font-weight: 700; /* Emphasized weight */
+  color: var(--orange); /* Highlighted header color */
+}
+.office-table td {
+  font-size: 1rem; /* Normal body size */
+  color: var(--text); /* Standard text color */
+}
+.office-closed td {
+  color: #888; /* Gray out closed days */
+  font-style: italic; /* Italicized for distinction */
+}
+
+/* ---------------------- FOOTER ---------------------- */
+.office-footer {
+  font-size: 1rem; /* Standard paragraph size */
+  margin-top: 2rem; /* Space above footer note */
+  color: var(--muted); /* Subtle muted color */
+}
+.office-footer a {
+  color: var(--sky-blue); /* Accent color for links */
+  text-decoration: underline; /* Underline for clarity */
+}
+.office-footer a:hover {
+  color: var(--orange); /* Hover → bright orange highlight */
+}

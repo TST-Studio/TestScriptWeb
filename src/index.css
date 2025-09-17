@@ -1,7 +1,25 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Default font stack applied globally.
+     - system-ui → native OS UI font (fast + clean).
+     - Avenir → modern geometric fallback.
+     - Helvetica / Arial → classic sans-serif backups.
+     - sans-serif → generic fallback to ensure consistency. */
+
   color-scheme: light dark;
+  /* Informs browser of both light + dark support.
+     Enables automatic form controls, scrollbars, and UI components
+     to adapt between light/dark themes seamlessly. */
+
   text-rendering: optimizeLegibility;
+  /* Activates advanced kerning + ligatures.
+     Optimizes readability on body text and headers. */
+
   -webkit-font-smoothing: antialiased;
+  /* WebKit (Safari/Chrome) hinting for smoother, crisper fonts. */
+
   -moz-osx-font-smoothing: grayscale;
+  /* Firefox/macOS-specific smoothing.
+     Uses grayscale anti-aliasing instead of subpixel, making text
+     appear sharper and reducing color fringing on Retina displays. */
 }

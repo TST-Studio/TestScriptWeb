@@ -1,117 +1,121 @@
 .hero {
-  position: relative;
-  isolation: isolate; /* keeps z-index sane */
-  min-height: 100svh; /* see step 2 */
-  display: grid;
-  /* place-items: center; */
-  padding: clamp(6rem, 2vh, 8rem) 1.5rem 4rem; /* room for header and content */
-  /* text-align: center; */
+  position: relative; /* Container anchors overlay (::before) */
+  isolation: isolate; /* Prevents child z-index leaks */
+  min-height: 100svh; /* Full screen height using viewport units */
+  display: grid; /* Grid allows centering/flexibility */
+  /* place-items: center; */ /* Optional centering, currently disabled */
+  padding: clamp(6rem, 2vh, 8rem) 1.5rem 4rem;
+  /* Top padding scales responsively, side fixed, bottom 4rem */
+  /* text-align: center; */ /* Text alignment, off for flexibility */
   background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  /* Hero background image */
+  background-size: cover; /* Image covers container fully */
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-position: center; /* Keeps focus center */
 }
-/*Overlay for readability */
+/* Overlay for readability */
 .hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-
+  content: ''; /* Empty element overlay */
+  position: absolute; /* Covers hero container */
+  inset: 0; /* Full coverage (top/right/bottom/left = 0) */
+  z-index: -1; /* Sits behind hero content */
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.35),
     rgba(0, 0, 0, 0.15)
-  );
+  ); /* Gradient fade for readability */
 }
 
 .title {
-  display: grid;
-  place-items: center;
-  margin: 1rem 0 0.01rem;
-  color: #fb8500;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+  display: grid; /* Centers inside itself */
+  place-items: center; /* Horizontal + vertical centering */
+  margin: 1rem 0 0.01rem; /* Small spacing */
+  color: #fb8500; /* Bright orange accent */
+  font-weight: 800; /* Heavy bold */
+  letter-spacing: -0.04em; /* Tighten letter spacing */
+  line-height: 1.1; /* Compact lines */
   font-size: clamp(2.25rem, 6vw, 8rem);
+  /* Responsive size: min 2.25rem → max 8rem */
 }
 
 .description {
   display: grid;
   place-items: center;
-  margin: 1rem 0 3rem;
-  width: 100%;
-  color: #ffb703;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 0;
+  margin: 1rem 0 3rem; /* Space below title */
+  width: 100%; /* Span full width */
+  color: #ffb703; /* Yellow text */
+  font-weight: 600; /* Semi-bold */
+  letter-spacing: -0.02em; /* Slightly condensed */
+  line-height: 0; /* Tight line spacing */
   font-size: clamp(1.125rem, 2.5vw, 2.5rem);
+  /* Responsive scaling */
 }
 
 .mission {
-  display: flex;
-  justify-content: center;
-  font-size: 1.25rem;
-  color: #ffffffba;
-  font-weight: 800;
-  margin: 1rem 0 0rem;
-  width: 70%;
-  padding: 1%;
-  font-size: 1.45rem;
-  line-height: 1.6; /* <-- prevents line overlap */
-  text-align: center; /* or 'center' if you prefer */
-  text-indent: 2rem;
-  border-radius: 3rem;
+  display: flex; /* Flex container for content */
+  justify-content: center; /* Center horizontally */
+  font-size: 1.25rem; /* Base font */
+  color: #ffffffba; /* Semi-transparent white */
+  font-weight: 800; /* Bold */
+  margin: 1rem 0 0rem; /* Top spacing only */
+  width: 70%; /* Constrained width for readability */
+  padding: 1%; /* Inner padding */
+  font-size: 1.45rem; /* Override to larger font */
+  line-height: 1.6; /* Prevents overlapping lines */
+  text-align: center; /* Centers multi-line text */
+  text-indent: 2rem; /* Indented first line */
+  border-radius: 3rem; /* Rounded container */
   box-shadow: rgba(227, 212, 3, 0.902) 0em 0.625em 1.25em;
+  /* Gold glow for emphasis */
 }
 
 .video-title {
   display: flex;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #ffffff;
-  font-weight: 800;
-  margin-left: 10rem;
-  margin: 5rem 0 0.01rem;
+  justify-content: center; /* Center title */
+  font-size: 1.5rem; /* Medium emphasis */
+  color: #ffffff; /* White text */
+  font-weight: 800; /* Bold */
+  margin-left: 10rem; /* Offset left */
+  margin: 5rem 0 0.01rem; /* Large top margin */
 }
 
-/* Box sizing rules */
+/* Box sizing reset */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Consistent sizing model */
 }
 html,
 body {
-  min-height: 100%;
+  min-height: 100%; /* Ensure full height baseline */
 }
 body {
-  margin: 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  margin: 0; /* Remove default margins */
+  text-rendering: optimizeLegibility; /* Better text rendering */
+  -webkit-font-smoothing: antialiased; /* Smooth fonts */
 }
 img,
 picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+  display: block; /* Remove inline gaps */
+  max-width: 100%; /* Prevent overflow */
 }
 input,
 button,
 textarea,
 select {
-  font: inherit;
+  font: inherit; /* Match font with parent */
 }
 
 .demo-video {
   display: grid;
-  place-items: center; /* centers content */
+  place-items: center; /* Center video */
   margin: 1rem 0 0.1rem;
-  width: 100%;
-  max-width: 60em; /* optional: keep it from getting too wide */
-  margin-inline: auto; /* center the block itself */
+  width: 100%; /* Fill container */
+  max-width: 60em; /* Constrain width */
+  margin-inline: auto; /* Center horizontally */
   position: relative;
 }
 /* Native <video> should scale nicely */
@@ -119,139 +123,135 @@ select {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0.75em;
+  border-radius: 0.75em; /* Rounded corners */
   box-shadow: #0095ff77 0em 0.625em 1.25em;
+  /* Blue glow shadow */
 }
 @media (prefers-color-scheme: dark) {
   .demo-video video {
     filter: invert(1) grayscale(1);
+    /* Optional inversion for contrast in dark mode */
   }
 }
 
 /* Top bar with buttons */
 .site-header {
-  position: fixed; /* or fixed if you want it always visible */
+  position: fixed; /* Always visible on scroll */
   top: 0;
-  inset-inline: 0; /* logical left/right */
-  z-index: 1000;
-  background: transparent; /* or a blur/glass if you like */
+  inset-inline: 0; /* Logical left+right sides */
+  z-index: 1000; /* Highest stacking context */
+  background: transparent; /* Transparent base */
 }
 
 .header-inner {
-  max-width: 75em;
-  margin-inline: auto;
+  max-width: 75em; /* Constrain header */
+  margin-inline: auto; /* Center horizontally */
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: clamp(1rem, 8vw, 4rem);
+  justify-content: space-between; /* Spread content */
+  gap: clamp(1rem, 8vw, 4rem); /* Responsive gap */
 }
 
-/* reset + pill styles (stronger selector so it overrides your global button rules) */
+/* Pill button style */
 button.pill-btn {
-  border: none;
+  border: none; /* No border */
   background: transparent;
   display: flex;
   align-items: center;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10rem;
-  color: #ffffff;
-  text-transform: uppercase;
+  padding: 0.75rem 1.25rem; /* Comfortable padding */
+  border-radius: 10rem; /* Fully rounded pill */
+  color: #ffffff; /* White text */
+  text-transform: uppercase; /* Uppercase letters */
   font-size: 1rem;
-  letter-spacing: 0.15rem;
-  transition: all 0.3s;
+  letter-spacing: 0.15rem; /* Spaced letters */
+  transition: all 0.3s; /* Smooth hover effects */
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Clip hover background */
   z-index: 1;
   cursor: pointer;
 }
-
-/* hover sweep layer */
+/* Hover sweep layer */
 button.pill-btn:before {
-  width: 0;
+  width: 0; /* Hidden by default */
   left: 0;
   top: 0;
-  content: '';
+  content: ''; /* Empty element */
   position: absolute;
-  height: 100%;
-  background-color: #0e7a95;
+  height: 100%; /* Full height background sweep */
+  background-color: #0e7a95; /* Cyan hover color */
   transition: all 0.3s;
-  border-radius: 10rem;
+  border-radius: 10rem; /* Match pill shape */
   z-index: -1;
 }
 button.pill-btn:hover::before {
-  width: 100%;
+  width: 100%; /* Expands to full pill width */
 }
 
 .read-the-docs {
-  color: #f5f5f5;
+  color: #f5f5f5; /* Light gray link */
 }
 
+/* ---------------------- COMMUNITY SECTION ---------------------- */
 .community {
   position: relative;
   display: block;
-  margin-top: 1rem;
-  padding: 10rem 1rem 1rem;
-  --bg1: #ffdbb4;
+  margin-top: 1rem; /* Space from hero */
+  padding: 10rem 1rem 1rem; /* Large top spacing */
+  --bg1: #ffdbb4; /* Background accents */
   --bg2: #ffd1a6;
   --bg3: #fff8ee;
-  --ring: rgba(227, 212, 3, 0.902);
-  --card-bg: rgba(255, 255, 255, 0.85);
-
-  --card-border: rgba(0, 0, 0, 0.08);
-  --title-grad: linear-gradient(#0602ff, #219ebc);
+  --ring: rgba(227, 212, 3, 0.902); /* Shadow glow */
+  --card-bg: rgba(255, 255, 255, 0.85); /* Card background */
+  --card-border: rgba(0, 0, 0, 0.08); /* Card borders */
+  --title-grad: linear-gradient(#0602ff, #219ebc); /* Gradient heading */
 }
 @media (prefers-color-scheme: dark) {
   .community {
     position: sticky;
     margin-top: 1rem;
     padding: 3rem 1.5rem;
-    --bg1: #ffdbb4;
-    --bg2: #ffd1a6;
-    --bg3: #fff8ee;
-    --ring: rgba(227, 212, 3, 0.902);
-    --card-bg: rgba(0, 0, 0, 0.85);
+    --card-bg: rgba(0, 0, 0, 0.85); /* Dark theme card background */
     --card-border: rgba(0, 0, 0, 0.08);
     --title-grad: linear-gradient(#0602ff, #219ebc);
   }
 }
-
 .community__inner {
-  max-width: 68.75em;
-  margin: 0 auto;
+  max-width: 68.75em; /* Content width */
+  margin: 0 auto; /* Centered */
 }
 
-/* Responsive grid: 3 columns on desktop -> 2 -> 1 */
+/* Responsive grid */
 .community__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.25em, 1fr));
-  gap: 1.25em;
+  /* Auto-fit adjusts # of cards per row */
+  gap: 1.25em; /* Space between cards */
 }
 
 /* Card */
 .card {
   position: relative;
   display: grid;
-  grid-template-columns: 2.75em 1fr;
-  gap: 0.875em;
+  grid-template-columns: 2.75em 1fr; /* Icon left, text right */
+  gap: 0.875em; /* Space between icon and text */
   align-items: start;
   padding: 1.375em;
   border-radius: 0.875em;
   background: var(--card-bg);
   border: 0.0625em solid var(--card-border);
   box-shadow: 0 0.375em 1.25em var(--ring);
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* No link underline */
+  color: inherit; /* Inherit text color */
   transition:
     transform 0.18s ease,
     box-shadow 0.18s ease,
     border-color 0.18s ease;
 }
-
 .card:hover {
-  transform: translateY(-0.125em);
-  box-shadow: 0 0.625em 1.875em var(--ring);
-  border-color: rgba(99, 102, 241, 0.35);
+  transform: translateY(-0.125em); /* Lift effect */
+  box-shadow: 0 0.625em 1.875em var(--ring); /* Stronger glow */
+  border-color: rgba(99, 102, 241, 0.35); /* Blue highlight */
 }
 
 /* Icon bubble */
@@ -266,14 +266,14 @@ button.pill-btn:hover::before {
 .card__icon svg {
   width: 1.375em;
   height: 1.375em;
-  fill: #b25f00;
+  fill: #b25f00; /* Brownish icon fill */
 }
 @media (prefers-color-scheme: dark) {
   .card__icon {
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(99, 102, 241, 0.15); /* Dark theme bubble */
   }
   .card__icon svg {
-    fill: #e5e7eb;
+    fill: #e5e7eb; /* Light icon in dark */
   }
 }
 
@@ -282,17 +282,17 @@ button.pill-btn:hover::before {
   margin: 0 0 0.375em;
   font-weight: 700;
   font-size: 1.05rem;
-  color: rgb(191, 131, 0);
+  color: rgb(191, 131, 0); /* Gold accent */
 }
 .card__desc {
   margin: 0;
-  color: #000000;
-  line-height: 1.35;
+  color: #000000; /* Black default */
+  line-height: 1.35; /* Spacing for readability */
   font-size: 0.95rem;
 }
 @media (prefers-color-scheme: dark) {
   .card__desc {
-    color: #c7cbd6;
+    color: #c7cbd6; /* Light gray in dark */
   }
 }
 
@@ -301,13 +301,12 @@ button.pill-btn:hover::before {
   position: absolute;
   top: 0.125em;
   right: 0.75em;
-  opacity: 0.65;
+  opacity: 0.65; /* Subtle by default */
   transition:
     opacity 0.18s ease,
     transform 0.18s ease;
 }
-
 .card:hover .card__external {
-  opacity: 1;
-  transform: translate(0.125em, -0.125em);
+  opacity: 1; /* Fully visible */
+  transform: translate(0.125em, -0.125em); /* Nudge up-right */
 }
