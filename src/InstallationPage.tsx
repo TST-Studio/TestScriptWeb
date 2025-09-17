@@ -192,7 +192,7 @@ const InstallationDetails: React.FC = () => {
           {/* ---------- VIDEO DEMO ---------- */}
 
           <iframe
-            className="demo-video"
+            className="tutorial-video"
             src="https://www.youtube.com/embed/cSW7uQHNTJE?si=2OBw8i-JGx-5CJKT"
             title="YouTube video player"
             frameBorder="0"
