@@ -1,89 +1,151 @@
 /* Code-conduct.css — TestScript Code of Conduct Styling */
+/* This stylesheet applies theme-specific styles to the Code of Conduct page. */
 
 /* Root Container */
 .conduct-page {
   min-height: 100vh;
+  /* Ensures page covers full viewport height. */
+
   background: linear-gradient(180deg, var(--bg), var(--prussian-blue));
+  /* Dark gradient background, flowing from top (bg) to bottom (prussian-blue). */
+
   color: var(--text);
+  /* Default text color set from global theme variable. */
+
   display: flex;
   flex-direction: column;
+  /* Layout uses vertical flexbox → stacks navbar on top, content below. */
 }
 
 /* Navbar (inherits global style but scoped here for safety) */
 .conduct-navbar {
   position: sticky;
   top: 0;
+  /* Navbar sticks to top when scrolling. */
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* Flexbox → evenly spaces logo and links horizontally, vertically centers them. */
+
   background: var(--panel);
+  /* Dark panel background for navbar. */
+
   border-bottom: 0.05em solid var(--sky-blue);
+  /* Thin cyan border under navbar for separation. */
+
   padding: 0.875em 1.375em;
+  /* Vertical and horizontal padding around navbar items. */
+
   z-index: 20;
+  /* Ensures navbar appears above content layers. */
 }
 .nav-brand {
   cursor: pointer;
+  /* Makes logo clickable. */
 }
 .nav-links {
   display: flex;
   gap: 1em;
+  /* Flex row → spaces out nav items equally with 1em gap. */
+
   list-style: none;
   margin: 0;
   padding: 0;
+  /* Resets default <ul> styling. */
 }
 .nav-links li {
   cursor: pointer;
   color: var(--muted);
+  /* Default muted text for inactive links. */
+
   transition: color 0.2s ease;
+  /* Smooth color change on hover. */
 }
 .nav-links li:hover {
   color: var(--orange);
+  /* Highlight link with orange glow when hovered. */
 }
 
 /* Main Container */
 .conduct-container {
   max-width: 60rem;
+  /* Content capped at 960px for readability. */
+
   margin: 3rem auto;
+  /* Centers content horizontally, adds top/bottom margin spacing. */
+
   padding: 0 1.5rem;
+  /* Side padding → ensures text doesn’t touch viewport edges. */
 }
 
 /* Title + Intro */
 .conduct-title {
   font-size: 2.5rem;
+  /* Large heading size for prominence. */
+
   color: var(--yellow);
+  /* Glowing yellow accent from theme. */
+
   text-align: center;
   margin-bottom: 1.5rem;
+  /* Centers title and adds spacing below. */
+
   text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
+  /* Yellow glow behind title for emphasis. */
 }
 .conduct-intro {
   font-size: 1.125rem;
+  /* Slightly larger than body text for importance. */
+
   text-align: center;
   margin-bottom: 3rem;
+  /* Centers intro paragraph and adds generous spacing. */
+
   color: var(--sky-blue);
+  /* Uses cyan to contrast title’s yellow and draw reader’s eye. */
 }
 
 /* Sections */
 .conduct-section {
   margin-bottom: 2.5rem;
+  /* Vertical spacing between sections. */
 }
 .conduct-heading {
   font-size: 1.75rem;
+  /* Subheading size for each section. */
+
   margin-bottom: 1rem;
+  /* Space below heading before content starts. */
+
   color: var(--orange);
+  /* Orange heading to separate from main title. */
+
   text-shadow: 0 0 0.5rem rgba(251, 133, 0, 0.6);
+  /* Adds orange glow for visual emphasis. */
 }
 .conduct-list {
   list-style: disc;
+  /* Bullet points for readability. */
+
   padding-left: 1.5rem;
+  /* Indentation for list alignment. */
+
   line-height: 1.6;
+  /* Spacing between lines for readability. */
+
   color: var(--text);
+  /* Default theme text color. */
 }
 
 /* Links */
 a {
   color: var(--sky-blue);
+  /* Default cyan links. */
   text-decoration: underline;
+  /* Clear underline so links are visually obvious. */
 }
 a:hover {
   color: var(--orange);
+  /* Hover state switches cyan → orange. */
 }

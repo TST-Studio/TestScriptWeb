@@ -1,13 +1,35 @@
 <!doctype html>
 <html lang="en">
+  <!-- DOCTYPE declares HTML5 standard. Ensures modern parsing rules are applied.
+       lang="en" specifies default language (English) for accessibility + SEO. -->
+
   <head>
     <meta charset="UTF-8" />
+    <!-- Declares UTF-8 encoding → universal character support (letters, emojis, symbols). -->
+
     <link rel="icon" href="/images/favicon.png" type="image/png" />
+    <!-- Favicon for browser tabs/bookmarks.
+         href → path to favicon image.
+         type="image/png" → MIME type, ensures proper recognition. -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Sets responsive scaling:
+         - width=device-width → matches screen width.
+         - initial-scale=1.0 → 100% zoom by default.
+         Vital for mobile responsiveness. -->
+
     <title>Tst Studios.</title>
+    <!-- Title shown in browser tab + search results. -->
   </head>
+
   <body>
     <div id="root"></div>
+    <!-- Root DOM node where React mounts entire application.
+         ReactDOM.createRoot() in main.tsx attaches to this element. -->
+
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Script entrypoint for app.
+         type="module" → modern ES module support.
+         src="/src/main.tsx" → boots React code compiled by Vite. -->
   </body>
 </html>
