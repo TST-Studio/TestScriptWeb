@@ -1,24 +1,24 @@
 :root {
   /* Core Brand Dark */
-  --bg: #0f1115;
-  --panel: #151922;
-  --prussian-blue: #023047;
+  --bg: #0f1115;                /* Deep background base */
+  --panel: #151922;             /* Panel background for nav + cards */
+  --prussian-blue: #023047;     /* Accent dark-blue gradient tone */
 
   /* Accent Flames */
-  --sky-blue: #8ecae6;
-  --orange: #fb8500;
-  --yellow: #ffb703;
+  --sky-blue: #8ecae6;          /* Neon cyan glow accent */
+  --orange: #fb8500;            /* Bright orange accent for hover */
+  --yellow: #ffb703;            /* Warm yellow highlight */
 
   /* Text + Neutrals */
-  --text: #e8eaf2;
-  --muted: #a7afc0;
-  --border: #252a36;
+  --text: #e8eaf2;              /* Default text color (light gray) */
+  --muted: #a7afc0;             /* Muted gray for secondary nav items */
+  --border: #252a36;            /* Border line color */
 }
 
 /* Base */
 body {
-  margin: 0;
-  font-family:
+  margin: 0; /* Reset default margin */
+  font-family: /* Font stack for cross-platform consistency */
     Inter,
     system-ui,
     -apple-system,
@@ -28,78 +28,80 @@ body {
     'Helvetica Neue',
     sans-serif;
   background: linear-gradient(180deg, var(--bg) 0%, var(--prussian-blue) 100%);
-  color: var(--text);
+  /* Vertical gradient background: black → dark blue */
+  color: var(--text); /* Default text color applied */
 }
 
 /* NAVBAR — Dark Base + Sky Blue Glow */
 .navbar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.875em 1.375em;
-  background: var(--panel);
-  border-bottom: 0.05em solid var(--sky-blue);
-  box-shadow: 0 0.05em 0.375em rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  position: sticky;                  /* Navbar sticks to top on scroll */
+  top: 0;                            /* Locked to top edge */
+  display: flex;                     /* Flexbox for layout */
+  align-items: center;               /* Align items vertically */
+  justify-content: space-between;    /* Brand left, links right */
+  padding: 0.875em 1.375em;          /* Vertical + horizontal spacing */
+  background: var(--panel);          /* Dark panel background */
+  border-bottom: 0.05em solid var(--sky-blue); /* Cyan bottom border */
+  box-shadow: 0 0.05em 0.375em rgba(0, 0, 0, 0.5); /* Subtle shadow depth */
+  z-index: 10;                       /* Stays above page elements */
 }
 .nav-brand {
-  font-weight: 800;
-  font-size: 1.05em;
-  color: var(--sky-blue);
-  text-shadow: 0 0 0.5em rgba(142, 202, 230, 0.6);
-  cursor: pointer;
+  font-weight: 800; /* Heavy bold brand text */
+  font-size: 1.05em; /* Slightly larger than body text */
+  color: var(--sky-blue); /* Cyan branding color */
+  text-shadow: 0 0 0.5em rgba(142, 202, 230, 0.6); /* Glowing cyan aura */
+  cursor: pointer; /* Pointer cursor to indicate clickable */
 }
 .nav-links {
-  display: flex;
-  gap: 1.05em;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex; /* Horizontal flex layout for links */
+  gap: 1.05em;   /* Space between nav items */
+  list-style: none; /* Remove default bullets */
+  margin: 0; /* Remove default UL margin */
+  padding: 0; /* Remove default UL padding */
 }
 .nav-links li {
-  padding: 0.5em 0.75em;
-  border-radius: 0.375em;
-  color: var(--muted);
-  cursor: pointer;
+  padding: 0.5em 0.75em; /* Inner clickable area */
+  border-radius: 0.375em; /* Rounded corners */
+  color: var(--muted); /* Muted text until hover */
+  cursor: pointer; /* Hand cursor on hover */
   transition:
-    background 0.2s ease,
-    color 0.2s ease;
+    background 0.2s ease, /* Smooth background change */
+    color 0.2s ease;      /* Smooth color change */
 }
 .nav-links li:hover {
-  background: rgba(251, 133, 0, 0.2);
-  color: var(--orange);
+  background: rgba(251, 133, 0, 0.2); /* Orange background overlay */
+  color: var(--orange); /* Orange text highlight */
 }
+
 .testscript-title {
-  margin: 0.5em 0 1.375em;
-  font-size: 4rem;
-  font-weight: 700;
-  color: rgb(25, 163, 255);
-  text-shadow: 0em 0.0625em 0.0625em rgb(225, 255, 0);
+  margin: 0.5em 0 1.375em; /* Top margin, more bottom spacing */
+  font-size: 4rem; /* Very large title font */
+  font-weight: 700; /* Heavy bold title */
+  color: rgb(25, 163, 255); /* Bright blue text */
+  text-shadow: 0em 0.0625em 0.0625em rgb(225, 255, 0); /* Yellow glow shadow */
 }
 .testscript-description {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.872);
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  border-radius: 0.625em;
-  color: rgb(0, 174, 255);
-  text-shadow: 0em 0.0425em 0.04em white;
+  font-size: 1.5rem; /* Medium-large subtitle */
+  font-weight: 500; /* Medium weight */
+  line-height: 1.4; /* Comfortable spacing */
+  color: rgba(255, 255, 255, 0.872); /* Semi-white text */
+  padding: 0.5rem 0.75rem; /* Inner spacing around text */
+  text-align: center; /* Centered text */
+  border-radius: 0.625em; /* Soft rounded corners */
+  color: rgb(0, 174, 255); /* Override to cyan-blue text */
+  text-shadow: 0em 0.0425em 0.04em white; /* Subtle white glow */
 }
 .testscript-title,
 .testscript-description {
-  display: flex;
-  justify-content: center;
+  display: flex; /* Flex for alignment */
+  justify-content: center; /* Center horizontally */
 }
 
 .product-name {
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgba(227, 212, 3, 0.902);
-  text-shadow:
+  font-size: 3rem; /* Large section titles */
+  font-weight: 700; /* Bold */
+  color: rgba(227, 212, 3, 0.902); /* Gold text */
+  text-shadow: /* Heavy dark shadow for bold look */
     0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
     -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
     0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
@@ -110,64 +112,64 @@ body {
     -0.05em 0em 0 rgba(0, 0, 0, 0.778);
 }
 .tables-row {
-  display: flex;
-  align-items: flex-start; /* align tops of the two boxes */
-  gap: 4rem; /* space between tables */
-  flex-wrap: wrap; /* wrap on small screens */
+  display: flex; /* Flex container for columns */
+  align-items: flex-start; /* Align table tops */
+  gap: 4rem; /* Space between columns */
+  flex-wrap: wrap; /* Wrap to next row on small screens */
 }
 .features-wrapper,
 .prereq-wrapper,
 .steps-wrapper {
-  flex: 1 1 18.75em; /* flexible, minimum width */
-  max-width: 50em;
-  background-color: #ffffffad;
-  border-radius: 1rem;
-  box-shadow: 0em 0.625em 1.25em rgba(227, 212, 3, 0.902);
-  padding: 1%;
+  flex: 1 1 18.75em; /* Grow/Shrink, min width ~300px */
+  max-width: 50em; /* Don’t exceed 800px each */
+  background-color: #ffffffad; /* White semi-transparent bg */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0em 0.625em 1.25em rgba(227, 212, 3, 0.902); /* Gold glow shadow */
+  padding: 1%; /* Inner padding */
 }
 .features-table {
-  width: fit-content;
-  border-collapse: collapse;
-  margin: 1rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 2;
-  text-align: left;
-  border-radius: 0.625em;
-  color: rgb(0, 0, 0);
+  width: fit-content; /* Only as wide as content */
+  border-collapse: collapse; /* Collapse table borders */
+  margin: 1rem 1rem; /* Outer margin */
+  font-size: 1.5rem; /* Table text size */
+  font-weight: 500; /* Medium weight */
+  line-height: 2; /* Extra spacing between rows */
+  text-align: left; /* Align left */
+  border-radius: 0.625em; /* Rounded corners */
+  color: rgb(0, 0, 0); /* Black text */
 }
 .features-table td {
-  padding: 0.6rem 0.75rem;
-  color: rgb(0, 0, 0);
+  padding: 0.6rem 0.75rem; /* Cell padding */
+  color: rgb(0, 0, 0); /* Black cell text */
 }
 .features-table tr + tr td {
-  border-top: 0.0625em solid #000000;
+  border-top: 0.0625em solid #000000; /* Row separator */
 }
 
 .prereq-table {
-  width: fit-content;
-  border-collapse: collapse;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.872);
-  text-align: left;
-  border-radius: 0.625em;
-  /* background: rgba(0, 0, 0, 0.712); */
-  color: rgb(0, 0, 0);
+  width: fit-content; /* Table fits content */
+  border-collapse: collapse; /* Merge borders */
+  font-size: 1.5rem; /* Text size */
+  font-weight: 500; /* Medium bold */
+  line-height: 2; /* Line spacing */
+  color: rgba(255, 255, 255, 0.872); /* Default white text */
+  text-align: left; /* Align text left */
+  border-radius: 0.625em; /* Rounded corners */
+  /* background: rgba(0, 0, 0, 0.712); */ /* Old background (commented) */
+  color: rgb(0, 0, 0); /* Override to black text */
 }
 .prereq-table td {
-  padding: 0.9rem 0.75 1rem;
-  color: rgba(0, 0, 0, 0.774);
+  padding: 0.9rem 0.75 1rem; /* Vertical + horizontal padding */
+  color: rgba(0, 0, 0, 0.774); /* Gray-black text */
 }
 /* Minimalist row separators */
 .prereq-table tr + tr {
-  border-top: 0.0625em solid #000000;
+  border-top: 0.0625em solid #000000; /* Black horizontal rule */
 }
 .steps-header {
-  font-size: 2.3rem;
-  color: var(--orange);
-  text-shadow:
+  font-size: 2.3rem; /* Section header size */
+  color: var(--orange); /* Orange color */
+  text-shadow: /* Heavy shadow outline */
     0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
     -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
     0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
@@ -180,35 +182,35 @@ body {
 
 /* INPUTS — Panel Base + Sky Blue Focus */
 .inputs-grid {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-size: medium;
-  font-weight: 200%;
+  display: flex; /* Flex container */
+  flex-direction: column; /* Stack vertically */
+  flex-wrap: wrap; /* Wrap if needed */
+  font-size: medium; /* Base font size */
+  font-weight: 200%; /* Incorrect value, likely meant numeric weight */
 }
 .input-block {
-  display: flex;
-  font-weight: 600;
-  flex-direction: column;
+  display: flex; /* Flex container */
+  font-weight: 600; /* Bold labels */
+  flex-direction: column; /* Stack label + input */
 }
 .input-label {
-  color: rgb(0, 0, 0);
-  font-size: 1.7rem;
+  color: rgb(0, 0, 0); /* Black label text */
+  font-size: 1.7rem; /* Large labels */
 }
 .long-input {
-  width: fit-content;
-  font-size: 1.5rem;
-  padding: 0em 0.875em 1.25em;
-  color: rgba(0, 0, 0, 0.837);
+  width: fit-content; /* Shrink to text */
+  font-size: 1.5rem; /* Large text */
+  padding: 0em 0.875em 1.25em; /* Inner spacing */
+  color: rgba(0, 0, 0, 0.837); /* Dark gray text */
 }
 
 .testscript-installation {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0 1rem;
-  font-size: 3rem;
-  color: var(--orange);
-  text-shadow:
+  display: flex; /* Flex for centering */
+  justify-content: center; /* Center horizontally */
+  margin: 1rem 0 1rem; /* Vertical spacing */
+  font-size: 3rem; /* Big header */
+  color: var(--orange); /* Orange text */
+  text-shadow: /* Strong outlined shadow */
     0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
     -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
     0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
@@ -219,12 +221,53 @@ body {
     -0.05em 0em 0 rgba(0, 0, 0, 0.778);
 }
 .demo-video {
-  position: relative;
-  width: 100%;
-  max-width: 50em;
-  aspect-ratio: 16 / 9;
-  margin: 2rem auto;
-  box-shadow: 0 0.625em 1.875em rgba(0, 0, 0, 0.25);
-  border-radius: 0.75em;
-  overflow: hidden;
+  position: relative; /* Relative for sizing */
+  width: 100%; /* Full width */
+  max-width: 50em; /* Cap size */
+  aspect-ratio: 16 / 9; /* Keep 16:9 ratio */
+  margin: 2rem auto; /* Center with vertical spacing */
+  box-shadow: 0 0.625em 1.875em rgba(0, 0, 0, 0.25); /* Shadow depth */
+  border-radius: 0.75em; /* Rounded corners */
+  overflow: hidden; /* Clip overflow */
+}
+
+/* MENU TOGGLE BUTTON — Hidden on desktop */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  background: none; /* Transparent background */
+  border: none; /* No border */
+  font-size: 1.5rem; /* Large icon size */
+  color: var(--sky-blue); /* Cyan color */
+  cursor: pointer; /* Hand cursor */
+}
+
+/* DROPDOWN MENU — Mobile */
+.dropdown-menu {
+  background: var(--panel); /* Dark background */
+  border-top: 0.05em solid var(--sky-blue); /* Cyan top border */
+  padding: 1rem; /* Inner spacing */
+}
+.dropdown-menu ul {
+  list-style: none; /* Remove bullets */
+  margin: 0; /* Reset margins */
+  padding: 0; /* Reset padding */
+}
+.dropdown-menu li {
+  padding: 0.75rem 0; /* Vertical spacing per item */
+  color: var(--text); /* White text */
+  cursor: pointer; /* Hand cursor */
+  transition: color 0.2s ease; /* Smooth hover color */
+}
+.dropdown-menu li:hover {
+  color: var(--orange); /* Orange hover text */
+}
+
+/* MEDIA QUERY — Switch nav on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide horizontal nav */
+  }
+  .menu-toggle {
+    display: block; /* Show hamburger button */
+  }
 }
