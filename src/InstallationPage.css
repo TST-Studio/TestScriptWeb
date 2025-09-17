@@ -40,20 +40,20 @@ body {
   justify-content: space-between;
   padding: 0.875em 1.375em;
   background: var(--panel);
-  border-bottom: 0.125em solid var(--sky-blue);
-  box-shadow: 0 0.125em 0.375em rgba(0, 0, 0, 0.5);
+  border-bottom: 0.05em solid var(--sky-blue);
+  box-shadow: 0 0.05em 0.375em rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 .nav-brand {
   font-weight: 800;
-  font-size: 1.125em;
+  font-size: 1.05em;
   color: var(--sky-blue);
   text-shadow: 0 0 0.5em rgba(142, 202, 230, 0.6);
   cursor: pointer;
 }
 .nav-links {
   display: flex;
-  gap: 1.125em;
+  gap: 1.05em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -76,7 +76,7 @@ body {
   font-size: 4rem;
   font-weight: 700;
   color: rgb(25, 163, 255);
-  text-shadow: 0em 0.0625em 0.0625em white;
+  text-shadow: 0em 0.0625em 0.0625em rgb(225, 255, 0);
 }
 .testscript-description {
   font-size: 1.5rem;
@@ -87,7 +87,7 @@ body {
   text-align: center;
   border-radius: 0.625em;
   color: rgb(0, 174, 255);
-  text-shadow: 0em 0.0625em 0.0625em white;
+  text-shadow: 0em 0.0425em 0.04em white;
 }
 .testscript-title,
 .testscript-description {
@@ -98,16 +98,16 @@ body {
 .product-name {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--orange);
+  color: rgba(227, 212, 3, 0.902);
   text-shadow:
-    0.125em 0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em -0.125em 0 rgba(0, 0, 0, 0.778),
-    0.125em -0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em 0.125em 0 rgba(0, 0, 0, 0.778),
-    0em 0.125em 0 rgba(0, 0, 0, 0.778),
-    0.125em 0em 0 rgba(0, 0, 0, 0.778),
-    0em -0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em 0em 0 rgba(0, 0, 0, 0.778);
+    0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
+    0em 0.05em 0 rgba(0, 0, 0, 0.778),
+    0.05em 0em 0 rgba(0, 0, 0, 0.778),
+    0em -0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em 0em 0 rgba(0, 0, 0, 0.778);
 }
 .tables-row {
   display: flex;
@@ -168,14 +168,14 @@ body {
   font-size: 2.3rem;
   color: var(--orange);
   text-shadow:
-    0.125em 0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em -0.125em 0 rgba(0, 0, 0, 0.778),
-    0.125em -0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em 0.125em 0 rgba(0, 0, 0, 0.778),
-    0em 0.125em 0 rgba(0, 0, 0, 0.778),
-    0.125em 0em 0 rgba(0, 0, 0, 0.778),
-    0em -0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em 0em 0 rgba(0, 0, 0, 0.778);
+    0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
+    0em 0.05em 0 rgba(0, 0, 0, 0.778),
+    0.05em 0em 0 rgba(0, 0, 0, 0.778),
+    0em -0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em 0em 0 rgba(0, 0, 0, 0.778);
 }
 
 /* INPUTS — Panel Base + Sky Blue Focus */
@@ -209,14 +209,14 @@ body {
   font-size: 3rem;
   color: var(--orange);
   text-shadow:
-    0.125em 0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em -0.125em 0 rgba(0, 0, 0, 0.778),
-    0.125em -0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em 0.125em 0 rgba(0, 0, 0, 0.778),
-    0em 0.125em 0 rgba(0, 0, 0, 0.778),
-    0.125em 0em 0 rgba(0, 0, 0, 0.778),
-    0em -0.125em 0 rgba(0, 0, 0, 0.778),
-    -0.125em 0em 0 rgba(0, 0, 0, 0.778);
+    0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
+    0em 0.05em 0 rgba(0, 0, 0, 0.778),
+    0.05em 0em 0 rgba(0, 0, 0, 0.778),
+    0em -0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em 0em 0 rgba(0, 0, 0, 0.778);
 }
 .demo-video {
   position: relative;
