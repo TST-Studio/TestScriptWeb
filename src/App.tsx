@@ -56,7 +56,7 @@ function App() {
               className="pill-btn"
               onClick={() => navigate('/installation-page')}
             >
-              Extension
+              Tools
             </button>
             <button
               className="pill-btn"
