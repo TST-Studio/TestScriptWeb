@@ -46,7 +46,7 @@
   color: #ffb703; /* Yellow text */
   font-weight: 600; /* Semi-bold */
   letter-spacing: -0.02em; /* Slightly condensed */
-  line-height: 0; /* Tight line spacing */
+  line-height: normal; /* No overlap */
   font-size: clamp(1.125rem, 2.5vw, 2.5rem);
   /* Responsive scaling */
 }
@@ -65,7 +65,7 @@
   text-align: center; /* Centers multi-line text */
   text-indent: 2rem; /* Indented first line */
   border-radius: 3rem; /* Rounded container */
-  box-shadow: rgba(227, 212, 3, 0.902) 0em 0.625em 1.25em;
+  box-shadow: rgba(255, 255, 255, 0.902) 0em 0.625em 1.25em;
   /* Gold glow for emphasis */
 }
 
@@ -77,42 +77,16 @@
   font-weight: 800; /* Bold */
   margin-left: 10rem; /* Offset left */
   margin: 5rem 0 0.01rem; /* Large top margin */
-}
-
-/* Box sizing reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box; /* Consistent sizing model */
-}
-html,
-body {
-  min-height: 100%; /* Ensure full height baseline */
-}
-body {
-  margin: 0; /* Remove default margins */
-  text-rendering: optimizeLegibility; /* Better text rendering */
-  -webkit-font-smoothing: antialiased; /* Smooth fonts */
-}
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block; /* Remove inline gaps */
-  max-width: 100%; /* Prevent overflow */
-}
-input,
-button,
-textarea,
-select {
-  font: inherit; /* Match font with parent */
+  text-shadow: /* Strong outlined shadow */
+    0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
+    -0.05em 0.05em 0 rgba(0, 0, 0, 0.778);
 }
 
 .demo-video {
   display: grid;
   place-items: center; /* Center video */
-  margin: 1rem 0 0.1rem;
   width: 100%; /* Fill container */
   max-width: 60em; /* Constrain width */
   margin-inline: auto; /* Center horizontally */
@@ -124,8 +98,7 @@ select {
   width: 100%;
   height: auto;
   border-radius: 0.75em; /* Rounded corners */
-  box-shadow: #0095ff77 0em 0.625em 1.25em;
-  /* Blue glow shadow */
+  box-shadow: #ffffff 0em 0.625em 1.25em; /* Blue glow shadow */
 }
 @media (prefers-color-scheme: dark) {
   .demo-video video {
