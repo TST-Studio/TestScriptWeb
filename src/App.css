@@ -62,7 +62,7 @@
   text-align: center; /* or 'center' if you prefer */
   text-indent: 2rem;
   border-radius: 3rem;
-  box-shadow: rgba(227, 212, 3, 0.902) 0px 10px 20px;
+  box-shadow: rgba(227, 212, 3, 0.902) 0em 0.625em 1.25em;
 }
 
 .video-title {
@@ -110,7 +110,7 @@ select {
   place-items: center; /* centers content */
   margin: 1rem 0 0.1rem;
   width: 100%;
-  max-width: 960px; /* optional: keep it from getting too wide */
+  max-width: 60em; /* optional: keep it from getting too wide */
   margin-inline: auto; /* center the block itself */
   position: relative;
 }
@@ -119,8 +119,8 @@ select {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 12px;
-  box-shadow: #0095ff77 0px 10px 20px;
+  border-radius: 0.75em;
+  box-shadow: #0095ff77 0em 0.625em 1.25em;
 }
 @media (prefers-color-scheme: dark) {
   .demo-video video {
@@ -138,7 +138,7 @@ select {
 }
 
 .header-inner {
-  max-width: 1200px;
+  max-width: 75em;
   margin-inline: auto;
   padding: 1rem 1.5rem;
   display: flex;
@@ -217,29 +217,29 @@ button.pill-btn:hover::before {
 }
 
 .community__inner {
-  max-width: 1100px;
+  max-width: 68.75em;
   margin: 0 auto;
 }
 
 /* Responsive grid: 3 columns on desktop -> 2 -> 1 */
 .community__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(16.25em, 1fr));
+  gap: 1.25em;
 }
 
 /* Card */
 .card {
   position: relative;
   display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 14px;
+  grid-template-columns: 2.75em 1fr;
+  gap: 0.875em;
   align-items: start;
-  padding: 22px;
-  border-radius: 14px;
+  padding: 1.375em;
+  border-radius: 0.875em;
   background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  box-shadow: 0 6px 20px var(--ring);
+  border: 0.0625em solid var(--card-border);
+  box-shadow: 0 0.375em 1.25em var(--ring);
   text-decoration: none;
   color: inherit;
   transition:
@@ -249,8 +249,8 @@ button.pill-btn:hover::before {
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px var(--ring);
+  transform: translateY(-0.125em);
+  box-shadow: 0 0.625em 1.875em var(--ring);
   border-color: rgba(99, 102, 241, 0.35);
 }
 
@@ -258,14 +258,14 @@ button.pill-btn:hover::before {
 .card__icon {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 2.75em;
+  height: 2.75em;
+  border-radius: 0.75em;
   background: #ffffff;
 }
 .card__icon svg {
-  width: 22px;
-  height: 22px;
+  width: 1.375em;
+  height: 1.375em;
   fill: #b25f00;
 }
 @media (prefers-color-scheme: dark) {
@@ -279,7 +279,7 @@ button.pill-btn:hover::before {
 
 /* Text */
 .card__title {
-  margin: 0 0 6px;
+  margin: 0 0 0.375em;
   font-weight: 700;
   font-size: 1.05rem;
   color: rgb(191, 131, 0);
@@ -299,8 +299,8 @@ button.pill-btn:hover::before {
 /* External arrow */
 .card__external {
   position: absolute;
-  top: 2px;
-  right: 12px;
+  top: 0.125em;
+  right: 0.75em;
   opacity: 0.65;
   transition:
     opacity 0.18s ease,
@@ -309,5 +309,5 @@ button.pill-btn:hover::before {
 
 .card:hover .card__external {
   opacity: 1;
-  transform: translate(2px, -2px);
+  transform: translate(0.125em, -0.125em);
 }

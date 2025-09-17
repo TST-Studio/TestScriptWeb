@@ -11,7 +11,13 @@ import '/src/components/about-team.css';
 // Imports your existing CSS stylesheet for About Team.
 // NOTE: We are NOT altering it, just consuming it.
 
-import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
+} from 'react-icons/fa';
 // Importing icons from react-icons library:
 // - FaGithub: GitHub logo for team member links.
 // - FaLinkedin: LinkedIn logo for team member links.
@@ -27,23 +33,58 @@ import { Link } from 'react-router-dom';
 
 type Member = {
   // Strict TypeScript type for a team member object.
-  img: string;     // Image path for avatar photo.
-  name: string;    // Member’s name.
-  role: string;    // Member’s role (title/job).
-  github: string;  // GitHub profile URL.
-  linkedin: string;// LinkedIn profile URL.
-  email: string;   // Email address.
+  img: string; // Image path for avatar photo.
+  name: string; // Member’s name.
+  role: string; // Member’s role (title/job).
+  github: string; // GitHub profile URL.
+  linkedin: string; // LinkedIn profile URL.
+  email: string; // Email address.
 };
 
 // ---------------------- TEAM DATA ----------------------
 
 const team: Member[] = [
   // Array of objects. Each object represents one team member.
-  { img: '/images/member1.png', name: 'Glen Jarvis', role: 'Full Stack Software Engineer', github: 'https://github.com/glenjarvis/', linkedin: 'https://linkedin.com/in/glenjarvis', email: 'Glen.Jarvis@tst-studio.com' },
-  { img: '/images/member2.jpeg', name: 'Jonathan Jovel', role: 'Full Stack Software Engineer', github: 'https://github.com/jalexjovel', linkedin: 'https://linkedin.com/in/jonathan-jovel', email: 'Jonathan.Jovel@tst-studio.com' },
-  { img: '/images/member3.jpeg', name: 'Laura Schlueter', role: 'Full Stack Software Engineer | Scrum Leader', github: 'https://github.com/LauraSchlueter22', linkedin: 'https://linkedin.com/in/lauraschlueter22', email: 'Laura.Schlueter@tst-studio.com' },
-  { img: '/images/member4.jpg', name: 'Tucker Olsen', role: 'Full Stack Engineer | Product Manager', github: 'https://github.com/tuckerolsen', linkedin: 'https://linkedin.com/in/tuckerolsen23', email: 'Tucker.Olsen@tst-studio.com' },
-  { img: '/images/amanimg.png', name: 'Aman Lally', role: 'Full Stack Engineer | QA Tester', github: 'https://github.com/CodeRepeater', linkedin: 'https://linkedin.com/in/amanlally', email: 'Aman.Lally@tst-studio.com' },
+  {
+    img: '/images/member1.png',
+    name: 'Glen Jarvis',
+    role: 'Full Stack Software Engineer',
+    github: 'https://github.com/glenjarvis/',
+    linkedin: 'https://linkedin.com/in/glenjarvis',
+    email: 'Glen.Jarvis@tst-studio.com',
+  },
+  {
+    img: '/images/member2.jpeg',
+    name: 'Jonathan Jovel',
+    role: 'Full Stack Software Engineer',
+    github: 'https://github.com/jalexjovel',
+    linkedin: 'https://linkedin.com/in/jonathan-jovel',
+    email: 'Jonathan.Jovel@tst-studio.com',
+  },
+  {
+    img: '/images/member3.jpeg',
+    name: 'Laura Schlueter',
+    role: 'Full Stack Software Engineer | Scrum Leader',
+    github: 'https://github.com/LauraSchlueter22',
+    linkedin: 'https://linkedin.com/in/lauraschlueter22',
+    email: 'Laura.Schlueter@tst-studio.com',
+  },
+  {
+    img: '/images/member4.jpg',
+    name: 'Tucker Olsen',
+    role: 'Full Stack Engineer | Product Manager',
+    github: 'https://github.com/tuckerolsen',
+    linkedin: 'https://linkedin.com/in/tuckerolsen23',
+    email: 'Tucker.Olsen@tst-studio.com',
+  },
+  {
+    img: '/images/amanimg.png',
+    name: 'Aman Lally',
+    role: 'Full Stack Engineer | QA Tester',
+    github: 'https://github.com/CodeRepeater',
+    linkedin: 'https://linkedin.com/in/amanlally',
+    email: 'Aman.Lally@tst-studio.com',
+  },
 ];
 // 💎 This centralizes team data in one place. Easy to update or add new members.
 
@@ -51,11 +92,11 @@ const team: Member[] = [
 
 const navLinks = [
   // Array of objects representing nav menu links.
-  { name: 'Home', path: '/' },                  // Root route
+  { name: 'Home', path: '/' }, // Root route
   { name: 'Installation', path: '/installation-page' }, // Installation guide page
-  { name: 'Docs', path: '/docs' },              // Documentation page
-  { name: 'CLI', path: '/cli' },                // CLI tool page
-  { name: 'Contact', path: '/contact' },        // Contact page
+  { name: 'Docs', path: '/docs' }, // Documentation page
+  { name: 'CLI', path: '/cli' }, // CLI tool page
+  { name: 'Contact', path: '/contact' }, // Contact page
 ];
 
 // ---------------------- COMPONENT ----------------------
@@ -77,10 +118,11 @@ const About: React.FC = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         // Callback triggered when observed elements appear/disappear in viewport.
-        entries.forEach((entry) =>
-          entry.isIntersecting
-            ? entry.target.classList.add('show')   // Add .show class → CSS animates fade-in.
-            : entry.target.classList.remove('show')// Remove .show if scrolled out.
+        entries.forEach(
+          (entry) =>
+            entry.isIntersecting
+              ? entry.target.classList.add('show') // Add .show class → CSS animates fade-in.
+              : entry.target.classList.remove('show') // Remove .show if scrolled out.
         );
       },
       { threshold: 0.15 } // Trigger when 15% of element visible.
@@ -106,9 +148,9 @@ const About: React.FC = () => {
       <div
         style={{
           position: 'absolute', // Floats element absolutely relative to parent.
-          top: 20,              // 20px from top of page.
-          left: 20,             // 20px from left of page.
-          zIndex: 1000,         // High z-index → always above other content.
+          top: 20, // 20px from top of page.
+          left: 20, // 20px from left of page.
+          zIndex: 1000, // High z-index → always above other content.
         }}
       >
         {/* HAMBURGER / CLOSE BUTTON */}
@@ -116,13 +158,13 @@ const About: React.FC = () => {
           onClick={() => setMenuOpen(!menuOpen)}
           // Toggle menuOpen state when clicked.
           style={{
-            background: 'transparent',                 // No background.
-            border: 'none',                            // No border.
-            cursor: 'pointer',                         // Pointer cursor on hover.
-            color: '#00eaff',                          // Neon cyan text color.
-            fontSize: '28px',                          // Icon size.
-            textShadow: '0 0 8px #00eaff, 0 0 20px #00eaff', // Neon glow effect.
-            transition: 'transform 0.2s ease',         // Smooth scaling animation.
+            background: 'transparent', // No background.
+            border: 'none', // No border.
+            cursor: 'pointer', // Pointer cursor on hover.
+            color: '#00eaff', // Neon cyan text color.
+            fontSize: '1.75em', // Icon size.
+            textShadow: '0 0 0.5em #00eaff, 0 0 1.25em #00eaff', // Neon glow effect.
+            transition: 'transform 0.2s ease', // Smooth scaling animation.
           }}
           onMouseEnter={(e) => {
             (e.currentTarget as HTMLElement).style.transform = 'scale(1.2)';
@@ -144,12 +186,13 @@ const About: React.FC = () => {
           // Render dropdown only if menuOpen = true.
           <div
             style={{
-              marginTop: '12px', // Space between button and menu.
+              marginTop: '0.75em', // Space between button and menu.
               background: 'linear-gradient(180deg, #0f1115, #1b1f27)', // Dark gradient background.
-              border: '1px solid rgba(0, 234, 255, 0.5)', // Neon cyan border.
-              borderRadius: '12px', // Rounded corners.
-              padding: '20px', // Inner padding for breathing space.
-              boxShadow: '0 0 25px rgba(0, 234, 255, 0.7), 0 0 50px rgba(0, 234, 255, 0.4)',
+              border: '0.0625em solid rgba(0, 234, 255, 0.5)', // Neon cyan border.
+              borderRadius: '0.75em', // Rounded corners.
+              padding: '1.25em', // Inner padding for breathing space.
+              boxShadow:
+                '0 0 1.5625em rgba(0, 234, 255, 0.7), 0 0 3.125em rgba(0, 234, 255, 0.4)',
               // Glowing aura shadow.
               animation: 'fadeSlide 0.4s ease', // Entry animation (defined in global CSS).
             }}
@@ -159,15 +202,17 @@ const About: React.FC = () => {
               <div
                 key={i} // React key for list item.
                 style={{
-                  margin: '14px 0', // Space between links.
+                  margin: '0.875em 0', // Space between links.
                   transition: 'transform 0.3s ease', // Smooth hover scaling.
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.transform = 'translateX(8px) scale(1.05)';
+                  (e.currentTarget as HTMLElement).style.transform =
+                    'translateX(0.5em) scale(1.05)';
                   // On hover → slide right + enlarge.
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.transform = 'translateX(0) scale(1)';
+                  (e.currentTarget as HTMLElement).style.transform =
+                    'translateX(0) scale(1)';
                   // Reset on leave.
                 }}
               >
@@ -177,9 +222,10 @@ const About: React.FC = () => {
                     color: '#00eaff', // Neon cyan text.
                     textDecoration: 'none', // No underline.
                     fontWeight: 700, // Bold weight.
-                    fontSize: '18px', // Larger text.
-                    letterSpacing: '1px', // Spaced-out letters.
-                    textShadow: '0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #00eaff',
+                    fontSize: '1.125em', // Larger text.
+                    letterSpacing: '0.0625em', // Spaced-out letters.
+                    textShadow:
+                      '0 0 0.625em #00eaff, 0 0 1.25em #00eaff, 0 0 2.5em #00eaff',
                     // Multi-layer glowing aura.
                     transition: 'color 0.3s ease', // Smooth color changes.
                   }}
@@ -229,8 +275,13 @@ const About: React.FC = () => {
               </a>
             </p>
             <p>
-              <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                <FaLinkedin /> {member.linkedin.replace('https://linkedin.com/in/', '')}
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin />{' '}
+                {member.linkedin.replace('https://linkedin.com/in/', '')}
                 {/* LinkedIn link with icon + profile slug. */}
               </a>
             </p>
