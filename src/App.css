@@ -46,7 +46,7 @@
   color: #ffb703; /* Yellow text */
   font-weight: 600; /* Semi-bold */
   letter-spacing: -0.02em; /* Slightly condensed */
-  line-height: 0; /* Tight line spacing */
+  line-height: normal; /* No overlap */
   font-size: clamp(1.125rem, 2.5vw, 2.5rem);
   /* Responsive scaling */
 }
