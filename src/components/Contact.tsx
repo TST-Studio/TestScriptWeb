@@ -12,7 +12,7 @@ const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'Installation', path: '/installation-page' },
   { name: 'Docs', path: '/docs' },
-  { name: 'CLI', path: '/cli' },
+  { name: 'Conduct', path: '/conduct' },
   { name: 'About', path: '/about-team' },
 ];
 

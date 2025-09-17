@@ -40,7 +40,7 @@ const InstallationDetails: React.FC = () => {
             <li onClick={() => navigate('/')}>Home</li>
             <li onClick={() => navigate('/about-team')}>About</li>
             <li onClick={() => navigate('/docs')}>Docs</li>
-            <li onClick={() => navigate('/cli')}>CLI</li>
+            <li onClick={() => navigate('/conduct')}>Conduct</li>
             <li onClick={() => navigate('/contact')}>Contact</li>
           </ul>
 
@@ -61,7 +61,7 @@ const InstallationDetails: React.FC = () => {
               <li onClick={() => {navigate('/'); setMenuOpen(false);}}>Home</li>
               <li onClick={() => {navigate('/about-team'); setMenuOpen(false);}}>About</li>
               <li onClick={() => {navigate('/docs'); setMenuOpen(false);}}>Docs</li>
-              <li onClick={() => {navigate('/cli'); setMenuOpen(false);}}>CLI</li>
+              <li onClick={() => {navigate('/conduct'); setMenuOpen(false);}}>Conduct</li>
               <li onClick={() => {navigate('/contact'); setMenuOpen(false);}}>Contact</li>
             </ul>
           </div>
