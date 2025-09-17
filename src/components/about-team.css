@@ -1,7 +1,7 @@
 .about-team {
   /* ROOT CONTAINER: controls the entire About section layout */
   text-align: center; /* Horizontally center text content */
-  padding: 80px 20px; /* 80px vertical padding, 20px horizontal breathing room */
+  padding: 5em 1.25em; /* 5em vertical padding, 1.25em horizontal breathing room */
   color: #e8eaf2; /* Default text color: soft bluish-gray for readability */
   background: transparent; /* Transparent so parent background can show through */
   min-height: 100vh; /* Forces section to fill at least full viewport height */
@@ -13,24 +13,24 @@
 
 .about-team h1 {
   /* MAIN HEADING */
-  font-size: 42px; /* Large font for dominance */
-  margin-bottom: 16px; /* Space beneath heading before next element */
+  font-size: 2.625em; /* Large font for dominance */
+  margin-bottom: 1em; /* Space beneath heading before next element */
   color: #ffb703; /* Gold accent color for importance */
-  text-shadow: 0 0 12px rgba(255, 183, 3, 0.5); /* Subtle glowing shadow aura */
+  text-shadow: 0 0 0.75em rgba(255, 183, 3, 0.5); /* Subtle glowing shadow aura */
 }
 
 .about-team h2 {
   /* SUBHEADING */
-  font-size: 24px; /* Slightly smaller than h1 for hierarchy */
-  margin-bottom: 32px; /* Space beneath subheading before mission text */
+  font-size: 1.5em; /* Slightly smaller than h1 for hierarchy */
+  margin-bottom: 2em; /* Space beneath subheading before mission text */
   color: #a7afc0; /* Muted bluish-gray accent for balance */
 }
 
 .about-team .mission {
   /* MISSION STATEMENT PARAGRAPH */
-  max-width: 900px; /* Constrains line length for readability */
-  margin: 0 auto 60px auto; /* Center horizontally + 60px bottom spacing before grid */
-  font-size: 16px; /* Standard readable size */
+  max-width: 56.25em; /* Constrains line length for readability */
+  margin: 0 auto 3.75em auto; /* Center horizontally + 3.75em bottom spacing before grid */
+  font-size: 1em; /* Standard readable size */
   line-height: 1.6; /* Taller lines improve readability */
   color: #cbd5e1; /* Softer gray tone for less eye strain */
 }
@@ -40,23 +40,25 @@
   display: flex; /* Enables flexbox */
   flex-direction: row; /* Arrange cards in a row */
   justify-content: center; /* Center all cards horizontally */
-  gap: 28px; /* Horizontal and vertical space between cards */
+  gap: 1.75em; /* Horizontal and vertical space between cards */
   width: 100%; /* Full container width */
-  max-width: 1400px; /* Restrict maximum width for consistent layout */
+  max-width: 87.5em; /* Restrict maximum width for consistent layout */
   flex-wrap: wrap; /* Allow cards to wrap onto new rows */
 }
 
 .team-member {
   /* INDIVIDUAL TEAM CARD */
   background: #151922; /* Dark card background */
-  border: 1px solid #252a36; /* Thin border for definition */
-  border-radius: 12px; /* Rounded corners */
-  padding: 20px; /* Internal padding for breathing space */
-  width: 250px; /* Fixed card width */
-  min-height: 400px; /* Ensures consistent card height */
-  transition: transform 0.3s ease, background 0.3s ease; /* Smooth hover animations */
+  border: 0.0625em solid #252a36; /* Thin border for definition */
+  border-radius: 0.75em; /* Rounded corners */
+  padding: 1.25em; /* Internal padding for breathing space */
+  width: 15.625em; /* Fixed card width */
+  min-height: 25em; /* Ensures consistent card height */
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease; /* Smooth hover animations */
   opacity: 0; /* Start invisible (fade-in controlled via JS + .show) */
-  transform: translateY(40px); /* Start slightly shifted down */
+  transform: translateY(2.5em); /* Start slightly shifted down */
   display: flex; /* Flexbox for internal alignment */
   flex-direction: column; /* Stack content vertically */
   align-items: center; /* Center horizontally */
@@ -78,11 +80,11 @@
 .team-member img.avatar {
   /* AVATAR IMAGE STYLING */
   width: 100%; /* Image fills card width */
-  height: 240px; /* Fixed uniform height */
+  height: 15em; /* Fixed uniform height */
   object-fit: cover; /* Crop to fill container */
   object-position: top; /* Keep face/top of image visible */
-  border-radius: 8px; /* Rounded corners */
-  margin-bottom: 16px; /* Space beneath image */
+  border-radius: 0.5em; /* Rounded corners */
+  margin-bottom: 1em; /* Space beneath image */
   display: block; /* Ensure image respects block flow */
   transition: transform 0.3s ease; /* Smooth zoom effect on hover */
 }
@@ -94,8 +96,8 @@
 
 .team-member h3 {
   /* MEMBER NAME */
-  font-size: 20px; /* Larger than body text */
-  margin: 12px 0; /* Space above and below name */
+  font-size: 1.25em; /* Larger than body text */
+  margin: 0.75em 0; /* Space above and below name */
   color: #8ecae6; /* Sky blue color accent */
   transition: color 0.3s ease; /* Smooth hover color change */
   text-align: center; /* Center text alignment */
@@ -108,9 +110,9 @@
 
 .team-member p {
   /* ROLE + LINKS */
-  font-size: 15px; /* Slightly larger than small text */
+  font-size: 0.9375em; /* Slightly larger than small text */
   color: #fb8500; /* Orange accent color */
-  margin-bottom: 12px; /* Space beneath each paragraph */
+  margin-bottom: 0.75em; /* Space beneath each paragraph */
   text-align: center; /* Center text alignment */
 }
 
@@ -129,22 +131,22 @@
 
 /* ---------------------- RESPONSIVE BREAKPOINTS ---------------------- */
 
-@media (max-width: 1200px) {
+@media (max-width: 75em) {
   .team-grid {
-    gap: 20px; /* Reduce spacing between cards */
+    gap: 1.25em; /* Reduce spacing between cards */
   }
   .team-member {
-    width: 220px; /* Narrower cards to fit more on row */
+    width: 13.75em; /* Narrower cards to fit more on row */
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25em) {
   .team-member {
     width: 45%; /* Cards occupy 45% of row width → 2 per row */
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   .team-grid {
     flex-direction: column; /* Stack cards vertically */
     align-items: center; /* Center cards horizontally */
@@ -159,7 +161,7 @@
 @keyframes fadeSlide {
   from {
     opacity: 0; /* Start invisible */
-    transform: translateY(-10px); /* Start slightly above final position */
+    transform: translateY(-0.625em); /* Start slightly above final position */
   }
   to {
     opacity: 1; /* Fade to visible */
