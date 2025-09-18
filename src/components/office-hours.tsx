@@ -39,14 +39,8 @@ const OfficeHours: React.FC = () => {
                   <td>6:00 PM – 7:00 PM</td>
                 </tr>
                 <tr>
-
-                </tr>
-                <tr>
                   <td>Wednesday</td>
                   <td>6:00 PM – 7:00 PM</td>
-                </tr>
-                <tr>
-
                 </tr>
                 <tr>
                   <td>Friday</td>
@@ -62,6 +56,21 @@ const OfficeHours: React.FC = () => {
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          {/* ---------- ZOOM LINK ---------- */}
+          <div className="office-zoom">
+            <p>
+              Join our live office hours on{' '}
+              <a
+                href="https://us02web.zoom.us/j/89007572910?pwd=aib0mh2UqAnDaSQ2sPuYMJ4L8L9hl5.1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="zoom-link"
+              >
+                Zoom Meeting
+              </a>
+            </p>
           </div>
 
           {/* ---------- FOOTER NOTE ---------- */}

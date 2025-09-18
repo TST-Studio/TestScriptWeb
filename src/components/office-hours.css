@@ -40,7 +40,6 @@
   flex-direction: column;
   align-items: center;
   margin: -6.5rem auto;
-
 }
 
 /* ---------------------- CONTENT CONTAINER ---------------------- */
@@ -96,6 +95,25 @@
 .office-closed td {
   color: #888;
   font-style: italic;
+}
+
+/* ---------------------- ZOOM LINK ---------------------- */
+.office-zoom {
+  margin: 2rem 0;
+}
+.office-zoom p {
+  font-size: 1.125rem;
+  color: var(--sky-blue);
+}
+.zoom-link {
+  color: #fb8500;
+  font-weight: 700;
+  text-decoration: underline;
+  text-shadow: 0 0 0.5rem rgba(251, 133, 0, 0.5);
+}
+.zoom-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 1rem rgba(251, 133, 0, 0.8);
 }
 
 /* ---------------------- FOOTER ---------------------- */
