@@ -1,25 +1,87 @@
+/* ==========================================================
+   🌌 index.css — GLOBAL BASE + GLASS PANEL SYSTEM
+   ========================================================== */
+
+/* ---------------------- ROOT COLORS ---------------------- */
 :root {
+  --bg: #0f1115;
+  --panel: rgba(21, 25, 34, 0.75);
+  --prussian-blue: #023047;
+
+  --sky-blue: #8ecae6;
+  /* body text */
+  --orange: #fb8500;
+  /* heading text */
+  --yellow: #ffb703;
+  /* subheading text */
+
+  --text: #e8eaf2;
+  --muted: #a7afc0;
+  --border: rgba(0, 234, 255, 0.25);
+}
+
+/* ---------------------- GLOBAL RESET ---------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+  color: var(--text);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* Default font stack applied globally.
-     - system-ui → native OS UI font (fast + clean).
-     - Avenir → modern geometric fallback.
-     - Helvetica / Arial → classic sans-serif backups.
-     - sans-serif → generic fallback to ensure consistency. */
+  background: linear-gradient(180deg, var(--bg), var(--prussian-blue));
+}
 
-  color-scheme: light dark;
-  /* Informs browser of both light + dark support.
-     Enables automatic form controls, scrollbars, and UI components
-     to adapt between light/dark themes seamlessly. */
+/* ---------------------- HERO BACKGROUND ---------------------- */
+.hero {
+  padding-top: 0;
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: grid;
+  background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(2, 48, 71, 0.25)
+  );
+}
 
-  text-rendering: optimizeLegibility;
-  /* Activates advanced kerning + ligatures.
-     Optimizes readability on body text and headers. */
+/* ---------------------- GLASS PANEL SYSTEM ---------------------- */
+.glass-panel {
+  background: var(--panel);
+  backdrop-filter: blur(0.75rem);
+  border: 0.0625rem solid var(--border);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 60rem;
+  color: var(--text);
+  box-shadow: 0 0.75rem 2rem rgba(0, 234, 255, 0.15);
+}
+.glass-panel h1,
+.glass-panel h2 {
+  color: var(--orange);
+  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
+}
+.glass-panel p {
+  color: var(--sky-blue);
+  line-height: 1.6;
+}
 
-  -webkit-font-smoothing: antialiased;
-  /* WebKit (Safari/Chrome) hinting for smoother, crisper fonts. */
-
-  -moz-osx-font-smoothing: grayscale;
-  /* Firefox/macOS-specific smoothing.
-     Uses grayscale anti-aliasing instead of subpixel, making text
-     appear sharper and reducing color fringing on Retina displays. */
+/* ---------------------- NAVBAR SPACING FIX ---------------------- */
+.hero,
+.roadmap-page,
+.office-page,
+.conduct-page,
+.contact-page {
+  padding-top: 6em; /* 🔥 Pushes content down below fixed navbar */
 }

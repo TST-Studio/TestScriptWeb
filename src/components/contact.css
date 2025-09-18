@@ -1,139 +1,157 @@
-/* contact.css — Dominion Contact Stylesheet */
+/* ==========================================================
+   ⚔️ contact.css — Dominion Contact Stylesheet
+   ========================================================== */
 
-/* ---------------------- ROOT CONTAINER ---------------------- */
 .contact-page {
-  text-align: center;                          /* Center all text content */
-  padding: 5rem 1.25rem;                       /* Vertical breathing + horizontal margin */
-  color: #e8eaf2;                              /* Light gray text for contrast */
-  background: transparent;                     /* Transparent to inherit root bg */
-  min-height: 100vh;                           /* Full viewport height */
-  display: flex;                               /* Flex container */
-  flex-direction: column;                      /* Vertical stacking */
-  justify-content: flex-start;                 /* Start from top */
-  align-items: center;                         /* Center horizontally */
-  position: relative;                          /* Allows absolute nav positioning */
+  text-align: center;
+  padding: 0rem 1.25rem;
+  color: #e8eaf2;
+  background: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
+/* ---------------------- GLASS PANEL ---------------------- */
+.glass-panel {
+  background: rgba(21, 25, 34, 0.85); /* Dark roadmap tone */
+  border: 0.0625em solid rgba(142, 202, 230, 0.25); /* Cyan edge */
+  border-radius: 0.75em;
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 52em;
+  backdrop-filter: blur(0.5em);
+  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15);
+  text-align: center;
+  color: #e8eaf2;
+}
+.glass-panel p {
+    color: #ffffff;
+    font-size: 1.1em;
+}
 /* ---------------------- HEADINGS ---------------------- */
 .contact-page h1 {
-  font-size: 2.625rem;                         /* ~42px → large dominion heading */
-  margin-bottom: 1rem;                         /* Space below */
-  color: #ffb703;                              /* Golden highlight */
-  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.5); /* Glowing aura */
+  font-size: 2.625rem;
+  margin-bottom: 1.5rem;
+  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
+  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.5);
 }
 
 /* ---------------------- PARAGRAPHS ---------------------- */
 .contact-intro {
-  font-size: 1rem;                             /* Base body text */
-  line-height: 1.6;                            /* Comfortable reading */
-  max-width: 43.75rem;                         /* Limit ~700px for readability */
-  margin: 0 auto 2.5rem auto;                  /* Center + bottom spacing */
-  color: #cbd5e1;                              /* Muted gray-blue */
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 43.75rem;
+  margin: 0 auto 2.5rem auto;
+  color: #cbd5e1;
 }
 
 .contact-contribute {
-  font-size: 0.9375rem;                        /* Slightly smaller than intro */
-  line-height: 1.6;                            /* Same readable spacing */
-  max-width: 46.875rem;                        /* Limit ~750px width */
-  margin: 0 auto 3.125rem auto;                /* Center + extra bottom space */
-  color: #8ecae6;                              /* Soft aqua for distinction */
-  font-style: italic;                          /* Emphasis tone */
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  max-width: 46.875rem;
+  margin: 0 auto 3.125rem auto;
+  color: #8ecae6;
+  font-style: italic;
 }
 
-/* ---------------------- IMAGE AREA ---------------------- */
+/* ---------------------- IMAGE ---------------------- */
 .contact-image {
-  margin-bottom: 2.5rem;                       /* Space below image block */
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover effects */
+  margin-bottom: 2.5rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .contact-image img {
-  width: 100%;                                 /* Responsive scaling */
-  max-width: 31.25rem;                         /* Limit ~500px */
-  border-radius: 0.75rem;                      /* Rounded corners */
-  box-shadow: 0 0 1.5625rem rgba(0, 234, 255, 0.4); /* Initial glow */
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Hover transitions */
+  width: 100%;
+  max-width: 31.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 1.5625rem rgba(0, 234, 255, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .contact-image img:hover {
-  transform: scale(1.05);                      /* Enlarge on hover */
+  transform: scale(1.05);
   box-shadow: 0 0 2.1875rem rgba(0, 234, 255, 0.7),
-              0 0 3.75rem rgba(255, 183, 3, 0.6); /* Neon + gold glow combo */
+              0 0 3.75rem rgba(255, 183, 3, 0.6);
 }
 
-/* ---------------------- CONTACT LINKS ---------------------- */
+/* ---------------------- LINKS ---------------------- */
 .contact-links {
-  margin-bottom: 2.5rem;                       /* Space below block */
-  display: flex;                               /* Flex layout */
-  flex-direction: column;                      /* Stack vertically */
-  gap: 1rem;                                   /* Equal spacing */
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .contact-link {
-  display: flex;                               /* Horizontal row */
-  align-items: center;                         /* Align icon + text */
-  justify-content: center;                     /* Center row */
-  gap: 0.75rem;                                /* Space between icon + link */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .contact-icon {
-  font-size: 1.25rem;                          /* Icon sizing */
-  color: #00eaff;                              /* Neon cyan */
-  text-shadow: 0 0 0.625rem #00eaff,
-               0 0 1.25rem #00eaff;            /* Glowing aura */
+  font-size: 1.25rem;
+  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
+  text-shadow: 0 0 0.625rem #00eaff, 0 0 1.25rem #00eaff;
 }
 
 .contact-link a {
-  color: #00eaff;                              /* Neon link color */
-  text-decoration: none;                       /* Clean style */
-  font-weight: 600;                            /* Semi-bold */
-  font-size: 1rem;                             /* Base size */
-  transition: color 0.3s ease;                 /* Smooth hover change */
+  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .contact-link a:hover {
-  color: #ffb703;                              /* Golden hover */
-  text-decoration: underline;                  /* Add emphasis */
+  color: #ffb703;
+  text-decoration: underline;
 }
 
 /* ---------------------- FORM ---------------------- */
 .contact-form {
-  display: flex;                               /* Vertical stack */
+  display: flex;
   flex-direction: column;
-  gap: 0.875rem;                               /* ~14px vertical spacing */
-  width: 100%;                                 /* Full responsive width */
-  max-width: 25rem;                            /* Limit ~400px */
+  gap: 0.875rem;
+  width: 100%;
+  max-width: 25rem;
+  margin: 0 auto;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 0.75rem;                            /* Comfortable spacing */
-  border: 0.0625rem solid #252a36;             /* Thin border */
-  border-radius: 0.5rem;                       /* Rounded corners */
-  background: #151922;                         /* Dark background */
-  color: #e8eaf2;                              /* Light text */
-  font-size: 0.875rem;                         /* Slightly smaller text */
-  outline: none;                               /* Remove default outline */
-  transition: border-color 0.3s ease;          /* Smooth focus highlight */
+  padding: 0.75rem;
+  border: 0.0625rem solid #252a36;
+  border-radius: 0.5rem;
+  background: #151922;
+  color: #e8eaf2;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #00eaff;                       /* Cyan border on focus */
+  border-color: #00eaff;
 }
 
 .contact-form button {
-  padding: 0.75rem;                            /* Equal button padding */
-  border: none;                                /* Clean button */
-  border-radius: 0.5rem;                       /* Rounded corners */
-  background: #00eaff;                         /* Neon cyan background */
-  color: #0f1115;                              /* Dark text */
-  font-weight: 700;                            /* Bold label */
-  font-size: 1rem;                             /* Standard button size */
-  cursor: pointer;                             /* Pointer cursor */
-  transition: background 0.3s ease, transform 0.2s ease; /* Hover effect */
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #00eaff;
+  color: #0f1115;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
-  background: #ffb703;                         /* Gold hover */
-  transform: scale(1.05);                      /* Slight enlarge */
+  background: #fb8500;
+  transform: scale(1.05);
 }

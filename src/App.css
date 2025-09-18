@@ -1,233 +1,229 @@
+/* ==========================================================
+   ⚔️ App.css — Homepage Styles + Dominion Glass Overlay
+   ========================================================== */
+
+/* ---------------------- HERO ---------------------- */
 .hero {
-  position: relative; /* Container anchors overlay (::before) */
-  isolation: isolate; /* Prevents child z-index leaks */
-  min-height: 100svh; /* Full screen height using viewport units */
-  display: grid; /* Grid allows centering/flexibility */
-  /* place-items: center; */ /* Optional centering, currently disabled */
-  padding: clamp(6rem, 2vh, 8rem) 1.5rem 4rem;
-  /* Top padding scales responsively, side fixed, bottom 4rem */
-  /* text-align: center; */ /* Text alignment, off for flexibility */
+  padding-top: 6em !important;
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: grid;
   background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg');
-  /* Hero background image */
-  background-size: cover; /* Image covers container fully */
-  background-repeat: no-repeat; /* Prevent tiling */
-  background-position: center; /* Keeps focus center */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/* Overlay for readability */
 .hero::before {
-  content: ''; /* Empty element overlay */
-  position: absolute; /* Covers hero container */
-  inset: 0; /* Full coverage (top/right/bottom/left = 0) */
-  z-index: -1; /* Sits behind hero content */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.35),
-    rgba(0, 0, 0, 0.15)
-  ); /* Gradient fade for readability */
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
 }
 
+/* ---------------------- GLASS PANEL ---------------------- */
+.glass-panel {
+  background: rgba(21, 25, 34, 0.75); /* Frosted dark transparency */
+  border: 0.0625em solid rgba(142, 202, 230, 0.25);
+  border-radius: 0.75em;
+  padding: 2em;
+  margin-top: 2em auto;
+  backdrop-filter: blur(0.5em);
+  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15);
+}
+.glass-panel h1 {
+  color: #fb8500;
+
+}
+
+/* ---------------------- TITLE ---------------------- */
 .title {
-  display: grid; /* Centers inside itself */
-  place-items: center; /* Horizontal + vertical centering */
-  margin: 1rem 0 0.01rem; /* Small spacing */
-  color: #fb8500; /* Bright orange accent */
-  font-weight: 800; /* Heavy bold */
-  letter-spacing: -0.04em; /* Tighten letter spacing */
-  line-height: 1.1; /* Compact lines */
+  display: grid;
+  place-items: center;
+  margin: 1rem 0 0.01rem;
+  color: #fb8500;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
   font-size: clamp(2.25rem, 6vw, 8rem);
-  /* Responsive size: min 2.25rem → max 8rem */
 }
 
+/* ---------------------- DESCRIPTION ---------------------- */
 .description {
   display: grid;
   place-items: center;
-  margin: 1rem 0 3rem; /* Space below title */
-  width: 100%; /* Span full width */
-  color: #ffb703; /* Yellow text */
-  font-weight: 600; /* Semi-bold */
-  letter-spacing: -0.02em; /* Slightly condensed */
-  line-height: normal; /* No overlap */
+  margin: 1rem 0 3rem;
+  width: 100%;
+  color: #ffb703;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: normal;
   font-size: clamp(1.125rem, 2.5vw, 2.5rem);
-  /* Responsive scaling */
 }
 
+/* ---------------------- MISSION ---------------------- */
 .mission {
-  display: flex; /* Flex container for content */
-  justify-content: center; /* Center horizontally */
-  font-size: 1.25rem; /* Base font */
-  color: #ffffffba; /* Semi-transparent white */
-  font-weight: 800; /* Bold */
-  margin: 1rem 0 0rem; /* Top spacing only */
-  width: 70%; /* Constrained width for readability */
-  padding: 1%; /* Inner padding */
-  font-size: 1.45rem; /* Override to larger font */
-  line-height: 1.6; /* Prevents overlapping lines */
-  text-align: center; /* Centers multi-line text */
-  text-indent: 2rem; /* Indented first line */
-  border-radius: 3rem; /* Rounded container */
-  box-shadow: rgba(255, 255, 255, 0.902) 0em 0.625em 1.25em;
-  /* Gold glow for emphasis */
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #8ecae6;
+  font-weight: 1000;
+  margin: 1rem 0 0rem;
+  width: 70%;
+  padding: 1%;
+  font-size: 1.45rem;
+  line-height: 1.6;
+  text-align: center;
+  text-indent: 2rem;
+  border-radius: 3rem;
+  box-shadow: rgba(251, 133, 0, 1) 0em 0.625em 1.25em;
 }
 
+/* ---------------------- VIDEO TITLE ---------------------- */
 .video-title {
   display: flex;
-  justify-content: center; /* Center title */
-  font-size: 1.5rem; /* Medium emphasis */
-  color: #ffffff; /* White text */
-  font-weight: 800; /* Bold */
-  margin-left: 10rem; /* Offset left */
-  margin: 5rem 0 0.01rem; /* Large top margin */
-  text-shadow: /* Strong outlined shadow */
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #ffffff; /* Cyan text inside tables */
+  font-weight: 800;
+  margin-left: 10rem;
+  margin: 5rem 0 0.01rem;
+  text-shadow:
     0.05em 0.05em 0 rgba(0, 0, 0, 0.778),
     -0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
     0.05em -0.05em 0 rgba(0, 0, 0, 0.778),
     -0.05em 0.05em 0 rgba(0, 0, 0, 0.778);
 }
 
+/* ---------------------- DEMO VIDEO ---------------------- */
 .demo-video {
   display: grid;
-  place-items: center; /* Center video */
-  width: 100%; /* Fill container */
-  max-width: 60em; /* Constrain width */
-  margin-inline: auto; /* Center horizontally */
+  place-items: center;
+  width: 100%;
+  max-width: 60em;
+  margin-inline: auto;
   position: relative;
 }
-/* Native <video> should scale nicely */
 .demo-video > video {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0.75em; /* Rounded corners */
-  box-shadow: #ffffff 0em 0.625em 1.25em; /* Blue glow shadow */
+  border-radius: 0.75em;
+  box-shadow: #ffffff 0em 0.625em 1.25em;
 }
 @media (prefers-color-scheme: dark) {
   .demo-video video {
     filter: invert(1) grayscale(1);
-    /* Optional inversion for contrast in dark mode */
   }
 }
 
-/* Top bar with buttons */
+/* ---------------------- HEADER ---------------------- */
 .site-header {
-  position: fixed; /* Always visible on scroll */
+  position: fixed;
   top: 0;
-  inset-inline: 0; /* Logical left+right sides */
-  z-index: 1000; /* Highest stacking context */
-  background: transparent; /* Transparent base */
+  inset-inline: 0;
+  z-index: 1000;
+  background: transparent;
 }
-
 .header-inner {
-  max-width: 75em; /* Constrain header */
-  margin-inline: auto; /* Center horizontally */
+  max-width: 75em;
+  margin-inline: auto;
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Spread content */
-  gap: clamp(1rem, 8vw, 4rem); /* Responsive gap */
+  justify-content: space-between;
+  gap: clamp(1rem, 8vw, 4rem);
 }
-
-/* Pill button style */
 button.pill-btn {
-  border: none; /* No border */
+  border: none;
   background: transparent;
   display: flex;
   align-items: center;
-  padding: 0.75rem 1.25rem; /* Comfortable padding */
-  border-radius: 10rem; /* Fully rounded pill */
-  color: #ffffff; /* White text */
-  text-transform: uppercase; /* Uppercase letters */
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #ffffff;
+  text-transform: uppercase;
   font-size: 1rem;
-  letter-spacing: 0.15rem; /* Spaced letters */
-  transition: all 0.3s; /* Smooth hover effects */
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
   position: relative;
-  overflow: hidden; /* Clip hover background */
+  overflow: hidden;
   z-index: 1;
   cursor: pointer;
 }
-/* Hover sweep layer */
 button.pill-btn:before {
-  width: 0; /* Hidden by default */
+  width: 0;
   left: 0;
   top: 0;
-  content: ''; /* Empty element */
+  content: '';
   position: absolute;
-  height: 100%; /* Full height background sweep */
-  background-color: #0e7a95; /* Cyan hover color */
+  height: 100%;
+  background-color: #0e7a95;
   transition: all 0.3s;
-  border-radius: 10rem; /* Match pill shape */
+  border-radius: 10rem;
   z-index: -1;
 }
 button.pill-btn:hover::before {
-  width: 100%; /* Expands to full pill width */
+  width: 100%;
 }
-
 .read-the-docs {
-  color: #f5f5f5; /* Light gray link */
+  color: #f5f5f5;
 }
 
-/* ---------------------- COMMUNITY SECTION ---------------------- */
+/* ---------------------- COMMUNITY ---------------------- */
 .community {
   position: relative;
   display: block;
-  margin-top: 1rem; /* Space from hero */
-  padding: 10rem 1rem 1rem; /* Large top spacing */
-  --bg1: #ffdbb4; /* Background accents */
+  margin-top: 1rem;
+  padding: 10rem 1rem 1rem;
+  --bg1: #ffdbb4;
   --bg2: #ffd1a6;
-  --bg3: #fff8ee;
-  --ring: rgba(227, 212, 3, 0.902); /* Shadow glow */
-  --card-bg: rgba(255, 255, 255, 0.85); /* Card background */
-  --card-border: rgba(0, 0, 0, 0.08); /* Card borders */
-  --title-grad: linear-gradient(#0602ff, #219ebc); /* Gradient heading */
+  --bg3: #eefff7;
+  --ring: rgba(251, 133, 0, 1);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --card-border: rgba(0, 0, 0, 0.08);
+  --title-grad: linear-gradient(#0602ff, #219ebc);
 }
 @media (prefers-color-scheme: dark) {
   .community {
     position: sticky;
     margin-top: 1rem;
     padding: 3rem 1.5rem;
-    --card-bg: rgba(0, 0, 0, 0.85); /* Dark theme card background */
+    --card-bg: rgba(0, 0, 0, 0.85);
     --card-border: rgba(0, 0, 0, 0.08);
     --title-grad: linear-gradient(#0602ff, #219ebc);
   }
 }
 .community__inner {
-  max-width: 68.75em; /* Content width */
-  margin: 0 auto; /* Centered */
+  max-width: 68.75em;
+  margin: 0 auto;
 }
-
-/* Responsive grid */
 .community__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16.25em, 1fr));
-  /* Auto-fit adjusts # of cards per row */
-  gap: 1.25em; /* Space between cards */
+  gap: 1.25em;
 }
-
-/* Card */
 .card {
   position: relative;
   display: grid;
-  grid-template-columns: 2.75em 1fr; /* Icon left, text right */
-  gap: 0.875em; /* Space between icon and text */
+  grid-template-columns: 2.75em 1fr;
+  gap: 0.875em;
   align-items: start;
   padding: 1.375em;
   border-radius: 0.875em;
   background: var(--card-bg);
   border: 0.0625em solid var(--card-border);
   box-shadow: 0 0.375em 1.25em var(--ring);
-  text-decoration: none; /* No link underline */
-  color: inherit; /* Inherit text color */
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    border-color 0.18s ease;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 .card:hover {
-  transform: translateY(-0.125em); /* Lift effect */
-  box-shadow: 0 0.625em 1.875em var(--ring); /* Stronger glow */
-  border-color: rgba(99, 102, 241, 0.35); /* Blue highlight */
+  transform: translateY(-0.125em);
+  box-shadow: 0 0.625em 1.875em var(--ring);
+  border-color: rgba(99, 102, 241, 0.35);
 }
-
-/* Icon bubble */
 .card__icon {
   display: grid;
   place-items: center;
@@ -239,47 +235,41 @@ button.pill-btn:hover::before {
 .card__icon svg {
   width: 1.375em;
   height: 1.375em;
-  fill: #b25f00; /* Brownish icon fill */
+  fill: #b25f00;
 }
 @media (prefers-color-scheme: dark) {
   .card__icon {
-    background: rgba(99, 102, 241, 0.15); /* Dark theme bubble */
+    background: rgba(99, 102, 241, 0.15);
   }
   .card__icon svg {
-    fill: #e5e7eb; /* Light icon in dark */
+    fill: #e5e7eb;
   }
 }
-
-/* Text */
 .card__title {
   margin: 0 0 0.375em;
   font-weight: 700;
   font-size: 1.05rem;
-  color: rgb(191, 131, 0); /* Gold accent */
+  color: #fb8500;
 }
 .card__desc {
   margin: 0;
-  color: #000000; /* Black default */
-  line-height: 1.35; /* Spacing for readability */
+  color: #000000;
+  line-height: 1.35;
   font-size: 0.95rem;
 }
 @media (prefers-color-scheme: dark) {
   .card__desc {
-    color: #c7cbd6; /* Light gray in dark */
+    color: #c7cbd6;
   }
 }
-
-/* External arrow */
 .card__external {
   position: absolute;
   top: 0.125em;
   right: 0.75em;
-  opacity: 0.65; /* Subtle by default */
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
+  opacity: 0.65;
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }
 .card:hover .card__external {
-  opacity: 1; /* Fully visible */
-  transform: translate(0.125em, -0.125em); /* Nudge up-right */
+  opacity: 1;
+  transform: translate(0.125em, -0.125em);
 }
