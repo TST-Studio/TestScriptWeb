@@ -1,70 +1,92 @@
+// ==========================================================
+// 🌌 main.tsx — ROOT ENTRY POINT
+// ==========================================================
+// This file mounts the React app, wires global routing,
+// and declares the page routes for TestScript Studio Website.
+// ==========================================================
+
 // ---------------------- CORE IMPORTS ----------------------
 import React from 'react';
-// React core library — required for all JSX elements and React components.
+// React core library — enables JSX + component definitions.
 
 import ReactDOM from 'react-dom/client';
-// ReactDOM client renderer (React 18). Provides createRoot() for mounting app into DOM.
+// React 18 DOM renderer. Provides createRoot() for mounting app into the DOM.
 
 // ---------------------- ROUTER IMPORTS ----------------------
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// BrowserRouter: enables navigation with HTML5 history API (no page reloads).
-// Routes: container that holds all defined <Route> paths.
-// Route: maps a specific URL path to a component element (page).
+// BrowserRouter: wraps app to handle navigation without page reloads.
+// Routes: groups multiple <Route> definitions.
+// Route: maps URL paths → React components (pages).
 
 // ---------------------- GLOBAL STYLES ----------------------
-import './index.css';
-// Global stylesheet applied across entire app (base typography, resets, themes).
 
 // ---------------------- PAGE IMPORTS ----------------------
 import App from './App.tsx';
-// App = homepage component, shown when visiting "/".
+// "/" → Homepage (hero, community, mission).
 
 import InstallationDetails from './InstallationPage.tsx';
-// InstallationDetails = installation guide page, shown when visiting "/installation-page".
+// "/installation-page" → Installation guide for TestScript.
 
 import About from './components/about-team.tsx';
-// About = About Team page, introduces team members, shown when visiting "/about-team".
+// "/about-team" → About Team page (introduces team + mission).
 
 import Contact from './components/Contact.tsx';
-// Contact = Contact page with form + contributor details, shown when visiting "/contact".
+// "/contact" → Contact + contribution form.
 
 import Conduct from './components/Code-conduct.tsx';
-// Conduct = Code of Conduct page, community rules, shown when visiting "/conduct".
+// "/conduct" → Code of Conduct (community guidelines).
 
 import Office from './components/office-hours.tsx';
-// Office = Office Hours page, lists availability schedule, shown when visiting "/office".
+// "/office" → Office Hours page (support availability).
 
-// ---------------------- ROOT RENDER ----------------------
+import Roadmap from './components/Roadmap.tsx';
+// "/roadmap" → Roadmap page (stretch goals + product vision).
+
+import Docs from './components/Docs.tsx';
+
+import './index.css';
+// Base/global stylesheet (resets, variables, typography).
+
+// ==========================================================
+// 🔥 ROOT RENDER — MOUNT REACT APP
+// ==========================================================
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // createRoot: attaches React virtual DOM to real DOM element with id="root".
-  // Non-null assertion (!) ensures TypeScript knows "root" exists.
+  // createRoot(): attaches virtual DOM tree to #root element.
+  // "!" = non-null assertion → TypeScript guarantees #root exists.
 
   <React.StrictMode>
-    {/* StrictMode: dev-only wrapper. Highlights potential problems (deprecated APIs, side effects). */}
+    {/* StrictMode: DEV-ONLY wrapper, highlights potential issues like
+        unsafe lifecycles, side-effects, or deprecated APIs. */}
 
     <BrowserRouter>
-      {/* BrowserRouter wraps the entire app, enabling route navigation without full reload. */}
+      {/* BrowserRouter: enables SPA routing via HTML5 history API. */}
 
       <Routes>
-        {/* Routes container: holds all defined paths mapping to components. */}
+        {/* ---------------------- ROUTES DECLARATION ---------------------- */}
 
         <Route path="/" element={<App />} />
-        {/* "/" root path → renders App (homepage). */}
+        {/* Root "/" → renders Homepage (App). */}
 
         <Route path="/installation-page" element={<InstallationDetails />} />
-        {/* "/installation-page" path → renders InstallationDetails page. */}
+        {/* "/installation-page" → renders Installation guide. */}
 
         <Route path="/about-team" element={<About />} />
-        {/* "/about-team" path → renders About Team page. */}
+        {/* "/about-team" → renders About Team page. */}
 
         <Route path="/contact" element={<Contact />} />
-        {/* "/contact" path → renders Contact page. */}
+        {/* "/contact" → renders Contact page. */}
 
         <Route path="/conduct" element={<Conduct />} />
-        {/* "/conduct" path → renders Code of Conduct page. */}
+        {/* "/conduct" → renders Code of Conduct. */}
 
         <Route path="/office" element={<Office />} />
-        {/* "/office" path → renders Office Hours page. */}
+        {/* "/office" → renders Office Hours page. */}
+
+        <Route path="/roadmap" element={<Roadmap />} />
+        {/* "/roadmap" → renders Roadmap page. */}
+
+        <Route path="/docs" element={<Docs />} />
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

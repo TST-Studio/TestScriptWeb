@@ -1,151 +1,103 @@
-/* Code-conduct.css — TestScript Code of Conduct Styling */
-/* This stylesheet applies theme-specific styles to the Code of Conduct page. */
+/* ==========================================================
+   ⚔️ Code-conduct.css — Community Rules + Glass Overlay
+   ========================================================== */
 
-/* Root Container */
-.conduct-page {
-  min-height: 100vh;
-  /* Ensures page covers full viewport height. */
-
-  background: linear-gradient(180deg, var(--bg), var(--prussian-blue));
-  /* Dark gradient background, flowing from top (bg) to bottom (prussian-blue). */
-
-  color: var(--text);
-  /* Default text color set from global theme variable. */
-
-  display: flex;
-  flex-direction: column;
-  /* Layout uses vertical flexbox → stacks navbar on top, content below. */
+/* ---------------------- HERO ---------------------- */
+.hero {
+  padding-top: 0;
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: grid;
+  background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2));
 }
 
-/* Navbar (inherits global style but scoped here for safety) */
-.conduct-navbar {
-  position: sticky;
-  top: 0;
-  /* Navbar sticks to top when scrolling. */
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* Flexbox → evenly spaces logo and links horizontally, vertically centers them. */
-
-  background: var(--panel);
-  /* Dark panel background for navbar. */
-
-  border-bottom: 0.05em solid var(--sky-blue);
-  /* Thin cyan border under navbar for separation. */
-
-  padding: 0.875em 1.375em;
-  /* Vertical and horizontal padding around navbar items. */
-
-  z-index: 20;
-  /* Ensures navbar appears above content layers. */
-}
-.nav-brand {
-  cursor: pointer;
-  /* Makes logo clickable. */
-}
-.nav-links {
-  display: flex;
-  gap: 1em;
-  /* Flex row → spaces out nav items equally with 1em gap. */
-
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  /* Resets default <ul> styling. */
-}
-.nav-links li {
-  cursor: pointer;
-  color: var(--muted);
-  /* Default muted text for inactive links. */
-
-  transition: color 0.2s ease;
-  /* Smooth color change on hover. */
-}
-.nav-links li:hover {
-  color: var(--orange);
-  /* Highlight link with orange glow when hovered. */
-}
-
-/* Main Container */
+/* ---------------------- GLASS PANEL ---------------------- */
+.glass-panel,
 .conduct-container {
-  max-width: 60rem;
-  /* Content capped at 960px for readability. */
-
-  margin: 3rem auto;
-  /* Centers content horizontally, adds top/bottom margin spacing. */
-
-  padding: 0 1.5rem;
-  /* Side padding → ensures text doesn’t touch viewport edges. */
+  background: rgba(21, 25, 34, 0.75); /* Frosted dark */
+  border: 0.0625em solid rgba(142, 202, 230, 0.25);
+  border-radius: 0.75em;
+  padding: 2em;
+  margin: -4.5em auto;
+  backdrop-filter: blur(0.5em);
+  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15);
+  max-width: 60em;
+  color: #e8eaf2;
 }
 
-/* Title + Intro */
+/* ---------------------- PAGE TITLE ---------------------- */
 .conduct-title {
   font-size: 2.5rem;
-  /* Large heading size for prominence. */
-
-  color: var(--yellow);
-  /* Glowing yellow accent from theme. */
-
+  font-weight: 800;
   text-align: center;
-  margin-bottom: 1.5rem;
-  /* Centers title and adds spacing below. */
-
-  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
-  /* Yellow glow behind title for emphasis. */
+  margin-bottom: 1rem;
+  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
+  text-shadow: 0 0 0.5em rgba(255, 183, 3, 0.6);
 }
+
+/* ---------------------- INTRO ---------------------- */
 .conduct-intro {
   font-size: 1.125rem;
-  /* Slightly larger than body text for importance. */
-
+  line-height: 1.6;
+  margin-bottom: 2rem;
   text-align: center;
-  margin-bottom: 3rem;
-  /* Centers intro paragraph and adds generous spacing. */
-
-  color: var(--sky-blue);
-  /* Uses cyan to contrast title’s yellow and draw reader’s eye. */
+  color: #ffffff;
 }
 
-/* Sections */
+/* ---------------------- SECTIONS ---------------------- */
 .conduct-section {
   margin-bottom: 2.5rem;
-  /* Vertical spacing between sections. */
 }
 .conduct-heading {
-  font-size: 1.75rem;
-  /* Subheading size for each section. */
-
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
-  /* Space below heading before content starts. */
-
-  color: var(--orange);
-  /* Orange heading to separate from main title. */
-
-  text-shadow: 0 0 0.5rem rgba(251, 133, 0, 0.6);
-  /* Adds orange glow for visual emphasis. */
+  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
+  text-shadow: 0 0 0.35em rgba(142, 202, 230, 0.5);
 }
+.conduct-section p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #ffffff;
+}
+
+/* ---------------------- LISTS ---------------------- */
 .conduct-list {
-  list-style: disc;
-  /* Bullet points for readability. */
-
-  padding-left: 1.5rem;
-  /* Indentation for list alignment. */
-
-  line-height: 1.6;
-  /* Spacing between lines for readability. */
-
-  color: var(--text);
-  /* Default theme text color. */
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.conduct-list li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  position: relative;
+  font-size: 1rem;
+  color: #8ecae6;
+}
+.conduct-list li::before {
+  content: "⎚";
+  position: absolute;
+  left: 0;
+  color: #ffb703;
 }
 
-/* Links */
-a {
-  color: var(--sky-blue);
-  /* Default cyan links. */
+/* ---------------------- LINKS ---------------------- */
+.conduct-section a {
+  color: #8ecae6;
   text-decoration: underline;
-  /* Clear underline so links are visually obvious. */
+  transition: color 0.2s ease;
 }
-a:hover {
-  color: var(--orange);
-  /* Hover state switches cyan → orange. */
+.conduct-section a:hover {
+  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
 }

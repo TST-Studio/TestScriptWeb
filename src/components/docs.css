@@ -1,0 +1,104 @@
+/* ==========================================================
+   ⚔️ docs.css — Documentation Page Styling
+   ========================================================== */
+
+.docs-page {
+  display: grid;
+  place-items: center;
+  margin-top: -2em;
+  padding: 2em;
+}
+
+.docs-title {
+  color: var(--orange); /* 🔥 flame orange */
+  font-size: 2em;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 0.5em var(--orange);
+}
+
+.docs-intro {
+  color: var(--sky-blue); /* 🌊 cyan text */
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* ---------------- SECTIONS ---------------- */
+.docs-section {
+  margin-bottom: 2.5rem;
+}
+
+.docs-section h2 {
+  color: var(--orange); /* 🔥 section headers */
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 0.3em var(--orange);
+}
+
+.docs-section p {
+  color: var(--sky-blue); /* 🌊 cyan body */
+  margin: 0.25rem 0;
+}
+
+/* ---------------- CODE BLOCKS ---------------- */
+.docs-section pre {
+  background: rgba(21, 25, 34, 0.85); /* glass-dark */
+  color: #ffffff;
+  padding: 1em;
+  border-radius: 0.75em;
+  font-family: monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  box-shadow: 0 0 0.75em rgba(251, 133, 0, 0.4); /* 🔥 glow */
+}
+
+/* ==========================================================
+   📱 Responsive Adjustments
+   ========================================================== */
+@media (max-width: 900px) {
+  .docs-page {
+    padding: 1em;
+    margin-top: 0;
+  }
+
+  .docs-title {
+    font-size: 1.75rem;
+  }
+
+  .docs-intro {
+    font-size: 1.1rem;
+    padding: 0 0.5rem;
+  }
+
+  .docs-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .docs-section pre {
+    font-size: 0.85rem;
+    padding: 0.75em;
+    white-space: pre-wrap; /* wrap on small screens */
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 600px) {
+  .docs-title {
+    font-size: 1.5rem;
+  }
+
+  .docs-intro {
+    font-size: 1rem;
+  }
+
+  .docs-section h2 {
+    font-size: 1.25rem;
+  }
+
+  .docs-section pre {
+    font-size: 0.8rem;
+  }
+}

@@ -1,170 +1,147 @@
+/* ==========================================================
+   ⚔️ about-team.css — Team Grid + Glass Panel Styling
+   ========================================================== */
+
+/* ---------------------- ROOT ---------------------- */
 .about-team {
-  /* ROOT CONTAINER: controls the entire About section layout */
-  text-align: center; /* Horizontally center text content */
-  padding: 5em 1.25em; /* 5em vertical padding, 1.25em horizontal breathing room */
-  color: #e8eaf2; /* Default text color: soft bluish-gray for readability */
-  background: transparent; /* Transparent so parent background can show through */
-  min-height: 100vh; /* Forces section to fill at least full viewport height */
-  display: flex; /* Enables flexbox layout */
-  flex-direction: column; /* Stacks children vertically */
-  justify-content: flex-start; /* Aligns content to the top */
-  align-items: center; /* Horizontally centers content */
+  text-align: center;
+  padding: 0 2em 1.25em 2em; /* top=0 | sides=2em | bottom=1.25em */
+  color: #e8eaf2;
+  background: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+/* ---------------------- GLASS PANEL ---------------------- */
+.glass-panel {
+  background: rgba(21, 25, 34, 0.85); /* Dark roadmap tone */
+  border: 0.0625em solid rgba(142, 202, 230, 0.25); /* Cyan edge */
+  border-radius: 0.75em; /* Smooth corners */
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 52em;
+  backdrop-filter: blur(0.5em); /* Frosted transparency */
+  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15); /* Subtle glow */
+  text-align: center;
+  color: #e8eaf2; /* Light text */
+}
+
+/* ---------------------- HEADINGS ---------------------- */
 .about-team h1 {
-  /* MAIN HEADING */
-  font-size: 2.625em; /* Large font for dominance */
-  margin-bottom: 1em; /* Space beneath heading before next element */
-  color: #ffb703; /* Gold accent color for importance */
-  text-shadow: 0 0 0.75em rgba(255, 183, 3, 0.5); /* Subtle glowing shadow aura */
+  font-size: 2.25em;
+  margin-bottom: 1em;
+  color: #fb8500;
+  text-shadow: 0 0 0.75em rgba(255, 183, 3, 0.5);
 }
 
 .about-team h2 {
-  /* SUBHEADING */
-  font-size: 1.5em; /* Slightly smaller than h1 for hierarchy */
-  margin-bottom: 2em; /* Space beneath subheading before mission text */
-  color: #a7afc0; /* Muted bluish-gray accent for balance */
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+  --yellow: #ffb703;
+
+  /* --yellow: #a2770b; */
 }
 
 .about-team .mission {
-  /* MISSION STATEMENT PARAGRAPH */
-  max-width: 56.25em; /* Constrains line length for readability */
-  margin: 0 auto 3.75em auto; /* Center horizontally + 3.75em bottom spacing before grid */
-  font-size: 1em; /* Standard readable size */
-  line-height: 1.6; /* Taller lines improve readability */
-  color: #cbd5e1; /* Softer gray tone for less eye strain */
+  max-width: 52em;
+  margin: 0 auto 3em auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #8ecae6;
 }
 
+/* ---------------------- GRID ---------------------- */
 .team-grid {
-  /* CONTAINER FOR TEAM CARDS */
-  display: flex; /* Enables flexbox */
-  flex-direction: row; /* Arrange cards in a row */
-  justify-content: center; /* Center all cards horizontally */
-  gap: 1.75em; /* Horizontal and vertical space between cards */
-  width: 100%; /* Full container width */
-  max-width: 87.5em; /* Restrict maximum width for consistent layout */
-  flex-wrap: wrap; /* Allow cards to wrap onto new rows */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5em;
+  width: 100%;
+  max-width: 90em;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
+/* ---------------------- CARD ---------------------- */
 .team-member {
-  /* INDIVIDUAL TEAM CARD */
-  background: #151922; /* Dark card background */
-  border: 0.0625em solid #252a36; /* Thin border for definition */
-  border-radius: 0.75em; /* Rounded corners */
-  padding: 1.25em; /* Internal padding for breathing space */
-  width: 15.625em; /* Fixed card width */
-  min-height: 25em; /* Ensures consistent card height */
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease; /* Smooth hover animations */
-  opacity: 0; /* Start invisible (fade-in controlled via JS + .show) */
-  transform: translateY(2.5em); /* Start slightly shifted down */
-  display: flex; /* Flexbox for internal alignment */
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center horizontally */
-  justify-content: flex-start; /* Align items at the top */
-}
-
-.team-member.show {
-  /* APPLIED WHEN ELEMENT ENTERS VIEWPORT (via IntersectionObserver) */
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Slide back into natural position */
+  background: #151922;
+  border: 0.0625em solid #252a36;
+  border-radius: 0.75em;
+  padding: 1em;
+  width: 14em;
+  height: 28em;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .team-member:hover {
-  /* CARD HOVER EFFECT */
-  transform: scale(1.05); /* Enlarge slightly for emphasis */
-  background: #1e2432; /* Darken background on hover */
+  transform: scale(1.05);
+  background: #1e2432;
 }
 
+/* ---------------------- IMAGE ---------------------- */
 .team-member img.avatar {
-  /* AVATAR IMAGE STYLING */
-  width: 100%; /* Image fills card width */
-  height: 15em; /* Fixed uniform height */
-  object-fit: cover; /* Crop to fill container */
-  object-position: top; /* Keep face/top of image visible */
-  border-radius: 0.5em; /* Rounded corners */
-  margin-bottom: 1em; /* Space beneath image */
-  display: block; /* Ensure image respects block flow */
-  transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+  width: 100%;
+  height: 12em;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0.5em;
+  /* margin-bottom: 0.5em; */
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .team-member:hover img.avatar {
-  /* AVATAR HOVER ZOOM */
-  transform: scale(1.03); /* Slight zoom on hover */
+  transform: scale(1.03);
 }
 
+/* ---------------------- TEXT ---------------------- */
 .team-member h3 {
-  /* MEMBER NAME */
-  font-size: 1.25em; /* Larger than body text */
-  margin: 0.75em 0; /* Space above and below name */
-  color: #8ecae6; /* Sky blue color accent */
-  transition: color 0.3s ease; /* Smooth hover color change */
-  text-align: center; /* Center text alignment */
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  color: #8ecae6;
+  text-align: center;
+  transition: color 0.3s ease;
 }
 
 .team-member:hover h3 {
-  /* NAME HOVER EFFECT */
-  color: #ffb703; /* Gold accent on hover */
+  color: #ffb703;
 }
 
 .team-member p {
-  /* ROLE + LINKS */
-  font-size: 0.9375em; /* Slightly larger than small text */
-  color: #fb8500; /* Orange accent color */
-  margin-bottom: 0.75em; /* Space beneath each paragraph */
-  text-align: center; /* Center text alignment */
+  font-size: 0.94em;
+  color: #fb8500;
+  margin-bottom: 0.5em;
+  text-align: center;
 }
 
 .team-member p a {
-  /* LINKS INSIDE CARD */
-  color: inherit; /* Inherit parent text color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth hover color animation */
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-word;
 }
 
 .team-member p a:hover {
-  /* LINK HOVER EFFECT */
-  color: #ffb703; /* Gold accent on hover */
-  text-decoration: underline; /* Add underline for clarity */
+  color: #fb8500;
+  text-decoration: underline;
 }
 
-/* ---------------------- RESPONSIVE BREAKPOINTS ---------------------- */
-
+/* ---------------------- RESPONSIVE ---------------------- */
 @media (max-width: 75em) {
   .team-grid {
-    gap: 1.25em; /* Reduce spacing between cards */
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .team-member {
-    width: 13.75em; /* Narrower cards to fit more on row */
-  }
-}
-
-@media (max-width: 56.25em) {
-  .team-member {
-    width: 45%; /* Cards occupy 45% of row width → 2 per row */
-  }
-}
-
-@media (max-width: 37.5em) {
-  .team-grid {
-    flex-direction: column; /* Stack cards vertically */
-    align-items: center; /* Center cards horizontally */
-  }
-  .team-member {
-    width: 90%; /* Card nearly full width */
-  }
-}
-
-/* ---------------------- FADE-IN ANIMATION ---------------------- */
-
-@keyframes fadeSlide {
-  from {
-    opacity: 0; /* Start invisible */
-    transform: translateY(-0.625em); /* Start slightly above final position */
-  }
-  to {
-    opacity: 1; /* Fade to visible */
-    transform: translateY(0); /* Slide to resting position */
+    width: 12em;
+    height: 26em;
   }
 }

@@ -1,5 +1,5 @@
 /* ==========================================================
-   ⚔️ Office-hours.css — Hours + Frosted Glass Panel Styling
+   ⚔️ roadmap.css — Dominion Roadmap Page with Glass Overlay
    ========================================================== */
 
 /* ---------------------- HERO ---------------------- */
@@ -33,81 +33,68 @@
   box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15);
 }
 
+.roadmap-intro p {
+  color: #ffffff;
+}
+
+.roadmap-intro {
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+.glass-panel p{
+    color: #8ecae6;
+    font-size: 1.2em;
+}
 /* ---------------------- ROOT PAGE ---------------------- */
-.office-page {
+.roadmap-page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: -6.5rem auto;
-
 }
 
-/* ---------------------- CONTENT CONTAINER ---------------------- */
-.office-container {
+/* ---------------------- CONTAINER ---------------------- */
+.roadmap-container {
   max-width: 60rem;
-  margin: 3rem auto;
+  margin: -4.5rem auto;
   padding: 0 1.5rem;
   text-align: center;
-  color: var(--text);
+  color: var(--sky-blue);
 }
 
 /* ---------------------- TITLE + INTRO ---------------------- */
-.office-title {
+.roadmap-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #ffb703;
   text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
 }
-.office-intro {
-  font-size: 1.125rem;
-  font-weight: 900;
-  color: #8ecae6;
-  margin-bottom: 2.5rem;
-}
 
-/* ---------------------- HOURS TABLE ---------------------- */
-.office-table-wrapper {
-  overflow-x: auto;
+
+
+/* ---------------------- TIMELINE ---------------------- */
+.roadmap-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.office-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0 auto 2.5rem;
-  background: rgba(21, 25, 34, 0.8);
+.roadmap-item {
+  background: rgba(21, 25, 34, 0.75);
   border-radius: 0.75rem;
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 234, 255, 0.3);
+  padding: 1.5rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 234, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.office-table th,
-.office-table td {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 0.05em solid var(--border);
+.roadmap-item:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.75rem 1.75rem rgba(0, 234, 255, 0.35);
 }
-.office-table th {
-  font-size: 1.25rem;
+.roadmap-phase {
+  font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
   color: #fb8500;
-}
-.office-table td {
-  font-size: 1rem;
-  color: #8ecae6;
-}
-.office-closed td {
-  color: #888;
-  font-style: italic;
-}
-
-/* ---------------------- FOOTER ---------------------- */
-.office-footer {
-  font-size: 1rem;
-  margin-top: 2rem;
-  color: var(--muted);
-}
-.office-footer a {
-  color: #8ecae6;
-  text-decoration: underline;
-}
-.office-footer a:hover {
-  color: #ffb703;
+  text-shadow: 0 0 0.5rem rgba(251, 133, 0, 0.6);
 }

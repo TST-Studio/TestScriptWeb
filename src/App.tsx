@@ -1,9 +1,19 @@
-import { useNavigate } from 'react-router-dom'; // dont erase this
-import './App.css';
-import './index.css';
+// ==========================================================
+// 🌌 App.tsx — HOMEPAGE COMPONENT
+// ==========================================================
+// Landing page for Tst Studio. Integrates global Navbar,
+// hero title, mission statement, demo video, and community links.
+// ==========================================================
 
+// ---------------------- IMPORTS ----------------------
+import './App.css';   // Local component styles
+import './index.css'; // Global theme + resets
+import Navbar from './components/Navbar';
+// 🔥 Dominion Global Navbar (shared across app)
+
+// ---------------------- COMPONENT ----------------------
 function App() {
-  const navigate = useNavigate(); // dont erase this
+  // COMMUNITY LINKS DATA
   const COMMUNITY = [
     {
       name: 'Github',
@@ -31,7 +41,7 @@ function App() {
       desc: 'Learn with team videos & tutorials',
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M23 7.5a4 4 0 0 0-2.8-2.8C18.5 4.2 12 4.2 12 4.2s-6.5 0-8.2.5A4 4 0 0 0 1 7.5 41 41 0 0 0 1 12a41 41 0 0 0  .8 4.5A4 4 0 0 0 4.6 19c1.7.5 7.4.5 7.4.5s6.5 0 8.2-.5a4 4 0 0 0 2.8-2.8A41 41 0 0 0 23 12a41 41 0 0 0 0-4.5ZM10 15.3V8.7l5.6 3.3L10 15.3z" />
+          <path d="M23 7.5a4 4 0 0 0-2.8-2.8C18.5 4.2 12 4.2 12 4.2s-6.5 0-8.2.5A4 4 0 0 0 1 7.5 41 41 0 0 0 1 12a41 41 0 0 0 .8 4.5A4 4 0 0 0 4.6 19c1.7.5 7.4.5 7.4.5s6.5 0 8.2-.5a4 4 0 0 0 2.8-2.8A41 41 0 0 0 23 12a41 41 0 0 0 0-4.5ZM10 15.3V8.7l5.6 3.3L10 15.3z" />
         </svg>
       ),
     },
@@ -47,52 +57,40 @@ function App() {
     },
   ];
 
+  // ---------------------- RENDER ----------------------
   return (
     <>
       <div className="hero">
-        <header className="site-header">
-          <div className="header-inner">
-            <button
-              className="pill-btn"
-              onClick={() => navigate('/installation-page')}
-            >
-              Tools
-            </button>
-            <button
-              className="pill-btn"
-              onClick={() => navigate('/about-team')}
-            >
-              Meet the team
-            </button>
-          </div>
-        </header>
-        <h1 className="title">Tst Studio.</h1>
-        <section className="description">
-          <p>
-            {' '}
-            Making developers' lives easier with innovative tools and
-            extensions.
-          </p>
-          <h3 className="mission">
-            Empowering developers to build with less friction. We simplify
-            workflows, remove barriers, and unlock creativity. Our solutions are
-            intuitive, reliable, and made for developers by developers.
-          </h3>
-        </section>
-        <div className="video-title"> UNIT TEST GENERATOR: TestScript</div>
+        {/* ---------------------- GLOBAL NAVBAR ---------------------- */}
+        <Navbar />
+
+        {/* ---------------------- HERO SECTION ---------------------- */}
+        <div className="glass-panel">
+          <h1 className="title">TST Studio</h1>
+          <section className="description">
+            <p>Making developers' lives easier with innovative tools and extensions.</p>
+            <h3 className="mission">
+              Empowering developers to build with less friction. We simplify workflows,
+              remove barriers, and unlock creativity. Our solutions are intuitive,
+              reliable, and made for developers by developers.
+            </h3>
+          </section>
+          <div className="video-title">UNIT TEST GENERATOR: TestScript</div>
+        </div>
+
+        {/* ---------------------- DEMO VIDEO ---------------------- */}
         <div className="demo-video">
           <video
-            src="./images/Short-Demo.mp4" // put the file in /public/videos/
+            src="./images/Short-Demo.mp4" // stored in /public/images
             autoPlay
             loop
             muted
             playsInline
-            style={{
-              width: '95%', // full width
-              height: 'auto', // maintain aspect ratio
-            }}
+            style={{ width: '95%', height: 'auto' }}
           />
         </div>
+
+        {/* ---------------------- COMMUNITY LINKS ---------------------- */}
         <section className="community">
           <div className="community__inner">
             <div className="community__grid">
@@ -111,7 +109,6 @@ function App() {
                     <h3 className="card__title">{item.name}</h3>
                     <p className="card__desc">{item.desc}</p>
                   </div>
-
                   <span className="card__external" aria-hidden="true"></span>
                 </a>
               ))}
@@ -123,4 +120,5 @@ function App() {
   );
 }
 
+// ---------------------- EXPORT ----------------------
 export default App;
