@@ -47,7 +47,7 @@ function App() {
     },
     {
       name: 'Linkedin',
-      href: 'https://linkedin.com/in/tst-studio',
+      href: 'https://www.linkedin.com/company/tst-studio/about/',
       desc: 'Follow us and connect with engineers!',
       icon: (
         <svg viewBox="0 0 24 24" aria-hidden="true">
