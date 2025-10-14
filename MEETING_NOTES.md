@@ -1,4 +1,3 @@
-
 Meeting:
 
 14-Oct, 2025
@@ -9,3 +8,4 @@ Talk: Jonathan Jovel introducing Model Context Protocol (MCP)
 Attendees:
 
 - Glen Jarvis
+- Tucker Olsen
