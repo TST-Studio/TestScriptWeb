@@ -9,3 +9,5 @@ Attendees:
 
 - Glen Jarvis
 - Tucker Olsen
+- Aman Lally
+
