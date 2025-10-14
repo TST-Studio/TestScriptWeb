@@ -6,6 +6,6 @@ Meeting:
 Talk: Jonathan Jovel introducing Model Context Protocol (MCP)
 
 Attendees:
-
+- Jonathan Jovel
 - Glen Jarvis
 - Tucker Olsen
