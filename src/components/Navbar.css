@@ -4,28 +4,31 @@
 
 /* ---------------------- BASE NAV ---------------------- */
 .site-header {
-  position: fixed;              /* 🔥 Always pinned at top */
+  position: fixed; /* 🔥 Always pinned at top */
   top: 0;
   left: 0;
   right: 0;
-  height: auto;                 /* Flexible height */
-  z-index: 2000;                /* Above all content */
-  background: transparent;      /* Floating transparent look */
+  height: auto; /* Flexible height */
+  z-index: 2000; /* Above all content */
+  background: transparent; /* Floating transparent look */
   backdrop-filter: none;
-  padding: 1rem 2rem;           /* Balanced vertical + horizontal spacing */
+  padding: 1rem 2rem; /* Balanced vertical + horizontal spacing */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    box-shadow 0.3s ease;
   pointer-events: auto;
 }
 
 /* 🔥 Dominion Glass after scroll */
 .site-header.scrolled {
-  background: rgba(15, 17, 21, 0.75);
+  background: var(--bg);
   backdrop-filter: blur(0.75em);
-  box-shadow: 0 0.5em 1.25em rgba(0, 0, 0, 0.5);
-  border-bottom: 0.05em solid rgba(142, 202, 230, 0.25);
+  box-shadow: 0 0.5em 1.25em var(--surface);
+  border-bottom: 0.05em solid var(--border);
 }
 
 /* Push page content down so it doesn't overlap header */
@@ -39,11 +42,11 @@
 /* ---------------------- INNER NAV ---------------------- */
 .header-inner {
   display: flex;
-  gap: 1.25rem;                /* Space between nav items */
+  gap: 1.25rem; /* Space between nav items */
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0.25rem 0;           /* Light vertical padding inside */
+  padding: 0.25rem 0; /* Light vertical padding inside */
 }
 
 /* ---------------------- DESKTOP ---------------------- */
@@ -65,15 +68,17 @@
 .hamburger-btn {
   background: none;
   border: none;
-  color: #00eaff;
-  font-size: 1.9rem;             /* Slightly larger touch target */
-  padding: 0.5rem 0.75rem;       /* Comfortable tap area */
+  color: var(--secondary);
+  font-size: 1.9rem; /* Slightly larger touch target */
+  padding: 0.5rem 0.75rem; /* Comfortable tap area */
   cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 .hamburger-btn:hover {
   transform: scale(1.15);
-  color: #fb8500;
+  color: var(--primary);
 }
 
 /* 🔥 Dominion Glass Dropdown */
@@ -83,15 +88,17 @@
   opacity: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75em;                  /* More spacing between links */
+  gap: 0.75em; /* More spacing between links */
   margin-top: 0.85em;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  background: rgba(15, 17, 21, 0.9);
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease;
+  background: var(--bg);
   backdrop-filter: blur(0.75em);
-  border: 0.05em solid rgba(142, 202, 230, 0.25);
+  border: 0.05em solid var(--border);
   border-radius: 0.75em;
-  box-shadow: 0 0.75em 1.25em rgba(0, 0, 0, 0.45);
-  padding: 1rem 1.25rem;        /* Balanced padding inside dropdown */
+  box-shadow: 0 0.75em 1.25em var(--bg);
+  padding: 1rem 1.25rem; /* Balanced padding inside dropdown */
 }
 .dropdown-menu.open {
   max-height: 600px;
@@ -114,11 +121,11 @@
    ⚔️ One-Line Enforcement for Navbar Links
    ========================================================== */
 .header-inner {
-  flex-wrap: nowrap;        /* 🔥 prevent wrapping */
-  white-space: nowrap;      /* 🚀 force all links inline */
-  overflow-x: auto;         /* allow horizontal scroll if needed */
-  scrollbar-width: none;    /* hide scrollbar in Firefox */
+  flex-wrap: nowrap; /* 🔥 prevent wrapping */
+  white-space: nowrap; /* 🚀 force all links inline */
+  overflow-x: auto; /* allow horizontal scroll if needed */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
 }
 .header-inner::-webkit-scrollbar {
-  display: none;            /* hide scrollbar in Chrome/Safari */
+  display: none; /* hide scrollbar in Chrome/Safari */
 }

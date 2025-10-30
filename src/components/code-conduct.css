@@ -19,21 +19,21 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(to bottom, var(--bg), var(--surface));
 }
 
 /* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel,
 .conduct-container {
-  background: rgba(21, 25, 34, 0.75); /* Frosted dark */
-  border: 0.0625em solid rgba(142, 202, 230, 0.25);
+  background: var(--surface);
+  border: 0.0625em solid var(--border);
   border-radius: 0.75em;
   padding: 2em;
   margin: -4.5em auto;
   backdrop-filter: blur(0.5em);
-  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15);
+  box-shadow: 0 0.75em 1.5em var(--accent);
   max-width: 60em;
-  color: #e8eaf2;
+  color: var(--text-secondary);
 }
 
 /* ---------------------- PAGE TITLE ---------------------- */
@@ -42,8 +42,8 @@
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
-  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
-  text-shadow: 0 0 0.5em rgba(255, 183, 3, 0.6);
+  color: var(--primary);
+  text-shadow: 0 0 0.5em var(--primary);
 }
 
 /* ---------------------- INTRO ---------------------- */
@@ -52,7 +52,7 @@
   line-height: 1.6;
   margin-bottom: 2rem;
   text-align: center;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 /* ---------------------- SECTIONS ---------------------- */
@@ -63,13 +63,13 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
-  text-shadow: 0 0 0.35em rgba(142, 202, 230, 0.5);
+  color: var(--primary);
+  text-shadow: 0 0 0.35em var(--accent);
 }
 .conduct-section p {
   font-size: 1rem;
   line-height: 1.65;
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 /* ---------------------- LISTS ---------------------- */
@@ -83,21 +83,21 @@
   padding-left: 1.25rem;
   position: relative;
   font-size: 1rem;
-  color: #8ecae6;
+  color: var(--secondary);
 }
 .conduct-list li::before {
-  content: "⎚";
+  content: '⎚';
   position: absolute;
   left: 0;
-  color: #ffb703;
+  color: var(--primary);
 }
 
 /* ---------------------- LINKS ---------------------- */
 .conduct-section a {
-  color: #8ecae6;
+  color: var(--text-secondary);
   text-decoration: underline;
   transition: color 0.2s ease;
 }
 .conduct-section a:hover {
-  color: rgba(251, 133, 0, 1); /* 🔥 solid flame */
+  color: var(--primary);
 }

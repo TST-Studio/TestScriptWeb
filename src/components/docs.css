@@ -10,7 +10,7 @@
 }
 
 .docs-title {
-  color: var(--primary); /* 🔥 flame orange */
+  color: var(--primary);
   font-size: 2em;
   text-align: center;
   font-weight: 900;
@@ -19,7 +19,7 @@
 }
 
 .docs-intro {
-  color: var(--secondary); /* 🌊 cyan text */
+  color: var(--secondary);
   text-align: center;
   margin-bottom: 2rem;
   font-size: 1.25rem;
@@ -32,27 +32,27 @@
 }
 
 .docs-section h2 {
-  color: var(--primary); /* 🔥 section headers */
+  color: var(--primary);
   font-size: 1.75rem;
   margin-bottom: 0.75rem;
   text-shadow: 0 0 0.3em var(--primary);
 }
 
 .docs-section p {
-  color: var(--secondary); /* 🌊 cyan body */
+  color: var(--secondary);
   margin: 0.25rem 0;
 }
 
 /* ---------------- CODE BLOCKS ---------------- */
 .docs-section pre {
-  background: rgba(21, 25, 34, 0.85); /* glass-dark */
-  color: #ffffff;
+  background: var(--bg);
+  color: var(--text-primary);
   padding: 1em;
   border-radius: 0.75em;
   font-family: monospace;
   font-size: 0.95rem;
   overflow-x: auto;
-  box-shadow: 0 0 0.75em rgba(251, 133, 0, 0.4); /* 🔥 glow */
+  box-shadow: 0 0 0.75em var(--primary);
 }
 
 /* ==========================================================

@@ -1,7 +1,7 @@
 .about-team {
   text-align: center;
   padding: 0 2em 1.25em 2em; /* top=0 | sides=2em | bottom=1.25em */
-  color: #e8eaf2;
+  color: var(--text-primary);
   background: transparent;
   min-height: 100vh;
   display: flex;
@@ -12,32 +12,29 @@
 
 /* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
-  background: rgba(21, 25, 34, 0.85); /* Dark roadmap tone */
-  border: 0.0625em solid rgba(142, 202, 230, 0.25); /* Cyan edge */
+  background: var(--surface);
+  border: 0.0625em solid var(--border);
   border-radius: 0.75em; /* Smooth corners */
   padding: 2em;
   margin: 2em auto;
   max-width: 52em;
   backdrop-filter: blur(0.5em); /* Frosted transparency */
-  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15); /* Subtle glow */
+  box-shadow: 0 0.75em 1.5em var(--accent); /* Subtle glow */
   text-align: center;
-  color: #e8eaf2; /* Light text */
+  color: var(--text-primary);
 }
 
 /* ---------------------- HEADINGS ---------------------- */
 .about-team h1 {
   font-size: 2.25em;
   margin-bottom: 1em;
-  /* color: #fb8500; */
-  text-shadow: 0 0 0.75em rgba(255, 183, 3, 0.5);
+  color: var(--primary);
+  text-shadow: 0 0 0.75em var(--primary);
 }
 
 .about-team h2 {
   font-size: 1.25em;
   margin-bottom: 1.5em;
-  --yellow: #ffb703;
-
-  /* --yellow: #a2770b; */
 }
 
 .about-team .mission {
@@ -45,7 +42,7 @@
   margin: 0 auto 3em auto;
   font-size: 1.2em;
   line-height: 1.6;
-  color: #8ecae6;
+  color: var(--secondary);
 }
 
 /* ---------------------- GRID ---------------------- */
@@ -62,8 +59,8 @@
 
 /* ---------------------- CARD ---------------------- */
 .team-member {
-  background: #151922;
-  border: 0.0625em solid #252a36;
+  background: var(--surface);
+  border: 0.0625em solid var(--border);
   border-radius: 0.75em;
   padding: 1em;
   width: 14em;
@@ -73,7 +70,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .team-member:hover {
@@ -101,18 +100,18 @@
 .team-member h3 {
   font-size: 1.5em;
   margin: 0.5em 0;
-  color: #8ecae6;
+  color: var(--secondary);
   text-align: center;
   transition: color 0.3s ease;
 }
 
 .team-member:hover h3 {
-  color: #ffb703;
+  color: var(--primary);
 }
 
 .team-member p {
   font-size: 0.94em;
-  color: #fb8500;
+  color: var(--primary);
   margin-bottom: 0.5em;
   text-align: center;
 }
@@ -125,7 +124,7 @@
 }
 
 .team-member p a:hover {
-  color: #fb8500;
+  color: var(--primary);
   text-decoration: underline;
 }
 
