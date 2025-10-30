@@ -9,9 +9,8 @@
   --accent: #023047;
 
   /* Accent Flames */
-  --secondary: #8ecae6; /* 🔥 Neon cyan for text pop */
-  --primary: #fb8500; /* Hover highlight */
-  --yellow: #ffb703; /* ⚔️ Golden headings */
+  --sky-blue: #8ecae6;   /* 🔥 Neon cyan for text pop */
+  --yellow: #ffb703;     /* ⚔️ Golden headings */
 
   /* Text + Neutrals */
   --text-primary: #e8eaf2; /* Base readable text */
@@ -92,7 +91,7 @@ body {
   margin: 0.5em 0 0.375em;
   font-size: 4rem;
   font-weight: 700;
-  color: var(--yellow); /* ⚔️ Gold headings */
+  color: var(--heading-txt-orange); 
   text-shadow: 0 0.15em 0.25em rgba(251, 133, 0, 0.6);
   display: flex;
   justify-content: center;
