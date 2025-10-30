@@ -3,20 +3,14 @@
    ========================================================== */
 
 :root {
-  /* Core Brand Dark */
   --bg: #0f1115;
   --surface: #151922;
   --accent: #023047;
-
-  /* Accent Flames */
-  --secondary: #8ecae6; /* 🔥 Neon cyan for text pop */
-  --primary: #fb8500; /* Hover highlight */
-  --yellow: #ffb703; /* ⚔️ Golden headings */
-
-  /* Text + Neutrals */
+  --primary: #fb8500;
+  --secondary: #8ecae6;
   --text-primary: #e8eaf2; /* Base readable text */
   --text-secondary: #a7afc0;
-  --border: #252a36;
+  --border: rgba(142, 202, 230, 0.25);
 }
 
 /* ---------------------- BASE ---------------------- */
@@ -37,13 +31,13 @@ body {
 
 /* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
-  background: rgba(21, 25, 34, 0.75);
-  border: 0.0625em solid rgba(142, 202, 230, 0.25);
+  background: var(--surface);
+  border: 0.0625em solid var(--border);
   border-radius: 0.75em;
   padding: 2em;
   margin: 2em auto;
   backdrop-filter: blur(0.5em);
-  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15);
+  box-shadow: 0 0.75em 1.5em var(--accent);
 }
 
 /* ---------------------- NAVBAR ---------------------- */
@@ -56,14 +50,14 @@ body {
   padding: 0.875em 1.375em;
   background: var(--surface);
   border-bottom: 0.05em solid var(--secondary);
-  box-shadow: 0 0.05em 0.375em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.05em 0.375em var(--bg);
   z-index: 10;
 }
 .nav-brand {
   font-weight: 800;
   font-size: 1.05em;
   color: var(--secondary);
-  text-shadow: 0 0 0.5em rgba(142, 202, 230, 0.6);
+  text-shadow: 0 0 0.5em var(--border);
   cursor: pointer;
 }
 .nav-links {
@@ -83,7 +77,6 @@ body {
     color 0.2s ease;
 }
 .nav-links li:hover {
-  background: rgba(251, 133, 0, 0.2);
   color: var(--primary);
 }
 
@@ -92,8 +85,7 @@ body {
   margin: 0.5em 0 0.375em;
   font-size: 4rem;
   font-weight: 700;
-  color: var(--yellow); /* ⚔️ Gold headings */
-  text-shadow: 0 0.15em 0.25em rgba(251, 133, 0, 0.6);
+  text-shadow: 0 0.15em 0.25em var(--primary);
   display: flex;
   justify-content: center;
 }
@@ -114,8 +106,7 @@ body {
 .product-name {
   font-size: 2.6rem;
   font-weight: 600;
-
-  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
+  text-shadow: 0 0 0.75rem var(--primary);
 }
 
 /* ---------------------- TABLE ROW ---------------------- */
@@ -136,9 +127,9 @@ body {
   flex: 1 1 18.75em;
   max-width: 25em;
   min-width: 17.5em;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--surface);
   border-radius: 1rem;
-  box-shadow: 0 0.625em 1.25em rgba(142, 202, 230, 0.3);
+  box-shadow: 0 0.625em 1.25em var(--border);
   padding: 1rem;
 }
 
@@ -153,7 +144,7 @@ body {
 .features-table td,
 .prereq-table td {
   padding: 0.6rem 0.75rem;
-  color: var(--secondary); /* Cyan text inside tables */
+  color: var(--secondary);
 }
 .features-table tr + tr td,
 .prereq-table tr + tr {
@@ -164,12 +155,12 @@ body {
 .input-label {
   font-weight: 800;
   font-size: 1.5rem;
-  color: var(--primary); /* Step titles pop */
+  color: var(--primary);
 }
 .steps-wrapper {
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--text-primary); /* Regular readable text */
+  color: var(--text-primary);
 }
 
 /* ---------------------- VIDEO ---------------------- */
@@ -181,7 +172,7 @@ body {
   max-width: 50em;
   aspect-ratio: 16 / 9;
   margin: 5rem auto;
-  box-shadow: 0 0.625em 1.875em rgba(142, 202, 230, 0.4);
+  box-shadow: 0 0.625em 1.875em var(--border);
   border-radius: 0.5em;
   overflow: hidden;
 }

@@ -19,22 +19,18 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.2)
-  );
+  background: linear-gradient(to bottom, var(--bg), var(--surface));
 }
 
 /* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
-  background: rgba(21, 25, 34, 0.75);
-  border: 0.0625em solid rgba(142, 202, 230, 0.25);
+  background: var(--surface);
+  border: 0.0625em solid var(--border);
   border-radius: 0.75em;
   padding: 2em;
   margin: 2em auto;
   backdrop-filter: blur(0.5em);
-  box-shadow: 0 0.75em 1.5em rgba(0, 234, 255, 0.15);
+  box-shadow: 0 0.75em 1.5em var(--accent);
 }
 
 /* ---------------------- ROOT PAGE ---------------------- */
@@ -59,13 +55,13 @@
 .office-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #ffb703;
-  text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
+  color: var(--primary);
+  text-shadow: 0 0 0.75rem var(--primary);
 }
 .office-intro {
   font-size: 1.125rem;
   font-weight: 900;
-  color: #8ecae6;
+  color: var(--secondary);
   margin-bottom: 2.5rem;
 }
 
@@ -77,9 +73,9 @@
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto 2.5rem;
-  background: rgba(21, 25, 34, 0.8);
+  background: var(--bg);
   border-radius: 0.75rem;
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 234, 255, 0.3);
+  box-shadow: 0 0.625rem 1.25rem var(--border);
 }
 .office-table th,
 .office-table td {
@@ -90,14 +86,14 @@
 .office-table th {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #fb8500;
+  color: var(--primary);
 }
 .office-table td {
   font-size: 1rem;
-  color: #8ecae6;
+  color: var(--secondary);
 }
 .office-closed td {
-  color: #888;
+  color: var(--text-secondary);
   font-style: italic;
 }
 
@@ -110,14 +106,14 @@
   color: var(--secondary);
 }
 .zoom-link {
-  color: #fb8500;
+  color: var(--primary);
   font-weight: 700;
   text-decoration: underline;
-  text-shadow: 0 0 0.5rem rgba(251, 133, 0, 0.5);
+  text-shadow: 0 0 0.5rem var(--primary);
 }
 .zoom-link:hover {
-  color: #ffffff;
-  text-shadow: 0 0 1rem rgba(251, 133, 0, 0.8);
+  color: var(--text-primary);
+  text-shadow: 0 0 1rem var(--primary);
 }
 
 /* ---------------------- FOOTER ---------------------- */
@@ -127,9 +123,9 @@
   color: var(--text-secondary);
 }
 .office-footer a {
-  color: #8ecae6;
+  color: var(--secondary);
   text-decoration: underline;
 }
 .office-footer a:hover {
-  color: #ffb703;
+  color: var(--primary);
 }
