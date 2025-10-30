@@ -5,10 +5,18 @@
 /* ---------------------- ROOT COLORS ---------------------- */
 :root {
   --bg: #0f1115;
-  --surface: rgba(21, 25, 34, 0.75);
-  --primary: #fb8500;
-  --secondary: #8ecae6;
-  --accent: #023047;
+  --panel: rgba(21, 25, 34, 0.75);
+  --prussian-blue: #023047;
+
+  --sky-blue: #8ecae6;
+  /* body text */
+  --heading-txt-orange: #fb8500;
+  /* heading text */
+  --yellow: #ffb703;
+  /* subheading text */
+
+  --text: #e8eaf2;
+  --muted: #a7afc0;
   --border: rgba(0, 234, 255, 0.25);
   --text-primary: #e8eaf2;
   --text-secondary: #a7afc0;
