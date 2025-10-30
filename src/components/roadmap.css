@@ -19,7 +19,11 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.2)
+  );
 }
 
 /* ---------------------- GLASS PANEL ---------------------- */
@@ -43,9 +47,9 @@
   margin-bottom: 3rem;
 }
 
-.glass-panel p{
-    color: #8ecae6;
-    font-size: 1.2em;
+.glass-panel p {
+  color: #8ecae6;
+  font-size: 1.2em;
 }
 /* ---------------------- ROOT PAGE ---------------------- */
 .roadmap-page {
@@ -61,7 +65,7 @@
   margin: -4.5rem auto;
   padding: 0 1.5rem;
   text-align: center;
-  color: var(--sky-blue);
+  color: var(--secondary);
 }
 
 /* ---------------------- TITLE + INTRO ---------------------- */
@@ -71,8 +75,6 @@
   color: #ffb703;
   text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
 }
-
-
 
 /* ---------------------- TIMELINE ---------------------- */
 .roadmap-timeline {
@@ -85,7 +87,9 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 0.625rem 1.25rem rgba(0, 234, 255, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .roadmap-item:hover {
   transform: translateY(-0.25rem);

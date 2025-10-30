@@ -5,30 +5,25 @@
 /* ---------------------- ROOT COLORS ---------------------- */
 :root {
   --bg: #0f1115;
-  --panel: rgba(21, 25, 34, 0.75);
-  --prussian-blue: #023047;
-
-  --sky-blue: #8ecae6;
-  /* body text */
-  --orange: #fb8500;
-  /* heading text */
-  --yellow: #ffb703;
-  /* subheading text */
-
-  --text: #e8eaf2;
-  --muted: #a7afc0;
+  --surface: rgba(21, 25, 34, 0.75);
+  --primary: #fb8500;
+  --secondary: #8ecae6;
+  --accent: #023047;
   --border: rgba(0, 234, 255, 0.25);
+  --text-primary: #e8eaf2;
+  --text-secondary: #a7afc0;
 }
 
 /* ---------------------- GLOBAL RESET ---------------------- */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   min-height: 100%;
   width: 100%;
-  color: var(--text);
+  color: var(--text-primary);
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  background: linear-gradient(180deg, var(--bg), var(--prussian-blue));
+  background: linear-gradient(180deg, var(--bg), var(--accent));
 }
 
 /* ---------------------- HERO BACKGROUND ---------------------- */
@@ -57,23 +52,23 @@ html, body {
 
 /* ---------------------- GLASS PANEL SYSTEM ---------------------- */
 .glass-panel {
-  background: var(--panel);
+  background: var(--surface);
   backdrop-filter: blur(0.75rem);
   border: 0.0625rem solid var(--border);
   border-radius: 0.75rem;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 60rem;
-  color: var(--text);
+  color: var(--text-primary);
   box-shadow: 0 0.75rem 2rem rgba(0, 234, 255, 0.15);
 }
 .glass-panel h1,
 .glass-panel h2 {
-  color: var(--orange);
+  color: var(--primary);
   text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
 }
 .glass-panel p {
-  color: var(--sky-blue);
+  color: var(--secondary);
   line-height: 1.6;
 }
 
