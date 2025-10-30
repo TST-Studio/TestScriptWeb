@@ -5,26 +5,33 @@
 :root {
   /* Core Brand Dark */
   --bg: #0f1115;
-  --panel: #151922;
-  --prussian-blue: #023047;
+  --surface: #151922;
+  --accent: #023047;
 
   /* Accent Flames */
   --sky-blue: #8ecae6;   /* 🔥 Neon cyan for text pop */
   --yellow: #ffb703;     /* ⚔️ Golden headings */
 
   /* Text + Neutrals */
-  --text: #e8eaf2;       /* Base readable text */
-  --muted: #a7afc0;
+  --text-primary: #e8eaf2; /* Base readable text */
+  --text-secondary: #a7afc0;
   --border: #252a36;
 }
 
 /* ---------------------- BASE ---------------------- */
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    'Helvetica Neue', sans-serif;
-  background: linear-gradient(180deg, var(--bg) 0%, var(--prussian-blue) 100%);
-  color: var(--text);
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Arial,
+    'Helvetica Neue',
+    sans-serif;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--accent) 100%);
+  color: var(--text-primary);
 }
 
 /* ---------------------- GLASS PANEL ---------------------- */
@@ -46,15 +53,15 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0.875em 1.375em;
-  background: var(--panel);
-  border-bottom: 0.05em solid var(--sky-blue);
+  background: var(--surface);
+  border-bottom: 0.05em solid var(--secondary);
   box-shadow: 0 0.05em 0.375em rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
 .nav-brand {
   font-weight: 800;
   font-size: 1.05em;
-  color: var(--sky-blue);
+  color: var(--secondary);
   text-shadow: 0 0 0.5em rgba(142, 202, 230, 0.6);
   cursor: pointer;
 }
@@ -68,13 +75,15 @@ body {
 .nav-links li {
   padding: 0.5em 0.75em;
   border-radius: 0.375em;
-  color: var(--muted);
+  color: var(--text-secondary);
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 .nav-links li:hover {
   background: rgba(251, 133, 0, 0.2);
-  color: var(--orange);
+  color: var(--primary);
 }
 
 /* ---------------------- TITLES ---------------------- */
@@ -92,7 +101,7 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.4;
-  color: var(--sky-blue); /* ✨ Cyan text pop */
+  color: var(--secondary); /* ✨ Cyan text pop */
   padding: 0.5rem 0.75rem;
   text-align: center;
   border-radius: 0.625em;
@@ -104,7 +113,7 @@ body {
 .product-name {
   font-size: 2.6rem;
   font-weight: 600;
-  color: var(--yellow); /* ⚔️ Yellow phase headers */
+
   text-shadow: 0 0 0.75rem rgba(255, 183, 3, 0.6);
 }
 
@@ -143,7 +152,7 @@ body {
 .features-table td,
 .prereq-table td {
   padding: 0.6rem 0.75rem;
-  color: var(--sky-blue); /* Cyan text inside tables */
+  color: var(--secondary); /* Cyan text inside tables */
 }
 .features-table tr + tr td,
 .prereq-table tr + tr {
@@ -154,12 +163,12 @@ body {
 .input-label {
   font-weight: 800;
   font-size: 1.5rem;
-  color: var(--orange); /* Step titles pop */
+  color: var(--primary); /* Step titles pop */
 }
 .steps-wrapper {
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--text); /* Regular readable text */
+  color: var(--text-primary); /* Regular readable text */
 }
 
 /* ---------------------- VIDEO ---------------------- */
@@ -182,12 +191,12 @@ body {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--sky-blue);
+  color: var(--secondary);
   cursor: pointer;
 }
 .dropdown-menu {
-  background: var(--panel);
-  border-top: 0.05em solid var(--sky-blue);
+  background: var(--surface);
+  border-top: 0.05em solid var(--secondary);
   padding: 1rem;
 }
 .dropdown-menu ul {
@@ -197,12 +206,12 @@ body {
 }
 .dropdown-menu li {
   padding: 0.75rem 0;
-  color: var(--text);
+  color: var(--text-primary);
   cursor: pointer;
   transition: color 0.2s ease;
 }
 .dropdown-menu li:hover {
-  color: var(--orange);
+  color: var(--primary);
 }
 @media (max-width: 768px) {
   .nav-links {

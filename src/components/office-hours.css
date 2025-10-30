@@ -19,7 +19,11 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.2)
+  );
 }
 
 /* ---------------------- GLASS PANEL ---------------------- */
@@ -48,7 +52,7 @@
   margin: 3rem auto;
   padding: 0 1.5rem;
   text-align: center;
-  color: var(--text);
+  color: var(--text-primary);
 }
 
 /* ---------------------- TITLE + INTRO ---------------------- */
@@ -103,7 +107,7 @@
 }
 .office-zoom p {
   font-size: 1.125rem;
-  color: var(--sky-blue);
+  color: var(--secondary);
 }
 .zoom-link {
   color: #fb8500;
@@ -120,7 +124,7 @@
 .office-footer {
   font-size: 1rem;
   margin-top: 2rem;
-  color: var(--muted);
+  color: var(--text-secondary);
 }
 .office-footer a {
   color: #8ecae6;
