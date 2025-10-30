@@ -10,3 +10,5 @@ Attendees:
 - Jonathan Jovel
 - Glen Jarvis
 - Tucker Olsen
+- Aman Lally
+
