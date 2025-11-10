@@ -4,90 +4,90 @@
 
 /* ---------------------- HERO ---------------------- */
 .hero {
-  padding-top: 6em !important;
-  position: relative;
-  isolation: isolate;
-  min-height: 100svh;
-  display: grid;
-  background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding-top: 6em !important;        /* Pushes hero below fixed header */
+  position: relative;                 /* Enables absolute children layering */
+  isolation: isolate;                 /* Creates new stacking context */
+  min-height: 100svh;                 /* Ensures full viewport height with safe-area awareness */
+  display: grid;                      /* Centers child content grid-wise */
+  background-image: url('https://www.insyde.com/wp-content/uploads/iStock-1280385511-1920x1080.jpg'); /* Sets hero background */
+  background-size: cover;             /* Scales image to fill */
+  background-repeat: no-repeat;       /* Prevents tiling */
+  background-position: center;        /* Keeps subject centered */
 }
 .hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to bottom, var(--bg), var(--surface));
+  content: '';                        /* Adds overlay pseudo-element */
+  position: absolute;                 /* Stretches overlay across hero */
+  inset: 0;                           /* Full coverage */
+  z-index: -1;                        /* Sits behind content */
+  background: linear-gradient(to bottom, var(--bg), var(--surface)); /* Softens image with gradient overlay */
 }
 
 /* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
-  background: var(--surface);
-  border: 0.0625em solid var(--border);
-  border-radius: 0.75em;
-  padding: 2em;
-  margin-top: 2em auto;
-  backdrop-filter: blur(0.5em);
-  box-shadow: 0 0.75em 1.5em var(--accent);
+  background: var(--surface);         /* Semi-transparent glass color */
+  border: 0.0625em solid var(--border); /* Subtle border for separation */
+  border-radius: 0.75em;              /* Smooth rounded corners */
+  padding: 2em;                       /* Internal spacing for content */
+  margin-top: 2em auto;               /* Vertical offset; center alignment */
+  backdrop-filter: blur(0.5em);       /* Glassmorphism blur effect */
+  box-shadow: 0 0.75em 1.5em var(--accent); /* Accent glow for depth */
 }
 .glass-panel h1 {
-  color: var(--primary);
+  color: var(--primary);              /* Highlighted header text */
 }
 
 /* ---------------------- TITLE ---------------------- */
 .title {
-  display: grid;
-  place-items: center;
-  margin: 1rem 0 0.01rem;
-  color: var(--primary);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  font-size: clamp(2.25rem, 6vw, 8rem);
+  display: grid;                      /* Centers title */
+  place-items: center;                /* Vertically/horizontally center text */
+  margin: 1rem 0 0.01rem;             /* Compact top/bottom spacing */
+  color: var(--primary);              /* Primary color for hierarchy */
+  font-weight: 800;                   /* Bold visual dominance */
+  letter-spacing: -0.04em;            /* Tight kerning for aesthetic strength */
+  line-height: 1.1;                   /* Controlled text density */
+  font-size: clamp(2.25rem, 6vw, 8rem); /* Responsive scaling between breakpoints */
 }
 
 /* ---------------------- DESCRIPTION ---------------------- */
 .description {
-  display: grid;
-  place-items: center;
-  margin: 1rem 0 3rem;
-  width: 100%;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: normal;
-  font-size: clamp(1.125rem, 2.5vw, 2.5rem);
+  display: grid;                      /* Centers description block */
+  place-items: center;                /* Aligns text in middle */
+  margin: 1rem 0 3rem;                /* Visual breathing space */
+  width: 100%;                        /* Full width alignment */
+  font-weight: 600;                   /* Mid-bold readability */
+  letter-spacing: -0.02em;            /* Subtle tightening for elegance */
+  line-height: normal;                /* Default rhythm */
+  font-size: clamp(1.125rem, 2.5vw, 2.5rem); /* Adaptive scaling for devices */
 }
 
 /* ---------------------- MISSION ---------------------- */
 .mission {
-  display: flex;
-  justify-content: center;
-  font-size: 1.25rem;
-  color: var(--secondary);
-  font-weight: 1000;
-  margin: 1rem 0 0rem;
-  width: 70%;
-  padding: 1%;
-  font-size: 1.45rem;
-  line-height: 1.6;
-  text-align: center;
-  text-indent: 2rem;
-  border-radius: 3rem;
-  box-shadow: var(--primary) 0em 0.625em 1.25em;
+  display: flex;                      /* Centers text horizontally */
+  justify-content: center;            /* Center alignment */
+  font-size: 1.25rem;                 /* Baseline text size */
+  color: var(--secondary);            /* Secondary tone */
+  font-weight: 1000;                  /* Extreme bold emphasis */
+  margin: 1rem 0 0rem;                /* Compact spacing */
+  width: 70%;                         /* Controlled line width for readability */
+  padding: 1%;                        /* Subtle internal space */
+  font-size: 1.45rem;                 /* Scaled readable size */
+  line-height: 1.6;                   /* Comfortable text rhythm */
+  text-align: center;                 /* Centered text */
+  text-indent: 2rem;                  /* Intro indentation for visual flow */
+  border-radius: 3rem;                /* Pill shape effect */
+  box-shadow: var(--primary) 0em 0.625em 1.25em; /* Glowing frame for emphasis */
 }
 
 /* ---------------------- VIDEO TITLE ---------------------- */
 .video-title {
-  display: flex;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: var(--text-primary);
-  font-weight: 800;
-  margin-left: 10rem;
-  margin: 5rem 0 0.01rem;
-  text-shadow:
+  display: flex;                      /* Horizontal layout */
+  justify-content: center;            /* Center align text */
+  font-size: 1.5rem;                  /* Large header text */
+  color: var(--text-primary);         /* Main readable color */
+  font-weight: 800;                   /* Strong emphasis */
+  margin-left: 10rem;                 /* Manual horizontal offset */
+  margin: 5rem 0 0.01rem;             /* Vertical spacing from content */
+  text-shadow:                        /* Layered shadows for readability on image */
     0.05em 0.05em 0 var(--bg),
     -0.05em -0.05em 0 var(--bg),
     0.05em -0.05em 0 var(--bg),
@@ -96,86 +96,85 @@
 
 /* ---------------------- DEMO VIDEO ---------------------- */
 .demo-video {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  max-width: 60em;
-  margin-inline: auto;
-  position: relative;
+  display: grid;                      /* Centers video block */
+  place-items: center;                /* Perfect centering */
+  width: 100%;                        /* Full horizontal width */
+  max-width: 60em;                    /* Limit width for aesthetics */
+  margin-inline: auto;                /* Horizontal centering */
+  position: relative;                 /* Context for overlay elements */
 }
 .demo-video > video {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 0.75em;
-  box-shadow: var(--text-primary) 0em 0.625em 1.25em;
+  display: block;                     /* Removes inline gaps */
+  width: 100%;                        /* Full width inside container */
+  height: auto;                       /* Maintain aspect ratio */
+  border-radius: 0.75em;              /* Soft visual rounding */
+  box-shadow: var(--text-primary) 0em 0.625em 1.25em; /* Frame glow */
 }
 @media (prefers-color-scheme: dark) {
   .demo-video video {
-    filter: invert(1) grayscale(1);
+    filter: invert(1) grayscale(1);   /* High-contrast inversion for dark mode */
   }
 }
 
 /* ---------------------- HEADER ---------------------- */
 .site-header {
-  position: fixed;
-  top: 0;
-  inset-inline: 0;
-  z-index: 1000;
-  background: transparent;
+  position: fixed;                    /* Keeps header locked at top */
+  top: 0;                             /* Aligns to viewport edge */
+  inset-inline: 0;                    /* Expands full horizontal range */
+  z-index: 1000;                      /* Prioritizes layering above hero */
+  background: transparent;            /* Visual overlay effect */
 }
 .header-inner {
-  max-width: 75em;
-  margin-inline: auto;
-  padding: 1rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(1rem, 8vw, 4rem);
+  max-width: 75em;                    /* Content constraint for large screens */
+  margin-inline: auto;                /* Centers header horizontally */
+  padding: 1rem 1.5rem;               /* Spacing for internal balance */
+  display: flex;                      /* Flexible layout for logo/nav */
+  align-items: center;                /* Vertical centering */
+  justify-content: space-between;     /* Logo-left, nav-right distribution */
+  gap: clamp(1rem, 8vw, 4rem);        /* Responsive spacing */
 }
 button.pill-btn {
-  border: none;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  padding: 0.75rem 1.25rem;
-  border-radius: 10rem;
-  color: var(--text-primary);
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 0.15rem;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  cursor: pointer;
+  border: none;                       /* Removes default button border */
+  background: transparent;            /* Invisible base */
+  display: flex;                      /* Aligns label and icon inline */
+  align-items: center;                /* Vertical centering */
+  padding: 0.75rem 1.25rem;           /* Balanced padding */
+  border-radius: 10rem;               /* Capsule shape */
+  color: var(--text-primary);         /* Text color matches theme */
+  text-transform: uppercase;          /* Strong label visual */
+  font-size: 1rem;                    /* Readable font size */
+  letter-spacing: 0.15rem;            /* Wide spacing for clarity */
+  transition: all 0.3s;               /* Smooth hover animations */
+  position: relative;                 /* Required for ::before overlay */
+  overflow: hidden;                   /* Contain animated background */
+  z-index: 1;                         /* Maintain text above pseudo-layer */
+  cursor: pointer;                    /* Indicates interactivity */
 }
 button.pill-btn:before {
-  width: 0;
-  left: 0;
-  top: 0;
-  content: '';
-  position: absolute;
-  height: 100%;
-  background-color: var(--accent);
-  transition: all 0.3s;
-  border-radius: 10rem;
-  z-index: -1;
+  width: 0;                           /* Hidden by default */
+  left: 0; top: 0;                    /* Origin from left edge */
+  content: '';                        /* Empty element for overlay */
+  position: absolute;                 /* Covers button on hover */
+  height: 100%;                       /* Full vertical coverage */
+  background-color: var(--accent);    /* Hover color fill */
+  transition: all 0.3s;               /* Smooth expansion */
+  border-radius: 10rem;               /* Matches button curvature */
+  z-index: -1;                        /* Stays beneath text */
 }
 button.pill-btn:hover::before {
-  width: 100%;
+  width: 100%;                        /* Expands fill on hover */
 }
 .read-the-docs {
-  color: var(--text-primary);
+  color: var(--text-primary);         /* Static text link color */
 }
 
 /* ---------------------- COMMUNITY ---------------------- */
 .community {
-  position: relative;
-  display: block;
-  margin-top: 1rem;
-  padding: 10rem 1rem 1rem;
-  --bg1: var(--text-secondary);
+  position: relative;                 /* For overlay or effects */
+  display: block;                     /* Standard block flow */
+  margin-top: 1rem;                   /* Space above section */
+  padding: 10rem 1rem 1rem;           /* Spacious top padding for reveal */
+  --bg1: var(--text-secondary);       /* CSS vars for gradients */
   --bg2: var(--text-secondary);
   --bg3: var(--text-primary);
   --ring: var(--primary);
@@ -185,90 +184,87 @@ button.pill-btn:hover::before {
 }
 @media (prefers-color-scheme: dark) {
   .community {
-    position: sticky;
-    margin-top: 1rem;
-    padding: 3rem 1.5rem;
-    --card-bg: var(--bg);
+    position: sticky;                 /* Keeps section visible while scrolling */
+    margin-top: 1rem;                 /* Consistent spacing */
+    padding: 3rem 1.5rem;             /* Reduced padding for dark layout */
+    --card-bg: var(--bg);             /* Dark theme background correction */
     --card-border: rgba(0, 0, 0, 0.08);
     --title-grad: linear-gradient(var(--accent), var(--secondary));
   }
 }
 .community__inner {
-  max-width: 68.75em;
-  margin: 0 auto;
+  max-width: 68.75em;                 /* Content width limit */
+  margin: 0 auto;                     /* Center container */
 }
 .community__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16.25em, 1fr));
-  gap: 1.25em;
+  display: grid;                      /* Grid layout for cards */
+  grid-template-columns: repeat(auto-fit, minmax(16.25em, 1fr)); /* Responsive column scaling */
+  gap: 1.25em;                        /* Consistent spacing between cards */
 }
 .card {
-  position: relative;
-  display: grid;
-  grid-template-columns: 2.75em 1fr;
-  gap: 0.875em;
-  align-items: start;
-  padding: 1.375em;
-  border-radius: 0.875em;
-  background: var(--card-bg);
-  border: 0.0625em solid var(--card-border);
-  box-shadow: 0 0.375em 1.25em var(--ring);
-  text-decoration: none;
-  color: inherit;
+  position: relative;                 /* Enables internal positioning */
+  display: grid;                      /* Layout for icon + text */
+  grid-template-columns: 2.75em 1fr;  /* Icon column + text column */
+  gap: 0.875em;                       /* Internal spacing */
+  align-items: start;                 /* Aligns content top */
+  padding: 1.375em;                   /* Comfortable interior space */
+  border-radius: 0.875em;             /* Smooth corners */
+  background: var(--card-bg);         /* Theme background */
+  border: 0.0625em solid var(--card-border); /* Subtle border contrast */
+  box-shadow: 0 0.375em 1.25em var(--ring); /* Depth with glow */
+  text-decoration: none;              /* Removes link underline */
+  color: inherit;                     /* Inherit text color */
   transition:
     transform 0.18s ease,
     box-shadow 0.18s ease,
-    border-color 0.18s ease;
+    border-color 0.18s ease;          /* Smooth interactive feedback */
 }
 .card:hover {
-  transform: translateY(-0.125em);
-  box-shadow: 0 0.625em 1.875em var(--ring);
+  transform: translateY(-0.125em);    /* Slight lift animation */
+  box-shadow: 0 0.625em 1.875em var(--ring); /* Enhanced glow */
 }
 .card__icon {
-  display: grid;
-  place-items: center;
-  width: 2.75em;
-  height: 2.75em;
-  border-radius: 0.75em;
-  background: var(--text-primary);
+  display: grid;                      /* Centers icon within square */
+  place-items: center;                /* Perfect center alignment */
+  width: 2.75em; height: 2.75em;      /* Icon container size */
+  border-radius: 0.75em;              /* Rounded icon background */
+  background: var(--text-primary);    /* Default light background */
 }
 .card__icon svg {
-  width: 1.375em;
-  height: 1.375em;
-  fill: var(--text-primary);
+  width: 1.375em; height: 1.375em;    /* Scales icon SVG */
+  fill: var(--text-primary);          /* Inherits light color */
 }
 @media (prefers-color-scheme: dark) {
   .card__icon svg {
-    fill: var(--text-secondary);
+    fill: var(--text-secondary);      /* Adjusts icon tone for dark mode */
   }
 }
 .card__title {
-  margin: 0 0 0.375em;
-  font-weight: 700;
-  font-size: 1.05rem;
-  color: var(--primary);
+  margin: 0 0 0.375em;                /* Minimal spacing below title */
+  font-weight: 700;                   /* Bold for hierarchy */
+  font-size: 1.05rem;                 /* Slightly larger than base text */
+  color: var(--primary);              /* Emphasized heading color */
 }
 .card__desc {
-  margin: 0;
-  color: var(--bg);
-  line-height: 1.35;
-  font-size: 0.95rem;
+  margin: 0;                          /* Tight vertical layout */
+  color: var(--bg);                   /* Contrast text */
+  line-height: 1.35;                  /* Comfortable readability */
+  font-size: 0.95rem;                 /* Compact paragraph text */
 }
 @media (prefers-color-scheme: dark) {
   .card__desc {
-    color: var(--text-secondary);
+    color: var(--text-secondary);     /* Softer tone for dark mode */
   }
 }
 .card__external {
-  position: absolute;
-  top: 0.125em;
-  right: 0.75em;
-  opacity: 0.65;
+  position: absolute;                 /* Anchors icon to card corner */
+  top: 0.125em; right: 0.75em;        /* Placement offsets */
+  opacity: 0.65;                      /* Dimmed default state */
   transition:
     opacity 0.18s ease,
-    transform 0.18s ease;
+    transform 0.18s ease;             /* Smooth hover transitions */
 }
 .card:hover .card__external {
-  opacity: 1;
-  transform: translate(0.125em, -0.125em);
+  opacity: 1;                         /* Full visibility on hover */
+  transform: translate(0.125em, -0.125em); /* Subtle motion for life */
 }

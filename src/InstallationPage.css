@@ -2,21 +2,22 @@
    ⚔️ InstallationPage.css — Glass Panels + Dominion Glow Theme
    ========================================================== */
 
+/* ---------------------- ROOT VARIABLES ---------------------- */
 :root {
-  --bg: #0f1115;
-  --surface: #151922;
-  --accent: #023047;
-  --primary: #fb8500;
-  --secondary: #8ecae6;
-  --text-primary: #e8eaf2; /* Base readable text */
-  --text-secondary: #a7afc0;
-  --border: rgba(142, 202, 230, 0.25);
+  --bg: #0f1115;                        /* Core page background (dark base) */
+  --surface: #151922;                   /* Panel surface tone for depth */
+  --accent: #023047;                    /* Highlight gradient base */
+  --primary: #fb8500;                   /* Dominant accent (orange glow) */
+  --secondary: #8ecae6;                 /* Secondary hue (cyan tone) */
+  --text-primary: #e8eaf2;              /* Base readable text color */
+  --text-secondary: #a7afc0;            /* Muted supporting text color */
+  --border: rgba(142, 202, 230, 0.25);  /* Subtle translucent border color */
 }
 
 /* ---------------------- BASE ---------------------- */
 body {
-  margin: 0;
-  font-family:
+  margin: 0;                            /* Remove default browser margin */
+  font-family:                          /* Cross-platform system fonts */
     Inter,
     system-ui,
     -apple-system,
@@ -25,191 +26,189 @@ body {
     Arial,
     'Helvetica Neue',
     sans-serif;
-  background: linear-gradient(180deg, var(--bg) 0%, var(--accent) 100%);
-  color: var(--text-primary);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--accent) 100%); /* Vertical gradient for depth */
+  color: var(--text-primary);           /* Default readable text color */
 }
 
 /* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
-  background: var(--surface);
-  border: 0.0625em solid var(--border);
-  border-radius: 0.75em;
-  padding: 2em;
-  margin: 2em auto;
-  backdrop-filter: blur(0.5em);
-  box-shadow: 0 0.75em 1.5em var(--accent);
+  background: var(--surface);           /* Glass surface background */
+  border: 0.0625em solid var(--border); /* Thin glowing outline */
+  border-radius: 0.75em;                /* Rounded edges for glass effect */
+  padding: 2em;                         /* Consistent spacing inside panel */
+  margin: 2em auto;                     /* Centers and spaces panel vertically */
+  backdrop-filter: blur(0.5em);         /* Frosted-glass blur effect */
+  box-shadow: 0 0.75em 1.5em var(--accent); /* Subtle ambient glow */
 }
 
 /* ---------------------- NAVBAR ---------------------- */
 .navbar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.875em 1.375em;
-  background: var(--surface);
-  border-bottom: 0.05em solid var(--secondary);
-  box-shadow: 0 0.05em 0.375em var(--bg);
-  z-index: 10;
+  position: sticky;                     /* Sticks to top on scroll */
+  top: 0;                               /* Anchored to viewport top */
+  display: flex;                        /* Flex layout for brand + nav links */
+  align-items: center;                  /* Vertical alignment */
+  justify-content: space-between;       /* Spreads items across navbar */
+  padding: 0.875em 1.375em;             /* Internal spacing balance */
+  background: var(--surface);           /* Dark panel background */
+  border-bottom: 0.05em solid var(--secondary); /* Thin cyan divider line */
+  box-shadow: 0 0.05em 0.375em var(--bg); /* Gentle bottom shadow */
+  z-index: 10;                          /* Keeps navbar above content */
 }
 .nav-brand {
-  font-weight: 800;
-  font-size: 1.05em;
-  color: var(--secondary);
-  text-shadow: 0 0 0.5em var(--border);
-  cursor: pointer;
+  font-weight: 800;                     /* Bold brand emphasis */
+  font-size: 1.05em;                    /* Slightly enlarged text */
+  color: var(--secondary);              /* Cyan brand color */
+  text-shadow: 0 0 0.5em var(--border); /* Soft glowing halo */
+  cursor: pointer;                      /* Clickable appearance */
 }
 .nav-links {
-  display: flex;
-  gap: 1.05em;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;                        /* Inline horizontal list */
+  gap: 1.05em;                          /* Space between links */
+  list-style: none;                     /* Removes default bullets */
+  margin: 0; padding: 0;                /* Removes default spacing */
 }
 .nav-links li {
-  padding: 0.5em 0.75em;
-  border-radius: 0.375em;
-  color: var(--text-secondary);
-  cursor: pointer;
+  padding: 0.5em 0.75em;                /* Clickable padding area */
+  border-radius: 0.375em;               /* Rounded link background */
+  color: var(--text-secondary);         /* Muted default color */
+  cursor: pointer;                      /* Clickable indicator */
   transition:
     background 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease;                    /* Smooth hover transitions */
 }
 .nav-links li:hover {
-  color: var(--primary);
+  color: var(--primary);                /* Orange glow on hover */
 }
 
 /* ---------------------- TITLES ---------------------- */
 .testscript-title {
-  margin: 0.5em 0 0.375em;
-  font-size: 4rem;
-  font-weight: 700;
-  text-shadow: 0 0.15em 0.25em var(--primary);
-  display: flex;
-  justify-content: center;
+  margin: 0.5em 0 0.375em;              /* Tight top/bottom spacing */
+  font-size: 4rem;                      /* Large heading for dominance */
+  font-weight: 700;                     /* Strong emphasis */
+  text-shadow: 0 0.15em 0.25em var(--primary); /* Glowing orange halo */
+  display: flex;                        /* Centers via flex */
+  justify-content: center;              /* Horizontal centering */
 }
 .testscript-description {
-  margin: 0.5em 0 2.375em;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: var(--secondary); /* ✨ Cyan text pop */
-  padding: 0.5rem 0.75rem;
-  text-align: center;
-  border-radius: 0.625em;
-  display: flex;
+  margin: 0.5em 0 2.375em;              /* Space below main title */
+  font-size: 1.5rem;                    /* Readable subtext size */
+  font-weight: 500;                     /* Medium strength weight */
+  line-height: 1.4;                     /* Balanced text rhythm */
+  color: var(--secondary);              /* Cyan highlight */
+  padding: 0.5rem 0.75rem;              /* Inner balance spacing */
+  text-align: center;                   /* Center-aligned text */
+  border-radius: 0.625em;               /* Smooth rounded edge */
+  display: flex;                        /* Centers both axes */
   justify-content: center;
 }
 
 /* ---------------------- SECTION HEADERS ---------------------- */
 .product-name {
-  font-size: 2.6rem;
-  font-weight: 600;
-  text-shadow: 0 0 0.75rem var(--primary);
+  font-size: 2.6rem;                    /* Large sub-header */
+  font-weight: 600;                     /* Semi-bold hierarchy */
+  text-shadow: 0 0 0.75rem var(--primary); /* Glowing depth effect */
 }
 
 /* ---------------------- TABLE ROW ---------------------- */
 .tables-row {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 2rem;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  padding: 2rem;
+  display: flex;                        /* Layout for feature/prereq/steps */
+  justify-content: center;              /* Centers all cards horizontally */
+  align-items: stretch;                 /* Aligns heights evenly */
+  gap: 2rem;                            /* Consistent column spacing */
+  flex-wrap: wrap;                      /* Responsive wrapping for small screens */
+  overflow-x: auto;                     /* Allows horizontal scroll if overflow */
+  padding: 2rem;                        /* Internal breathing room */
 }
 
 /* ---------------------- WRAPPERS ---------------------- */
 .features-wrapper,
 .prereq-wrapper,
 .steps-wrapper {
-  flex: 1 1 18.75em;
-  max-width: 25em;
-  min-width: 17.5em;
-  background: var(--surface);
-  border-radius: 1rem;
-  box-shadow: 0 0.625em 1.25em var(--border);
-  padding: 1rem;
+  flex: 1 1 18.75em;                    /* Flexible width base */
+  max-width: 25em;                      /* Cap width per card */
+  min-width: 17.5em;                    /* Prevents collapsing */
+  background: var(--surface);           /* Glass-panel base */
+  border-radius: 1rem;                  /* Soft card edges */
+  box-shadow: 0 0.625em 1.25em var(--border); /* Subtle depth */
+  padding: 1rem;                        /* Consistent padding for sections */
 }
 
 /* ---------------------- TABLES ---------------------- */
 .features-table,
 .prereq-table {
-  border-collapse: collapse;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  width: 100%;
+  border-collapse: collapse;            /* Remove cell gaps */
+  font-size: 1.25rem;                   /* Readable size for details */
+  line-height: 1.6;                     /* Comfortable vertical spacing */
+  width: 100%;                          /* Full container width */
 }
 .features-table td,
 .prereq-table td {
-  padding: 0.6rem 0.75rem;
-  color: var(--secondary);
+  padding: 0.6rem 0.75rem;              /* Balanced padding per cell */
+  color: var(--secondary);              /* Cyan tone for data text */
 }
 .features-table tr + tr td,
 .prereq-table tr + tr {
-  border-top: 0.0625em solid var(--border);
+  border-top: 0.0625em solid var(--border); /* Row divider for readability */
 }
 
 /* ---------------------- STEPS ---------------------- */
 .input-label {
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--primary);
+  font-weight: 800;                     /* Emphasized section labels */
+  font-size: 1.5rem;                    /* Clear visibility */
+  color: var(--primary);                /* Orange accent color */
 }
 .steps-wrapper {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text-primary);
+  font-size: 1.25rem;                   /* Comfortable readable step text */
+  font-weight: 500;                     /* Medium text strength */
+  color: var(--text-primary);           /* Standard readable text color */
 }
 
 /* ---------------------- VIDEO ---------------------- */
 .tutorial-video {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  max-width: 50em;
-  aspect-ratio: 16 / 9;
-  margin: 5rem auto;
-  box-shadow: 0 0.625em 1.875em var(--border);
-  border-radius: 0.5em;
-  overflow: hidden;
+  display: flex;                        /* Centers video */
+  justify-content: center;              /* Horizontal alignment */
+  position: relative;                   /* Context for overlay */
+  width: 100%;                          /* Full responsive width */
+  max-width: 50em;                      /* Size cap for large displays */
+  aspect-ratio: 16 / 9;                 /* Maintains perfect video proportions */
+  margin: 5rem auto;                    /* Centers and spaces vertically */
+  box-shadow: 0 0.625em 1.875em var(--border); /* Subtle luminous frame */
+  border-radius: 0.5em;                 /* Slight rounding on corners */
+  overflow: hidden;                     /* Prevents content overflow */
 }
 
 /* ---------------------- MOBILE NAV ---------------------- */
 .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--secondary);
-  cursor: pointer;
+  display: none;                        /* Hidden on desktop */
+  background: none;                     /* Transparent base */
+  border: none;                         /* Removes border outline */
+  font-size: 1.5rem;                    /* Icon sizing for visibility */
+  color: var(--secondary);              /* Cyan tone */
+  cursor: pointer;                      /* Pointer interaction */
 }
 .dropdown-menu {
-  background: var(--surface);
-  border-top: 0.05em solid var(--secondary);
-  padding: 1rem;
+  background: var(--surface);           /* Dark dropdown background */
+  border-top: 0.05em solid var(--secondary); /* Divider from navbar */
+  padding: 1rem;                        /* Spacing around list items */
 }
 .dropdown-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none;                     /* Removes default bullet points */
+  margin: 0; padding: 0;                /* Resets spacing */
 }
 .dropdown-menu li {
-  padding: 0.75rem 0;
-  color: var(--text-primary);
-  cursor: pointer;
-  transition: color 0.2s ease;
+  padding: 0.75rem 0;                   /* Space between items */
+  color: var(--text-primary);           /* Bright text for visibility */
+  cursor: pointer;                      /* Clickable element */
+  transition: color 0.2s ease;          /* Smooth hover transition */
 }
 .dropdown-menu li:hover {
-  color: var(--primary);
+  color: var(--primary);                /* Orange glow hover state */
 }
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: none;                      /* Hide standard nav on mobile */
   }
   .menu-toggle {
-    display: block;
+    display: block;                     /* Reveal hamburger icon */
   }
 }
