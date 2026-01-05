@@ -99,5 +99,4 @@ const InstallationDetails = () => {
   );
 };
 
-// ---------------------- EXPORT ----------------------
 export default InstallationDetails;

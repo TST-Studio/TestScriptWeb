@@ -1,8 +1,6 @@
 <div align="center">
 
 <h1>Tst Studio. Website</h1>
-
-  <!-- Badges -->
 <p>
   <a href="https://github.com/TST-Studio/TestScriptWeb/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/TST-Studio/TestScriptWeb" alt="contributors" />
@@ -26,7 +24,6 @@
 
 <br />
 
-<!-- About the Project -->
 
 ## About the Project
 
@@ -36,9 +33,6 @@ It provides a clean and modern frontend to showcase the CLI, its features, and d
  <img src="./public/images/website1.png" alt="website" width="%" height="auto" />
 
 <br />
-
-
-<!-- Getting Started -->
 
 ## Getting Started
 
@@ -66,25 +60,17 @@ This project is built with :
 git clone git@github.com:TST-Studio/TestScriptWeb.git
 
 cd TestScriptWebPage
-
 ```
-
-<!-- Installation -->
-
 ### Install dependencies
 
 ```bash
   npm install
 ```
-
-<!-- Run the App -->
-
 ### Run the Dev Server
 
 ```bash
   npm run dev
 ```
-
 ## Contributing
 
 Contributions are welcome and appreciated!
@@ -97,9 +83,6 @@ To contribute:
 4. Run and test as needed.
 5. Open a pull request.
  
-
-<!-- License -->
-
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).

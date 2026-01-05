@@ -1,19 +1,8 @@
-// ==========================================================
-// 🌌 App.tsx — HOMEPAGE COMPONENT
-// ==========================================================
-// Landing page for Tst Studio. Integrates global Navbar,
-// hero title, mission statement, demo video, and community links.
-// ==========================================================
-
-// ---------------------- IMPORTS ----------------------
-import './App.css';   // Local component styles
-import './index.css'; // Global theme + resets
+import './App.css';
+import './index.css';
 import Navbar from './components/Navbar';
-// 🔥 Dominion Global Navbar (shared across app)
 
-// ---------------------- COMPONENT ----------------------
 function App() {
-  // COMMUNITY LINKS DATA
   const COMMUNITY = [
     {
       name: 'Github',
@@ -57,14 +46,10 @@ function App() {
     },
   ];
 
-  // ---------------------- RENDER ----------------------
   return (
     <>
       <div className="hero">
-        {/* ---------------------- GLOBAL NAVBAR ---------------------- */}
         <Navbar />
-
-        {/* ---------------------- HERO SECTION ---------------------- */}
         <div className="glass-panel">
           <h1 className="title">TST Studio</h1>
           <section className="description">
@@ -90,7 +75,6 @@ function App() {
           />
         </div>
 
-        {/* ---------------------- COMMUNITY LINKS ---------------------- */}
         <section className="community">
           <div className="community__inner">
             <div className="community__grid">
@@ -120,5 +104,4 @@ function App() {
   );
 }
 
-// ---------------------- EXPORT ----------------------
 export default App;
