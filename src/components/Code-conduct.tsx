@@ -1,22 +1,24 @@
 // ---------------------- CODE OF CONDUCT PAGE ----------------------
-// Code-conduct.tsx — Dedicated page outlining TestScript community rules.
+// Purpose: Static informational page defining community expectations and enforcement.
+// Design: Reuses global layout (Navbar + hero wrapper) for consistency across the app.
 
 // ---------------------- IMPORTS ----------------------
-import React from 'react'; // React core library.
-import './Code-conduct.css'; // Local stylesheet scoped to this page.
-import Navbar from './Navbar'; // 🔥 Global Navbar shared across the entire site.
+import React from 'react'; // Core React dependency for functional component rendering.
+import './Code-conduct.css'; // Page-scoped styles to isolate layout and typography.
+import Navbar from './Navbar'; // Shared navigation component to maintain global UX consistency.
 
 // ---------------------- COMPONENT ----------------------
 const CodeConduct: React.FC = () => {
   return (
     <div className="hero">
-      {/* 🔥 GLOBAL NAVBAR */}
+      {/* Global layout wrapper ensures consistent spacing/visual identity across pages */}
       <Navbar />
 
-      {/* ---------- PAGE CONTENT ---------- */}
+      {/* Main content container: structured for readability and semantic grouping */}
       <div className="conduct-page">
         <div className="conduct-container">
-          {/* ---------- TITLE ---------- */}
+
+          {/* Page header establishes context and purpose for the user */}
           <h1 className="conduct-title">Code of Conduct</h1>
           <p className="conduct-intro">
             At TestScript, we are committed to fostering a safe, inclusive, and
@@ -24,7 +26,7 @@ const CodeConduct: React.FC = () => {
             whether online or in person.
           </p>
 
-          {/* ---------- EXPECTED BEHAVIOR ---------- */}
+          {/* Section: Defines expected norms to guide user behavior proactively */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Expected Behavior</h2>
             <ul className="conduct-list">
@@ -36,7 +38,7 @@ const CodeConduct: React.FC = () => {
             </ul>
           </section>
 
-          {/* ---------- UNACCEPTABLE BEHAVIOR ---------- */}
+          {/* Section: Clearly defines boundaries to prevent ambiguity in enforcement */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Unacceptable Behavior</h2>
             <ul className="conduct-list">
@@ -48,7 +50,7 @@ const CodeConduct: React.FC = () => {
             </ul>
           </section>
 
-          {/* ---------- ENFORCEMENT ---------- */}
+          {/* Section: Explains governance model and how rules are enforced */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Enforcement</h2>
             <p>
@@ -59,7 +61,7 @@ const CodeConduct: React.FC = () => {
             </p>
           </section>
 
-          {/* ---------- REPORTING ---------- */}
+          {/* Section: Provides escalation path for issues — critical for trust and accountability */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Reporting Issues</h2>
             <p>
@@ -68,6 +70,7 @@ const CodeConduct: React.FC = () => {
               All concerns will be reviewed promptly and treated confidentially.
             </p>
           </section>
+
         </div>
       </div>
     </div>
@@ -75,4 +78,5 @@ const CodeConduct: React.FC = () => {
 };
 
 // ---------------------- EXPORT ----------------------
+// Export as default to allow simple route-level import
 export default CodeConduct;
