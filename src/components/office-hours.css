@@ -1,8 +1,4 @@
-/* ==========================================================
-   ⚔️ Office-hours.css — Hours + Frosted Glass Panel Styling
-   ========================================================== */
 
-/* ---------------------- HERO ---------------------- */
 .hero {
   padding-top: 0;
   position: relative;
@@ -22,7 +18,6 @@
   background: linear-gradient(to bottom, var(--bg), var(--surface));
 }
 
-/* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
   background: var(--surface);
   border: 0.0625em solid var(--border);
@@ -33,7 +28,6 @@
   box-shadow: 0 0.75em 1.5em var(--accent);
 }
 
-/* ---------------------- ROOT PAGE ---------------------- */
 .office-page {
   min-height: 100vh;
   display: flex;
@@ -42,7 +36,6 @@
   margin: -6.5rem auto;
 }
 
-/* ---------------------- CONTENT CONTAINER ---------------------- */
 .office-container {
   max-width: 60rem;
   margin: 3rem auto;
@@ -51,7 +44,6 @@
   color: var(--text-primary);
 }
 
-/* ---------------------- TITLE + INTRO ---------------------- */
 .office-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -65,7 +57,6 @@
   margin-bottom: 2.5rem;
 }
 
-/* ---------------------- HOURS TABLE ---------------------- */
 .office-table-wrapper {
   overflow-x: auto;
 }
@@ -97,7 +88,6 @@
   font-style: italic;
 }
 
-/* ---------------------- ZOOM LINK ---------------------- */
 .office-zoom {
   margin: 2rem 0;
 }
@@ -116,7 +106,6 @@
   text-shadow: 0 0 1rem var(--primary);
 }
 
-/* ---------------------- FOOTER ---------------------- */
 .office-footer {
   font-size: 1rem;
   margin-top: 2rem;
