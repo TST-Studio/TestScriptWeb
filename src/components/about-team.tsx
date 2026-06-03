@@ -1,13 +1,9 @@
-// ==========================================================
-// ⚔️ about-team.tsx — About Team with Glass Panel + Navbar
-// ==========================================================
 
-import React, { useEffect } from 'react'; // React core + hooks
-import '/src/components/about-team.css'; // Local stylesheet
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // Icons
-import Navbar from './Navbar'; // 🔥 Global navigation bar
+import React, { useEffect } from 'react';
+import '/src/components/about-team.css';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import Navbar from './Navbar';
 
-// ---------------------- TYPES ----------------------
 type Member = {
   img: string;
   name: string;
@@ -17,7 +13,6 @@ type Member = {
   email: string;
 };
 
-// ---------------------- TEAM DATA ----------------------
 const team: Member[] = [
   {
     img: '/images/member1.png',
@@ -61,9 +56,8 @@ const team: Member[] = [
   },
 ];
 
-// ---------------------- COMPONENT ----------------------
 const About: React.FC = () => {
-  // Fade-in effect for team cards
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -80,12 +74,12 @@ const About: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // ---------------------- RENDER ----------------------
+
   return (
     <div className="hero">
       <Navbar />
       <div className="about-team">
-        {/* 🔥 Glass Panel for Text */}
+        {}
         <div className="glass-panel">
           <h1>About the Team</h1>
           <p className="mission">
@@ -97,7 +91,7 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        {/* 🔥 Team Grid */}
+        {}
         <div className="team-grid">
           {team.map((member, index) => (
             <div key={index} className="team-member hidden">
@@ -128,5 +122,4 @@ const About: React.FC = () => {
   );
 };
 
-// ---------------------- EXPORT ----------------------
 export default About;

@@ -1,5 +1,5 @@
 import React from 'react';
-import './InstallationPage.css'; 
+import './InstallationPage.css';
 import Navbar from './components/Navbar';
 
 const FEATURES = [
@@ -32,7 +32,7 @@ const InstallationDetails = () => {
   return (
     <>
       <Navbar />
-      {/* leave this V until we find a better global name*/}
+      {}
       <div className="hero">
         <div className="testscript-info glass-panel">
           <h2 className="testscript-title">TestScript</h2>
@@ -83,7 +83,7 @@ const InstallationDetails = () => {
             </div>
           </div>
 
-          {/* ---------- VIDEO DEMO ---------- */}
+          {}
           <iframe
             className="tutorial-video"
             src="https://www.youtube.com/embed/cSW7uQHNTJE?si=2OBw8i-JGx-5CJKT"

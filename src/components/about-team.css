@@ -1,6 +1,6 @@
 .about-team {
   text-align: center;
-  padding: 0 2em 1.25em 2em; /* top=0 | sides=2em | bottom=1.25em */
+  padding: 0 2em 1.25em 2em;
   color: var(--text-primary);
   background: transparent;
   min-height: 100vh;
@@ -10,21 +10,20 @@
   align-items: center;
 }
 
-/* ---------------------- GLASS PANEL ---------------------- */
+
 .glass-panel {
   background: var(--surface);
   border: 0.0625em solid var(--border);
-  border-radius: 0.75em; /* Smooth corners */
+  border-radius: 0.75em;
   padding: 2em;
   margin: 2em auto;
   max-width: 52em;
-  backdrop-filter: blur(0.5em); /* Frosted transparency */
-  box-shadow: 0 0.75em 1.5em var(--accent); /* Subtle glow */
+  backdrop-filter: blur(0.5em);
+  box-shadow: 0 0.75em 1.5em var(--accent);
   text-align: center;
   color: var(--text-primary);
 }
 
-/* ---------------------- HEADINGS ---------------------- */
 .about-team h1 {
   font-size: 2.25em;
   margin-bottom: 1em;
@@ -45,7 +44,6 @@
   color: var(--secondary);
 }
 
-/* ---------------------- GRID ---------------------- */
 .team-grid {
   display: flex;
   justify-content: center;
@@ -57,7 +55,6 @@
   overflow-x: auto;
 }
 
-/* ---------------------- CARD ---------------------- */
 .team-member {
   background: var(--surface);
   border: 0.0625em solid var(--border);
@@ -80,14 +77,12 @@
   background: #1e2432;
 }
 
-/* ---------------------- IMAGE ---------------------- */
 .team-member img.avatar {
   width: 100%;
   height: 12em;
   object-fit: cover;
   object-position: top;
   border-radius: 0.5em;
-  /* margin-bottom: 0.5em; */
   display: block;
   transition: transform 0.3s ease;
 }
@@ -96,7 +91,6 @@
   transform: scale(1.03);
 }
 
-/* ---------------------- TEXT ---------------------- */
 .team-member h3 {
   font-size: 1.5em;
   margin: 0.5em 0;
@@ -128,7 +122,6 @@
   text-decoration: underline;
 }
 
-/* ---------------------- RESPONSIVE ---------------------- */
 @media (max-width: 75em) {
   .team-grid {
     flex-wrap: wrap;

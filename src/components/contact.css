@@ -1,6 +1,3 @@
-/* ==========================================================
-   ⚔️ contact.css — Dominion Contact Stylesheet
-   ========================================================== */
 
 .contact-page {
   text-align: center;
@@ -15,7 +12,6 @@
   position: relative;
 }
 
-/* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
   background: var(--surface);
   border: 0.0625em solid var(--border);
@@ -28,11 +24,12 @@
   text-align: center;
   color: var(--text-primary);
 }
+
 .glass-panel p {
   color: var(--text-primary);
   font-size: 1.1em;
 }
-/* ---------------------- HEADINGS ---------------------- */
+
 .contact-page h1 {
   font-size: 2.625rem;
   margin-bottom: 1.5rem;
@@ -40,7 +37,6 @@
   text-shadow: 0 0 0.75rem var(--primary);
 }
 
-/* ---------------------- PARAGRAPHS ---------------------- */
 .contact-intro {
   font-size: 1rem;
   line-height: 1.6;
@@ -58,7 +54,6 @@
   font-style: italic;
 }
 
-/* ---------------------- IMAGE ---------------------- */
 .contact-image {
   margin-bottom: 2.5rem;
   transition:
@@ -83,7 +78,6 @@
     0 0 3.75rem var(--primary);
 }
 
-/* ---------------------- LINKS ---------------------- */
 .contact-links {
   margin-bottom: 2.5rem;
   display: flex;
@@ -119,7 +113,6 @@
   text-decoration: underline;
 }
 
-/* ---------------------- FORM ---------------------- */
 .contact-form {
   display: flex;
   flex-direction: column;

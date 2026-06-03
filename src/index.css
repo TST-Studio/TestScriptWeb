@@ -1,19 +1,12 @@
-/* ==========================================================
-   🌌 index.css — GLOBAL BASE + GLASS PANEL SYSTEM
-   ========================================================== */
 
-/* ---------------------- ROOT COLORS ---------------------- */
 :root {
   --bg: #0f1115;
   --panel: rgba(21, 25, 34, 0.75);
   --prussian-blue: #023047;
 
   --sky-blue: #8ecae6;
-  /* body text */
   --heading-txt-orange: #fb8500;
-  /* heading text */
   --yellow: #ffb703;
-  /* subheading text */
 
   --text: #e8eaf2;
   --muted: #a7afc0;
@@ -22,7 +15,6 @@
   --text-secondary: #a7afc0;
 }
 
-/* ---------------------- GLOBAL RESET ---------------------- */
 html,
 body {
   margin: 0;
@@ -34,7 +26,6 @@ body {
   background: linear-gradient(180deg, var(--bg), var(--accent));
 }
 
-/* ---------------------- HERO BACKGROUND ---------------------- */
 .hero {
   padding-top: 0;
   position: relative;
@@ -54,7 +45,6 @@ body {
   background: linear-gradient(to bottom, var(--bg), var(--surface));
 }
 
-/* ---------------------- GLASS PANEL SYSTEM ---------------------- */
 .glass-panel {
   background: var(--surface);
   backdrop-filter: blur(0.75rem);
@@ -76,11 +66,10 @@ body {
   line-height: 1.6;
 }
 
-/* ---------------------- NAVBAR SPACING FIX ---------------------- */
 .hero,
 .roadmap-page,
 .office-page,
 .conduct-page,
 .contact-page {
-  padding-top: 6em; /* 🔥 Pushes content down below fixed navbar */
+  padding-top: 6em;
 }

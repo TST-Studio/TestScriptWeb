@@ -1,18 +1,14 @@
-/* ==========================================================
-   ⚔️ navbar.css — Dominion Navbar with Balanced Padding
-   ========================================================== */
 
-/* ---------------------- BASE NAV ---------------------- */
 .site-header {
-  position: fixed; /* 🔥 Always pinned at top */
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: auto; /* Flexible height */
-  z-index: 2000; /* Above all content */
-  background: transparent; /* Floating transparent look */
+  height: auto;
+  z-index: 2000;
+  background: transparent;
   backdrop-filter: none;
-  padding: 1rem 2rem; /* Balanced vertical + horizontal spacing */
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +19,6 @@
   pointer-events: auto;
 }
 
-/* 🔥 Dominion Glass after scroll */
 .site-header.scrolled {
   background: var(--bg);
   backdrop-filter: blur(0.75em);
@@ -31,25 +26,22 @@
   border-bottom: 0.05em solid var(--border);
 }
 
-/* Push page content down so it doesn't overlap header */
 .hero,
 .roadmap-page,
 .office-page,
 .conduct-page {
-  padding-top: 6.5em; /* Extra breathing room from navbar */
+  padding-top: 6.5em;
 }
 
-/* ---------------------- INNER NAV ---------------------- */
 .header-inner {
   display: flex;
-  gap: 1.25rem; /* Space between nav items */
+  gap: 1.25rem;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0.25rem 0; /* Light vertical padding inside */
+  padding: 0.25rem 0;
 }
 
-/* ---------------------- DESKTOP ---------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -57,7 +49,6 @@
   width: 100%;
 }
 
-/* ---------------------- MOBILE ---------------------- */
 .mobile-nav {
   display: flex;
   flex-direction: column;
@@ -69,26 +60,26 @@
   background: none;
   border: none;
   color: var(--secondary);
-  font-size: 1.9rem; /* Slightly larger touch target */
-  padding: 0.5rem 0.75rem; /* Comfortable tap area */
+  font-size: 1.9rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   transition:
     transform 0.2s ease,
     color 0.2s ease;
 }
+
 .hamburger-btn:hover {
   transform: scale(1.15);
   color: var(--primary);
 }
 
-/* 🔥 Dominion Glass Dropdown */
 .dropdown-menu {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75em; /* More spacing between links */
+  gap: 0.75em;
   margin-top: 0.85em;
   transition:
     max-height 0.3s ease,
@@ -98,14 +89,14 @@
   border: 0.05em solid var(--border);
   border-radius: 0.75em;
   box-shadow: 0 0.75em 1.25em var(--bg);
-  padding: 1rem 1.25rem; /* Balanced padding inside dropdown */
+  padding: 1rem 1.25rem;
 }
+
 .dropdown-menu.open {
   max-height: 600px;
   opacity: 1;
 }
 
-/* ---------------------- ANIMATIONS ---------------------- */
 @keyframes fadeSlide {
   from {
     opacity: 0;
@@ -117,15 +108,13 @@
   }
 }
 
-/* ==========================================================
-   ⚔️ One-Line Enforcement for Navbar Links
-   ========================================================== */
 .header-inner {
-  flex-wrap: nowrap; /* 🔥 prevent wrapping */
-  white-space: nowrap; /* 🚀 force all links inline */
-  overflow-x: auto; /* allow horizontal scroll if needed */
-  scrollbar-width: none; /* hide scrollbar in Firefox */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+
 .header-inner::-webkit-scrollbar {
-  display: none; /* hide scrollbar in Chrome/Safari */
+  display: none;
 }
