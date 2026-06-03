@@ -1,6 +1,3 @@
-/* ==========================================================
-   ⚔️ InstallationPage.css — Glass Panels + Dominion Glow Theme
-   ========================================================== */
 
 :root {
   --bg: #0f1115;
@@ -8,12 +5,11 @@
   --accent: #023047;
   --primary: #fb8500;
   --secondary: #8ecae6;
-  --text-primary: #e8eaf2; /* Base readable text */
+  --text-primary: #e8eaf2;
   --text-secondary: #a7afc0;
   --border: rgba(142, 202, 230, 0.25);
 }
 
-/* ---------------------- BASE ---------------------- */
 body {
   margin: 0;
   font-family:
@@ -29,7 +25,6 @@ body {
   color: var(--text-primary);
 }
 
-/* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
   background: var(--surface);
   border: 0.0625em solid var(--border);
@@ -40,7 +35,6 @@ body {
   box-shadow: 0 0.75em 1.5em var(--accent);
 }
 
-/* ---------------------- NAVBAR ---------------------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -80,7 +74,6 @@ body {
   color: var(--primary);
 }
 
-/* ---------------------- TITLES ---------------------- */
 .testscript-title {
   margin: 0.5em 0 0.375em;
   font-size: 4rem;
@@ -94,7 +87,7 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.4;
-  color: var(--secondary); /* ✨ Cyan text pop */
+  color: var(--secondary);
   padding: 0.5rem 0.75rem;
   text-align: center;
   border-radius: 0.625em;
@@ -102,14 +95,12 @@ body {
   justify-content: center;
 }
 
-/* ---------------------- SECTION HEADERS ---------------------- */
 .product-name {
   font-size: 2.6rem;
   font-weight: 600;
   text-shadow: 0 0 0.75rem var(--primary);
 }
 
-/* ---------------------- TABLE ROW ---------------------- */
 .tables-row {
   display: flex;
   justify-content: center;
@@ -120,7 +111,6 @@ body {
   padding: 2rem;
 }
 
-/* ---------------------- WRAPPERS ---------------------- */
 .features-wrapper,
 .prereq-wrapper,
 .steps-wrapper {
@@ -133,7 +123,6 @@ body {
   padding: 1rem;
 }
 
-/* ---------------------- TABLES ---------------------- */
 .features-table,
 .prereq-table {
   border-collapse: collapse;
@@ -151,7 +140,6 @@ body {
   border-top: 0.0625em solid var(--border);
 }
 
-/* ---------------------- STEPS ---------------------- */
 .input-label {
   font-weight: 800;
   font-size: 1.5rem;
@@ -163,7 +151,6 @@ body {
   color: var(--text-primary);
 }
 
-/* ---------------------- VIDEO ---------------------- */
 .tutorial-video {
   display: flex;
   justify-content: center;
@@ -177,7 +164,6 @@ body {
   overflow: hidden;
 }
 
-/* ---------------------- MOBILE NAV ---------------------- */
 .menu-toggle {
   display: none;
   background: none;

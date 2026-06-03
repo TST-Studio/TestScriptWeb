@@ -1,22 +1,14 @@
-// ==========================================================
-// ⚔️ Roadmap.tsx — Public TestScript Roadmap with Dominion Glass
-// ==========================================================
+import React from 'react';
+import './roadmap.css';
+import Navbar from './Navbar';
 
-import React from 'react'; // Core React library
-import './roadmap.css'; // Dominion styles for roadmap
-import Navbar from './Navbar'; // 🔥 Global Navbar
-
-// ---------------------- COMPONENT ----------------------
 const Roadmap: React.FC = () => {
   return (
     <div className="hero">
-      {/* 🔥 GLOBAL NAVBAR */}
       <Navbar />
 
-      {/* ---------- PAGE CONTENT ---------- */}
       <div className="roadmap-page">
         <div className="roadmap-container glass-panel">
-          {/* ---------- TITLE + INTRO ---------- */}
           <h1 className="roadmap-title">TestScript Roadmap</h1>
 
           <p className="roadmap-intro">
@@ -26,7 +18,6 @@ const Roadmap: React.FC = () => {
             private until execution.
           </p>
 
-          {/* ---------- MILESTONES TIMELINE ---------- */}
           <div className="roadmap-timeline">
             <div className="roadmap-item">
               <h2 className="roadmap-phase">Phase 1 — Foundation</h2>
@@ -58,5 +49,4 @@ const Roadmap: React.FC = () => {
   );
 };
 
-// ---------------------- EXPORT ----------------------
 export default Roadmap;

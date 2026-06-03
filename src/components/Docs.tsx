@@ -1,6 +1,3 @@
-// ==========================================================
-// ⚔️ Docs.tsx — Dominion Documentation Page
-// ==========================================================
 
 import React from 'react';
 import Navbar from './Navbar';
@@ -9,7 +6,6 @@ import '/src/components/docs.css';
 const Docs: React.FC = () => {
   return (
     <div className="hero">
-      {/* 🔥 NAVBAR (shared across site) */}
       <Navbar />
 
       <div className="docs-page">
@@ -20,7 +16,6 @@ const Docs: React.FC = () => {
             authentication, and usage instructions to empower your development workflow.
           </p>
 
-          {/* ---------------- CONFIGURE ---------------- */}
           <section className="docs-section">
             <h2>⚙️ Configure</h2>
             <pre>
@@ -32,7 +27,6 @@ tst configure --provider=openai --model=gpt-4o-mini --outFormat=testDir --outBas
             </pre>
           </section>
 
-          {/* ---------------- GENERATE ---------------- */}
           <section className="docs-section">
             <h2>⚡ Generate</h2>
             <pre>
@@ -42,7 +36,6 @@ tst generate ./src/utils/math.js --function=add   # Generate tests for a functio
             </pre>
           </section>
 
-          {/* ---------------- AUTH ---------------- */}
           <section className="docs-section">
             <h2>🔑 Auth</h2>
             <pre>
@@ -55,7 +48,6 @@ tst auth status
             </pre>
           </section>
 
-          {/* ---------------- OTHER COMMANDS ---------------- */}
           <section className="docs-section">
             <h2>📜 Other Commands</h2>
             <pre>
@@ -65,7 +57,6 @@ tst --version   # Show current CLI version`}
             </pre>
           </section>
 
-          {/* ---------------- ENV VARIABLES ---------------- */}
           <section className="docs-section">
             <h2>🌍 Environment Variables</h2>
             <pre>
@@ -74,7 +65,6 @@ tst --version   # Show current CLI version`}
             </pre>
           </section>
 
-          {/* ---------------- DEFAULT OPTIONS ---------------- */}
           <section className="docs-section">
             <h2>⚔️ Default Options</h2>
             <pre>
@@ -87,7 +77,6 @@ moduleType: module`}
             </pre>
           </section>
 
-          {/* ---------------- ENUMS ---------------- */}
           <section className="docs-section">
             <h2>🔮 Supported Values</h2>
             <p><strong>Provider:</strong> 'openai' | 'anthropic' | 'vertex' | 'azure-openai' | 'bedrock'</p>

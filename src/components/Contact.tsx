@@ -1,7 +1,3 @@
-// ==========================================================
-// ⚔️ Contact.tsx — Dominion Contact Page with Glass Panel
-// ==========================================================
-
 import React, { useState } from 'react';
 import '/src/components/contact.css';
 import { FaEnvelope, FaGithub, FaBook } from 'react-icons/fa';
@@ -36,16 +32,13 @@ const Contact: React.FC = () => {
       <Navbar />
 
       <div className="contact-page">
-        {/* 🔥 Glass Panel for Text + Links + Form */}
         <div className="glass-panel">
           <h1>Contact Us</h1>
 
-          {/* ---------- IMAGE ---------- */}
           <div className="contact-image">
             <img src="/images/tst-banner.png" alt="Contact Visual" />
           </div>
 
-          {/* ---------- PARAGRAPHS ---------- */}
           <p className="contact-contribute">
             TestScript is an open-source project built for developers, by developers.
             We welcome contributors who want to shape the future of testing automation —
@@ -58,7 +51,6 @@ const Contact: React.FC = () => {
             Got questions, ideas, or want to contribute? Reach out below.
           </p>
 
-          {/* ---------- CONTACT LINKS ---------- */}
           <div className="contact-links">
             <div className="contact-link">
               <FaEnvelope className="contact-icon" />
@@ -84,7 +76,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* ---------- FORM ---------- */}
           <form className="contact-form" onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
@@ -92,7 +83,6 @@ const Contact: React.FC = () => {
             <button type="submit">Send</button>
           </form>
 
-          {/* ---------- STATUS MESSAGES ---------- */}
           {status === 'SUCCESS' && <p>🔥 Message sent! We’ll reply soon.</p>}
           {status === 'ERROR' && <p>⚠️ Something went wrong. Try again.</p>}
           {status === 'LIMIT' && (

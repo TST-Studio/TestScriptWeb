@@ -1,29 +1,19 @@
-// ==========================================================
-// ⚔️ Navbar.tsx — GLOBAL DOMINION NAVIGATION BAR
-// ==========================================================
-// Transparent + sticky navbar with active link highlighting.
-// Fully responsive: desktop pills → collapse to hamburger menu.
-// Scroll effect: glass panel activates after scroll.
-// ==========================================================
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa'; // hamburger + close icons
-import '../App.css'; // pill-btn styles
-import './navbar.css'; // scoped navbar styles
+import { FaBars, FaTimes } from 'react-icons/fa';
+import '../App.css';
+import './navbar.css';
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // state for responsiveness
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // dominion scroll glass effect
   const [scrolled, setScrolled] = useState(false);
 
-  // detect screen size
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     handleResize();
@@ -31,7 +21,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // detect scroll for glass background
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
@@ -53,7 +42,6 @@ const Navbar: React.FC = () => {
   return (
     <header className={`site-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="header-inner">
-        {/* DESKTOP NAV */}
         {!isMobile &&
           NAV_ITEMS.map((item) => (
             <button
@@ -74,7 +62,6 @@ const Navbar: React.FC = () => {
             </button>
           ))}
 
-        {/* MOBILE NAV */}
         {isMobile && (
           <div className="mobile-nav">
             <button
@@ -90,7 +77,7 @@ const Navbar: React.FC = () => {
                   className="pill-btn"
                   onClick={() => {
                     navigate(item.path);
-                    setMenuOpen(false); // close menu on nav
+                    setMenuOpen(false);
                   }}
                   style={{
                     color:

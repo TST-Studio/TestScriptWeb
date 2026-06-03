@@ -1,22 +1,15 @@
-// ---------------------- CODE OF CONDUCT PAGE ----------------------
-// Code-conduct.tsx — Dedicated page outlining TestScript community rules.
 
-// ---------------------- IMPORTS ----------------------
-import React from 'react'; // React core library.
-import './Code-conduct.css'; // Local stylesheet scoped to this page.
-import Navbar from './Navbar'; // 🔥 Global Navbar shared across the entire site.
+import React from 'react';
+import './Code-conduct.css';
+import Navbar from './Navbar';
 
-// ---------------------- COMPONENT ----------------------
 const CodeConduct: React.FC = () => {
   return (
     <div className="hero">
-      {/* 🔥 GLOBAL NAVBAR */}
       <Navbar />
 
-      {/* ---------- PAGE CONTENT ---------- */}
       <div className="conduct-page">
         <div className="conduct-container">
-          {/* ---------- TITLE ---------- */}
           <h1 className="conduct-title">Code of Conduct</h1>
           <p className="conduct-intro">
             At TestScript, we are committed to fostering a safe, inclusive, and
@@ -24,7 +17,6 @@ const CodeConduct: React.FC = () => {
             whether online or in person.
           </p>
 
-          {/* ---------- EXPECTED BEHAVIOR ---------- */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Expected Behavior</h2>
             <ul className="conduct-list">
@@ -36,7 +28,6 @@ const CodeConduct: React.FC = () => {
             </ul>
           </section>
 
-          {/* ---------- UNACCEPTABLE BEHAVIOR ---------- */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Unacceptable Behavior</h2>
             <ul className="conduct-list">
@@ -48,7 +39,6 @@ const CodeConduct: React.FC = () => {
             </ul>
           </section>
 
-          {/* ---------- ENFORCEMENT ---------- */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Enforcement</h2>
             <p>
@@ -59,7 +49,6 @@ const CodeConduct: React.FC = () => {
             </p>
           </section>
 
-          {/* ---------- REPORTING ---------- */}
           <section className="conduct-section">
             <h2 className="conduct-heading">Reporting Issues</h2>
             <p>
@@ -74,5 +63,4 @@ const CodeConduct: React.FC = () => {
   );
 };
 
-// ---------------------- EXPORT ----------------------
 export default CodeConduct;

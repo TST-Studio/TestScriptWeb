@@ -1,8 +1,4 @@
-/* ==========================================================
-   ⚔️ roadmap.css — Dominion Roadmap Page with Glass Overlay
-   ========================================================== */
 
-/* ---------------------- HERO ---------------------- */
 .hero {
   padding-top: 0;
   position: relative;
@@ -14,6 +10,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .hero::before {
   content: '';
   position: absolute;
@@ -22,7 +19,6 @@
   background: linear-gradient(to bottom, var(--bg), var(--surface));
 }
 
-/* ---------------------- GLASS PANEL ---------------------- */
 .glass-panel {
   background: var(--surface);
   border: 0.0625em solid var(--border);
@@ -47,7 +43,7 @@
   color: var(--text-secondary);
   font-size: 1.2em;
 }
-/* ---------------------- ROOT PAGE ---------------------- */
+
 .roadmap-page {
   min-height: 100vh;
   display: flex;
@@ -55,7 +51,6 @@
   align-items: center;
 }
 
-/* ---------------------- CONTAINER ---------------------- */
 .roadmap-container {
   max-width: 60rem;
   margin: -4.5rem auto;
@@ -64,7 +59,6 @@
   color: var(--secondary);
 }
 
-/* ---------------------- TITLE + INTRO ---------------------- */
 .roadmap-title {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -72,12 +66,12 @@
   text-shadow: 0 0 0.75rem var(--primary);
 }
 
-/* ---------------------- TIMELINE ---------------------- */
 .roadmap-timeline {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
 .roadmap-item {
   background: var(--bg);
   border-radius: 0.75rem;
@@ -87,10 +81,12 @@
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
+
 .roadmap-item:hover {
   transform: translateY(-0.25rem);
   box-shadow: 0 0.75rem 1.75rem var(--border);
 }
+
 .roadmap-phase {
   font-size: 1.5rem;
   font-weight: 700;
